@@ -1,4 +1,7 @@
-const { getAllMoviesHandler } = require('../handlers/filmsHandlers')
+const {
+  getAllMoviesHandler,
+  getMovieByIdHandler,
+} = require('../handlers/filmsHandlers')
 
 const { Router } = require('express')
 
@@ -8,7 +11,7 @@ const filmRouter = Router()
 filmRouter.get(`/`, getAllMoviesHandler)
 
 //GET MOVIE BY ID
-
+filmRouter.get('/:filmId', getMovieByIdHandler)
 //GET MOVIE BY NAME
 
 module.exports = filmRouter
