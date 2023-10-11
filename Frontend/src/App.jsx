@@ -1,15 +1,11 @@
-import Card from "./components/card";
-
+import { Auth } from './components/Login/Auth'
+import Card from './components/card'
 
 export default function App() {
- 
-
   return (
-  <div>
- <Card/>
-</div>
-  
+    <div>
+      <Auth />
+      <Card />
+    </div>
   )
 }
-
-
