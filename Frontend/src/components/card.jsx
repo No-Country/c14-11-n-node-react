@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import "../style/card.css"
+
 
 export default function Card() {
   const [data, setData] = useState([]);
@@ -27,16 +29,16 @@ export default function Card() {
   }
 
   return (
-    <div>
+    <div className='container__cards' >
       {data.map(item => (
         
-        <div>
+        <article className='cards'>
           <h1>{item.title}</h1>
           <img src={item.backdrop_path} alt="" />
           <h5>{item.overview}</h5>
           <h5>{item.release_date}</h5>
-       </div>
-        
+       </article>
+      
       ))}
     </div>
   );
