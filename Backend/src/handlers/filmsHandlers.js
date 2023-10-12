@@ -23,6 +23,18 @@ const getMovieByIdHandler = async (req, res) => {
   }
 }
 
+const getMovieByNameHandler = async (req, res) => {
+  const { name } = req.query
+
+  try {
+    const films = await getMovieById(name)
+
+    return res.status(200).json(films)
+  } catch (error) {
+    return res.status(404).send(error)
+  }
+}
+
 module.exports = {
   getAllMoviesHandler,
   getMovieByIdHandler,

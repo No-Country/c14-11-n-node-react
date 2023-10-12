@@ -61,6 +61,8 @@ export const Auth = () => {
     }
   }
 
+  console.log(auth.currentUser)
+
   return (
     <div>
       {auth.currentUser?.email ?? (
