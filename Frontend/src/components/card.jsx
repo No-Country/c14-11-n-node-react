@@ -5,9 +5,6 @@ import '../../data.json'
 
 
 //Se cambio la funcion y la forma de exportar la funcion Card
-
-
-
 const Card = () => {
 
   const [data, setData] = useState([]);

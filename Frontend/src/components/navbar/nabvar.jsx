@@ -1,18 +1,17 @@
-import Auth from "../Login/Auth"
 
 
-const nabvar = () => {
+
+const Nabvar = () => {
   return (
     <div className="container__nabvar">
-         <nav>
-            <ul>
-              <li>
-              <Auth/>
-              </li>
-            </ul>
-         </nav>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
     </div>
   )
 }
 
-export default nabvar
+export default Nabvar
