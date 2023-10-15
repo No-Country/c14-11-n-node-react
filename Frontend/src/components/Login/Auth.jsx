@@ -95,7 +95,8 @@ const Auth = () => {
   };
 
   return (
-    //hacer logica para mostrar login y boton para registrarse o separar por componente y rutas 👌
+    //se agrego renderizado condicional para los dos moduls tanto el de 
+    //inicio de secion comop para el registro falta agregar mas logica
     <div className="container__logginRegister">
        <div className="container_buttons_logginRegister">
        <button className="button_inicio_session" onClick={handleLogin}>Iniciar secion</button>
