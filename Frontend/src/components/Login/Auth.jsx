@@ -1,25 +1,24 @@
-import '../../style/auth.css';
+import "../../style/auth.css";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
-} from 'firebase/auth';
-import { useState } from 'react';
-import { auth, googleProvider } from '../../config/firebase';
+} from "firebase/auth";
+import { useState, useEffect } from "react";
+import { auth, googleProvider } from "../../config/firebase";
 
 const Auth = () => {
-
   //eastado para iniciar secion
   const [loginInput, setLoginInput] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
 
   //estado para registrase
   const [signUpInput, setSignUpInput] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
 
   //datos de inicio de secion
@@ -29,7 +28,6 @@ const Auth = () => {
       [event.target.name]: event.target.value,
     });
   };
-  
 
   // datos de registro
   const handleSignUpChange = (event) => {
@@ -39,17 +37,20 @@ const Auth = () => {
     });
   };
 
-
   //funcion de registro
   const register = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, signUpInput.email, signUpInput.password);
+      await createUserWithEmailAndPassword(
+        auth,
+        signUpInput.email,
+        signUpInput.password
+      );
     } catch (error) {
       console.log(error);
     }
   };
 
-  //iniciar seccion con google 
+  //iniciar seccion con google
   const signInWithGoogle = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
@@ -61,7 +62,11 @@ const Auth = () => {
   // funcion para iniciar sesion
   const logIn = async () => {
     try {
-      await signInWithEmailAndPassword(auth, loginInput.email, loginInput.password);
+      await signInWithEmailAndPassword(
+        auth,
+        loginInput.email,
+        loginInput.password
+      );
     } catch (error) {
       console.log(error);
     }
@@ -75,34 +80,32 @@ const Auth = () => {
     }
   };
 
+  const [renderRegister, setRenderRegister] = useState(false);
+  console.log(renderRegister);
+  const handleRegister = () => {
+    setRenderRegister(!renderRegister);
+    setRenderlogin(false); // Añade esta línea
+  };
+
+  const [renderLogin, setRenderlogin] = useState(false);
+
+  const handleLogin = () => {
+    setRenderlogin(!renderLogin);
+    setRenderRegister(false); // Añade esta línea
+  };
+
   return (
-
     //hacer logica para mostrar login y boton para registrarse o separar por componente y rutas 👌
-    <div>
-        <section className="registro">
-          <header>Registro</header>
-          <input
-            onChange={handleSignUpChange}
-            placeholder="Email..."
-            type="text"
-            name="email"
-            value={signUpInput.email}
-          />
-          <input
-            onChange={handleSignUpChange}
-            placeholder="Password..."
-            type="password"
-            name="password"
-            value={signUpInput.password}
-          />
-          <button onClick={register}>Registrarse</button>
-          <button className="googleBtn" onClick={signInWithGoogle}>
-            Registrarse con Google
-          </button>
-        </section>
-
-        <section className="loggin">
-          <header>Login</header>
+    <div className="container__logginRegister">
+       <div className="container_buttons_logginRegister">
+       <button className="button_inicio_session" onClick={handleLogin}>Iniciar secion</button>
+      <button  className="button__registro" onClick={handleRegister}>Registrarse</button>
+     
+       </div>
+      {renderLogin ?
+      ( 
+         <section className="loggin">
+          <div></div>
           <input
             onChange={handleLoginChange}
             placeholder="Email..."
@@ -122,165 +125,31 @@ const Auth = () => {
             Iniciar sesión con Google
           </button>
           <button onClick={logOut}>Cerrar sesión</button>
-        </section>
-  
+         </section>):""
+      }
 
+    { renderRegister?  (<section className="registro">
+        <input
+          onChange={handleSignUpChange}
+          placeholder="Email..."
+          type="text"
+          name="email"
+          value={signUpInput.email}
+        />
+        <input
+          onChange={handleSignUpChange}
+          placeholder="Password..."
+          type="password"
+          name="password"
+          value={signUpInput.password}
+        />
+        <button onClick={register}>Registrarse</button>
+        <button className="googleBtn" onClick={signInWithGoogle}>
+          Registrarse con Google
+        </button>
+      </section>):""}
     </div>
   );
 };
 
 export default Auth;
-
-
-
-
-
-
-
-
-
-
-
-// import '../../style/auth.css'
-// import {
-//   createUserWithEmailAndPassword,
-//   signInWithEmailAndPassword,
-//   signInWithPopup,
-//   signOut,
-// } from 'firebase/auth'
-// import { useState } from 'react'
-// import { auth, googleProvider } from '../../config/firebase'
-
-// const Auth = () => {
-//   const [loginInput, setLoginInput] = useState({
-//     email: '',
-//     password: '',
-//   })
-
-//   const [signUp, setSignUp] = useState({
-//     email: '',
-//     password: '',
-//   })
-
-
-
-
-//   const handleLogin = (event) => {
-//     setLoginInput({
-//       ...loginInput,
-//       [event.target.name]: event.target.value,
-//     })
-//   }
-
-
-//   const handleSingUp = (event) => {
-//     setSignUp({
-//       ...signUp,
-//       [event.target.name]: event.target.value,
-//     })
-//   }
-
-//   const signIn = async () => {
-//     try {
-//       await createUserWithEmailAndPassword(
-//         auth,
-//         signUp.email,
-//         signUp.password
-//       )
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   }
-
-//   const signInWithGoogle = async () => {
-//     try {
-//       await signInWithPopup(auth, googleProvider)
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   }
-
-//   const logOut = async () => {
-//     try {
-//       await signOut(auth)
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   }
-
-//   const logIn = async () => {
-//     try {
-//       await signInWithEmailAndPassword(
-//         auth,
-//         loginInput.email,
-//         loginInput.password
-//       )
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   }
-
-//   return (
-//     <div>
-//       {auth.currentUser?.email ?? (
-//         <section className="registro">
-//           <header>Registro</header>
-
-//           <input
-//             onChange={handleSingUp}
-//             placeholder="Email..."
-//             type="text"
-//             name="email"
-//             value={loginInput.email}
-//           />
-//           <input
-//             onChange={handleSingUp}
-//             placeholder="Password..."
-//             type="password"
-//             name="password"
-//             value={loginInput.password}
-//           />
-//           <button onClick={signIn}>Registrarse</button>
-
-//           <button className="googleBtn" onClick={signInWithGoogle}>
-//             Registrarse con Google
-//           </button>
-//         </section>
-//       )}
-//       <h4>Hay que separar el state de los inputs</h4>
-//       <section className="loggin">
-//         <header>Loggin</header>
-//         <input
-//           onChange={handleLogin}
-//           placeholder="Email..."
-//           type="text"
-//           name="email"
-//           value={loginInput.email}
-//         />
-//         <input
-//           onChange={handleLogin}
-//           placeholder="Password..."
-//           type="password"
-//           name="password"
-//           value={loginInput.password}
-//         />
-//         <button onClick={logIn}>Iniciar sesion</button>
-//         <button className="googleBtn" onClick={signInWithGoogle}>
-//           Iniciar sesion con Google
-//         </button>
-//         <button onClick={logOut}>Desloggearse</button>
-//       </section>
-//       {auth.currentUser?.email ? (
-//         <div>
-//           <h1>Estas loggeado con:</h1>
-//           <p>{auth.currentUser?.email}</p>
-//         </div>
-//       ) : (
-//         <h1>Todavia no te loggeaste</h1>
-//       )}
-//     </div>
-//   )
-// }
-
-
-// export default  Auth
