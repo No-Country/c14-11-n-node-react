@@ -5,7 +5,7 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { auth, googleProvider } from "../../config/firebase";
 
 const Auth = () => {
@@ -81,7 +81,7 @@ const Auth = () => {
   };
 
   const [renderRegister, setRenderRegister] = useState(false);
-  console.log(renderRegister);
+
   const handleRegister = () => {
     setRenderRegister(!renderRegister);
     setRenderlogin(false); // Añade esta línea

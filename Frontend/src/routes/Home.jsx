@@ -1,6 +1,4 @@
-import React from 'react'
-import Auth from '../components/Login/Auth'
-import Card from '../components/card'
+import Card from '../components/card/card'
 
 const Home = () => {
   return (
