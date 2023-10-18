@@ -1,13 +1,31 @@
-import Auth from "../Login/Auth"
+
+import { Link } from "react-router-dom"
 import "../..//style/nabvar.css"
 
-//Se trabajo en el componente nabvar 
+
 const Nabvar = () => {
+
+ 
+
   return (
     <div className="container__nabvar">
-        <ul>
-       <Auth/>
-        </ul>
+
+      <a href="/"><button>Home</button></a>
+
+    <div className="loginRegister">
+    <Link
+        to={"/login"}
+      >
+        <button>Inicio de Sesion</button>
+      </Link>
+      <Link
+        to={"/register"}
+      >
+        <button >Registro</button>
+      </Link>
+
+    </div>
+
     </div>
   )
 }
