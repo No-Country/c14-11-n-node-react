@@ -5,10 +5,11 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import '../style/home.css';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import Card from '../components/card/card';
 
  const Home =()=> {
   return (
-    <>
+    <div>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -52,8 +53,10 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
         <SwiperSlide className='swiper-slide'>
           <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
         </SwiperSlide>
+        
       </Swiper>
-    </>
+      <Card/>
+    </div>
   );
 }
 
