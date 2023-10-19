@@ -6,7 +6,20 @@ import 'swiper/css/pagination';
 import '../style/home.css';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
+import Card from '../components/card/card';
+
+
+
+
+
+
+
+
  const Home =()=> {
+
+   
+
+
   return (
     <>
       <Swiper
@@ -53,6 +66,11 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
           <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
         </SwiperSlide>
       </Swiper>
+      
+      <div>
+       <Card/>
+      </div>
+    
     </>
   );
 }

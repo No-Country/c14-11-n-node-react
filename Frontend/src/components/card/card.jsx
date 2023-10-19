@@ -1,54 +1,57 @@
-import { useState, useEffect } from 'react';
+
 import "../../style/card.css"
 import datos from '../../../data.json'
-
+import axios from "axios"
+import { useState } from "react";
 
 
 //Se cambio la funcion y la forma de exportar la funcion Card
 const Card = () => {
   const baseURL = "https://image.tmdb.org/t/p/w500";
-  const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
- 
-  console.log(data);
+  const [movies, setmovies] = useState()
 
+  //se estaba utilizande fecth para obtener datos de un json
+  //lo cual estaba provocando un error 
+  //fecht se utiliza para realizar solicitudes HTTP a una UR
+  //como el archivo es local obtenemos lo datos directamente 
+  const options = {
+    method: 'GET',
+    url: 'https://api.themoviedb.org/3/authentication',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ODA1NWViOTZlMzNmMjg3ZDk5MzlkMjNiYmUzMmRiOSIsInN1YiI6IjY1MzE4ZDg1NmQ5ZmU4MDBmZWE4ZmQwMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.f6vy8C0Sn5yff7G0tPSixu3c5U-e8hWpUaxmyhoHfEQ'
+    }
+  };
 
-//se estaba utilizande fecth para obtener datos de un json
-//lo cual estaba provocando un eror 
-//se utiliza para realizar solicitudes HTTP a una UR
-//como el archivo es local obtenemos lo datos directamente 
+  axios
+    .request(options)
+    .then(function (response) {
+      setmovies(response.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
 
-  useEffect(() => {
-    
-        setData(datos);
-        setIsLoading(false);
-  }, []);
+  const handleClick = (countryName) => {
+    console.log(countryName);
+  };
 
-  if (isLoading) {
-    return <div>Cargando...</div>;
-  }
-
-
-  //como se quito fecht entonces error no esta definido 
-  //y genera problemas se deja comentado para que no genere conflictos 
-
-  // if (error) {
-  //   return <div>Error: {error.message}</div>;
-  // }
 
 
   return (
     <div className='container__cards' >
-          {data?.map(item => (
-            <article key={item.title} className='container__card'>
-              <h1>{item.title}</h1>
-              <img src={baseURL + item.backdrop_path} alt="" />
-              <h5>{item.overview}</h5>
-              <h5>{item.release_date}</h5>
-           </article>
-          
-          ))}
-        </div>
+      {datos.map(item => (
+        <article
+          onClick={() => handleClick(item.title)}
+          key={item.title} className='container__card'>
+          <h1>{item.title}</h1>
+          <img src={baseURL + item.backdrop_path} alt="" />
+          <h5>{item.overview}</h5>
+          <h5>{item.release_date}</h5>
+        </article>
+
+      ))}
+    </div>
   )
 }
 
