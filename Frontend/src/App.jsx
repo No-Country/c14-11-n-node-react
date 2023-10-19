@@ -5,6 +5,7 @@ import Home from './routes/Home'
 import Nabvar from './components/navbar/nabvar'
 import Auth from "./components/Login/Auth"
 import Register from "./components/register/Register"
+import {Footer} from '../src/components/footer/Footer'
 import PlayMovie from "./routes/PlayMovie"
 
 
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/register" element={<Register/>}/>
         <Route  path="/playMovie/:playMovie" element={<PlayMovie/>}/>
       </Routes>
+       <Footer />
     </div>
   )
 }

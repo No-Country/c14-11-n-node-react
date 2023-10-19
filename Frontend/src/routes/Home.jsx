@@ -8,6 +8,10 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import Card from '../components/card/card';
 
  const Home =()=> {
+
+   
+
+
   return (
     <div>
       <Swiper
@@ -55,6 +59,9 @@ import Card from '../components/card/card';
         </SwiperSlide>
         
       </Swiper>
+      
+     
+    
       <Card/>
     </div>
   );

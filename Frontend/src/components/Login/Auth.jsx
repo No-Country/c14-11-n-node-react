@@ -1,4 +1,4 @@
-import "../../style/auth.css";
+
 import {
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -6,6 +6,7 @@ import {
 } from "firebase/auth";
 import { useState } from "react";
 import { auth, googleProvider } from "../../config/firebase";
+import '../../style/auth.css'
 
 const Auth = () => {
 
