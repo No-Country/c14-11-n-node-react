@@ -5,7 +5,7 @@ import Home from './routes/Home'
 import Nabvar from './components/navbar/nabvar'
 import Auth from "./components/Login/Auth"
 import Register from "./components/register/Register"
-
+import {Footer} from '../src/components/footer/Footer'
 
 export default function App() {
 
@@ -17,6 +17,7 @@ export default function App() {
         <Route path="/login" element={<Auth />} />
         <Route path="/register" element={<Register/>}/>
       </Routes>
+       <Footer />
     </div>
   )
 }
