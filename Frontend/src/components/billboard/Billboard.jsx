@@ -1,20 +1,19 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
 import '../../style/card.css'
-import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
+
 
 export const Billboard = () => {
 
-  const navigate = useNavigate()
+
     
   const API_KEY = '4f5f43495afcc67e9553f6c684a82f84'
   const API_URL = 'https://api.themoviedb.org/3'
   const URL_IMAGE = 'https://image.tmdb.org/t/p/original'
 
 //ruta para el reproducctor de trailer
-  const handleClick = (trailersMovies) => {
-  navigate(`/trailesMovies/${trailersMovies}`)
-}
+ 
 
   //variable de estado
   const [movies, setMovies] = useState([]);
@@ -44,11 +43,16 @@ useEffect(() => {
     <div >
       <h1 className="billboard__title">Movies In Theaters</h1>
         <div className='container__cards'>
-          {movies.map((movie)=> (
-            <div key={movie.id} className='container__card' onClick={()=> handleClick(movie.title)} >
+        {movies.map((movie) => (
+            
+          <div key={movie.id} className='container__card' >
+            <Link 
+              to={"/trailersMovies"}   className='container__card' >
               <img src={`${URL_IMAGE + movie.poster_path}`} alt={movie.title} />
-              <h2>{ movie.title }</h2>
+              <h2>{movie.title}</h2>
+              </Link>
             </div>
+           
           ))}
         </div>
       </div>

@@ -22,27 +22,28 @@
     box-shadow: 0 5px 10px 0 rgba(31, 38, 135, 0.37);
     font-family: 'Inter Tight', sans-serif;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); /* Desenfoque */
+    
     max-width: 300px;
     width: 100%;
-    color: rgb(115, 0, 255);
     border-radius: 5px;
-    padding: 20px;
-    text-align: justify;
-    height: auto;
-    overflow: hidden;
+    padding: 2px;
 }
-
-.container__card>img{
+.container__card>img {
     width: 100%;
     border-radius: 5px;
     cursor: pointer;
 }
+
 .container__card>h2 {
     text-align: center;
     color: #333;
+   text-decoration: none;
+   font-size: 25px;
 }
-.billboard__title{
+
+.billboard__title {
     text-align: center;
     color: #333;
 }
+
+

@@ -49,12 +49,14 @@ const Register = () => {
     return (
         <div>
             <section className="registro">
+                <h1>Resgistre</h1>
                 <input
                     onChange={handleSignUpChange}
                     placeholder="Email..."
                     type="text"
                     name="email"
                     value={signUpInput.email}
+                    className="input_registre "
                 />
                 <input
                     onChange={handleSignUpChange}
@@ -62,9 +64,10 @@ const Register = () => {
                     type="password"
                     name="password"
                     value={signUpInput.password}
+                    className="input_registre "
                 />
-                <button onClick={register}>Registrarse</button>
-                <button className="googleBtn" onClick={signInWithGoogle}>
+                <button className="button_registre " onClick={register}>Registrarse</button>
+                <button className="button_registre " onClick={signInWithGoogle}>
                     Registrarse con Google
                 </button>
             </section>

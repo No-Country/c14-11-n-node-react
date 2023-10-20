@@ -1,16 +1,17 @@
 .main__container__footer{
     max-width: 1440px;
     width: 100%;
-    background-color: red;
+    background-color: #151e33;
 }
 
 .container__footer{
-    background-color: aqua;
+   
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
+
 .container__section{
     width: 100%;
     display: flex;
@@ -19,7 +20,7 @@
 }
 
 .section__footer{
-    background-color: beige;
+   
     width: 200px;
     height: 200px;
     text-align: center;
@@ -32,7 +33,7 @@
 
 .footer__end{
     width: 100%;
-    background-color:blanchedalmond;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,8 +48,21 @@
 }
 
 .footer__end>p{
-    background-color: aquamarine;
+   color: aliceblue;
 }
 
  
+.footer_link {
+    color: #f089a0;
+    list-style: none;
+}
 
+h5 {
+    color: white;
+}
+.footer__linea{
+    max-width: 1400px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}

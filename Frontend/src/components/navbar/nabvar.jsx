@@ -10,18 +10,18 @@ const Nabvar = () => {
   return (
     <div className="container__nabvar">
 
-      <a href="/"><button>Home</button></a>
+      <a href="/"><button className="button__nabvar">Home</button></a>
 
     <div className="loginRegister">
     <Link
         to={"/login"}
       >
-        <button>Inicio de Sesion</button>
+        <button className="button__nabvar">Inicio de Sesion</button>
       </Link>
       <Link
         to={"/register"}
       >
-        <button >Registro</button>
+        <button  className="button__nabvar">Registro</button>
       </Link>
 
     </div>

@@ -69,12 +69,13 @@ const Auth = () => {
   
 
       <section className="loggin">
-        <div></div>
+        <h1>Inicio de Sesion</h1>
         <input
           onChange={handleLoginChange}
           placeholder="Email..."
           type="text"
           name="email"
+          className="input_loggin"
           value={loginInput.email}
         />
         <input
@@ -82,13 +83,14 @@ const Auth = () => {
           placeholder="Password..."
           type="password"
           name="password"
+          className="input_loggin"
           value={loginInput.password}
         />
-        <button onClick={logIn}>Iniciar sesión</button>
-        <button className="googleBtn" onClick={signInWithGoogle}>
+        <button onClick={logIn} className="button_loggin">Iniciar sesión</button>
+        <button className="button_loggin" onClick={signInWithGoogle}>
           Iniciar sesión con Google
         </button>
-        <button onClick={logOut}>Cerrar sesión</button>
+        <button onClick={logOut} className="button_loggin">Cerrar sesión</button>
       </section>
 
 
