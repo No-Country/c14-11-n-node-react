@@ -5,7 +5,8 @@ import Home from './routes/Home'
 import Nabvar from './components/navbar/nabvar'
 import Auth from "./components/Login/Auth"
 import Register from "./components/register/Register"
-import {Footer} from '../src/components/footer/Footer'
+import { Footer } from '../src/components/footer/Footer'
+import { TrailersMovies } from "./routes/TrailersMovies"
 
 export default function App() {
 
@@ -15,7 +16,8 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path="/login" element={<Auth />} />
-        <Route path="/register" element={<Register/>}/>
+        <Route path="/register" element={<Register />} />
+        <Route path="/trailesrMovies/:trailersMovies" element={<TrailersMovies/>}/>
       </Routes>
        <Footer />
     </div>
