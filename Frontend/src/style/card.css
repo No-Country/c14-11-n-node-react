@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;1,400&display=swap');
+
 
 .container__cards{
     max-width: 1440px;
@@ -29,11 +29,20 @@
     border-radius: 5px;
     padding: 20px;
     text-align: justify;
-    height: 400px;
+    height: auto;
     overflow: hidden;
 }
 
 .container__card>img{
     width: 100%;
     border-radius: 5px;
+    cursor: pointer;
+}
+.container__card>h2 {
+    text-align: center;
+    color: #333;
+}
+.billboard__title{
+    text-align: center;
+    color: #333;
 }

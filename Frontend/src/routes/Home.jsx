@@ -5,10 +5,13 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import '../style/home.css';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { Billboard } from '../components/billboard/Billboard';
 
+
+{/*
 import Card from '../components/card/card';
-
-
+<Card/>
+*/}
 
 
 
@@ -68,7 +71,7 @@ import Card from '../components/card/card';
       </Swiper>
       
       <div>
-       <Card/>
+       <Billboard />
       </div>
     
     </>
