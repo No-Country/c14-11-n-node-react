@@ -2,15 +2,15 @@ const express = require('express')
 
 const filmRouter = require('./routes/filmsRoutes')
 const filterRouter = require('./routes/filterRoutes')
-// import cors from 'cors'
+import cors from 'cors'
 
 const app = express()
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: ['http://localhost:5173'],
-//   })
-// )
+app.use(
+  cors({
+    credentials: true,
+    origin: ['http://localhost:5173'],
+  })
+)
 
 app.use('/getmovies', filmRouter)
 
