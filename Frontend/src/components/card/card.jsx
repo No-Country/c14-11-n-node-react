@@ -37,7 +37,7 @@ const Card = () => {
 
   return (
     <div className='container__cards' >
-      {datos?.map(item => (
+      {movies?.map(item => (
         <article
           onClick={() => handleClick(item.title)}
           key={item.title} className='container__card'>
