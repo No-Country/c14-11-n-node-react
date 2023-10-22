@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require ('cors');
 
 
 const filmRouter = require('./routes/filmsRoutes')
@@ -6,9 +7,18 @@ const filterRouter = require('./routes/filterRoutes')
 const listRouter = require('./routes/listRoutes')
 const errorResponse = require('./utils/errorResponse')
 
-// import cors from 'cors'
+const app = express();
 
-const app = express()
+// import cors from 'cors'
+app.use(
+  cors({
+    origin:["http://localhost:5173"],
+    methods:['OPTIONS', 'GET', 'POST', 'PUT', 'DELETE', 'PATCH']
+    
+  })
+);
+
+
 
 app.use('/getmovies', filmRouter)
 
