@@ -20,10 +20,6 @@ const Card = () => {
     setMovies([])
   }, [])
 
-
-
-
-
   //se estaba utilizande fecth para obtener datos de un json
   //lo cual estaba provocando un eror 
   //se utiliza para realizar solicitudes HTTP a una UR
