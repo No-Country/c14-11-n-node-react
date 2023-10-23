@@ -1,8 +1,9 @@
-
-const Cards = () => {
-
+const Cards = ({ name, img }) => {
   return (
-    <div>lorem*1000</div>
+    <div>
+      <h1>{name}</h1>
+      <img src={img} alt="" />
+    </div>
   )
 }
 
