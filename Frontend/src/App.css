@@ -1,8 +1,21 @@
-.main__container{
+
+body{
+  padding:0rem 3rem;
+  background-color: rgb(42, 1, 1);
+}
+.main__container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  max-width: 1440px;
+  background-image: url("./assets/fondoLogin.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
 
- 
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+
 }
