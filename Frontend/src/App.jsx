@@ -7,11 +7,14 @@ import { AuthProvider } from "./context/authContext";
 import ProtectedRouted from "./components/ProtectedRouted";
 import Cards from "./pages/Cards";
 import Error404 from "./pages/Error404";
+import Nabvar from "./components/Nabvar";
 
 export default function App() {
   return (
     <div className="main__container">
+     
       <AuthProvider>
+      <Nabvar/>
         <Routes>
           <Route
             path="/"

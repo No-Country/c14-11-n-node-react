@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 import "../style/login.css";
-import google from "../assets/google.svg"
+import google from "../assets/google.svg";
+import { motion } from "framer-motion";
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -33,12 +34,21 @@ const Login = () => {
     navigate("/");
   };
 
-const handldeRegister = () => {
-  navigate("/register");
-}
+  const handldeRegister = () => {
+    navigate("/register");
+  };
 
   return (
-    <div className="login">
+    <motion.div
+      className="login"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
       {error && <p className="login__error">{error}</p>}
       <form className="login__form" onSubmit={handleSubmit}>
         <label className="login__label" htmlFor="email">
@@ -71,8 +81,10 @@ const handldeRegister = () => {
         Login with Google <img src={google} alt="" />
       </button>
 
-      <button  className="login__button--register" onClick={handldeRegister}>Registrarse</button>
-    </div>
+      <button className="login__button--register" onClick={handldeRegister}>
+        Registrarse
+      </button>
+    </motion.div>
   );
 };
 

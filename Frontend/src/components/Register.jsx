@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 import "../style/register.css"
+import { motion }from "framer-motion"
+
+
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -29,7 +32,14 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      duration: 0.8,
+      delay: 0.5,
+      ease: [0, 0.71, 0.2, 1.01]
+    }}>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
       <label htmlFor="email">Email</label>
@@ -49,7 +59,7 @@ const Register = () => {
       />
       <button>Register</button>
     </form>
-    </div>
+    </motion.div>
   );
 };
 
