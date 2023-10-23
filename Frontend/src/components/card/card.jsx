@@ -1,5 +1,5 @@
 import "../../style/card.css"
-import datos from '../../../data.json'
+
 import { useNavigate } from 'react-router-dom';
 import { useEffect} from "react";
 import useFetch from "../../hooks/useFecth";
