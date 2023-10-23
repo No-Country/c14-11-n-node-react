@@ -1,9 +1,6 @@
 
 const Cards = () => {
 
-    
-    
-
   return (
     <div>lorem*1000</div>
   )
