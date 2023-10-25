@@ -3,6 +3,7 @@ import useFetch from "../hooks/useFecth";
 import { useForm } from "react-hook-form";
 import "../style/filters.css"
 
+
 const Filters = () => {
 
   
@@ -42,6 +43,7 @@ console.log(moviegenre);
           ))}
         </select>
         <button type="submit">Submit</button>
+
       </form>
       <section className="filter__movies">
           {

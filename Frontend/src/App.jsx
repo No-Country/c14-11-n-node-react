@@ -10,6 +10,10 @@ import Error404 from './pages/Error404'
 import Nabvar from './components/Nabvar'
 import Filters from './components/Filters'
 
+
+
+
+
 export default function App() {
   return (
     <div className="main__container">
@@ -36,6 +40,7 @@ export default function App() {
           <Route path="*" element={<Error404 />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          
         </Routes>
       </AuthProvider>
     </div>

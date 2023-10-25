@@ -18,7 +18,8 @@ const Nabvar = () => {
     <div className="nabvar__title--icon">
     <Link to={"/"}>
         <i className="bx bx-md bx-movie-play icon_navbar"></i>
-      </Link>
+        </Link>
+        
       {user && <h2 className="nabvar__title">Hola!!  {user?.email}</h2>}
       
     </div>
