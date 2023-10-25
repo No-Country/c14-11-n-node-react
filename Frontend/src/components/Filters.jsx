@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import useFetch from "../hooks/useFecth";
 import { useForm } from "react-hook-form";
 import "../style/filters.css"
+import { useNavigate } from "react-router-dom";
 
 
 const Filters = () => {
 
-  
   const [genrefilter, setGenrefilter] = useState();
   // const [movieFilter, setMovieFilter] = useState()
 
@@ -18,7 +18,7 @@ const Filters = () => {
   const [moviegenre, setMoviegenre] = useFetch(url1)
 
 
-console.log(moviegenre);
+console.log(genrefilter);
   useEffect(() => {
     setGenres();
     setMoviegenre()
@@ -30,6 +30,13 @@ console.log(moviegenre);
     setGenrefilter(data.genre);
     reset();
   };
+
+ const navigate = useNavigate()
+
+ 
+ const hanldeName = (title) => {
+  navigate(`/playmovies/${title}`)
+ }
 
   return (
     <section className="container__filter__cards">
@@ -48,7 +55,7 @@ console.log(moviegenre);
       <section className="filter__movies">
           {
             moviegenre?.map((movie) => (
-              <div className="movies__card" key={movie.id}>
+              <div onClick={()=>hanldeName(movie.title)}  className="movies__card" key={movie.id}>
                 <img src={baseURL+movie.backdrop_path} alt=""/>
                 <h1>{movie.title}</h1>
               </div>
