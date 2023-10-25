@@ -10,13 +10,9 @@ import Error404 from './pages/Error404'
 import Nabvar from './components/Nabvar'
 import Filters from './components/Filters'
 
-<<<<<<< HEAD
 
 
 
-=======
-//hayq ue hacer una vaca para comprarle un computador nueva Yoselin  :v
->>>>>>> f196ad8b132a7218a9a84c210a36b2290ea9cd09
 
 export default function App() {
   return (
