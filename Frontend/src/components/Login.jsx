@@ -32,7 +32,7 @@ const Login = () => {
     setError("");
     try {
       await login(userData.email, userData.password);
-      navigate("/");
+      
     } catch (error) {
       const errorCode = error.code;
       setError(errorCode);
