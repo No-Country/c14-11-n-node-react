@@ -61,6 +61,8 @@ const Auth = () => {
 
   
 
+  console.log(auth.currentUser)
+
   return (
     //se agrego renderizado condicional para los dos moduls tanto el de 
     //inicio de secion comop para el registro falta agregar mas logica
