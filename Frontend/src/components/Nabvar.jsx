@@ -28,6 +28,7 @@ const Nabvar = () => {
       ) : (
         <Link to={"/register"}>
           <button className="nabvar__btn" >Registrase</button>
+          
         </Link>
       )}
     </header>

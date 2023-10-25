@@ -43,22 +43,24 @@ const Register = () => {
     }}>
       {error && <p>{error}</p>}
       <form className="register__form" onSubmit={handleSubmit}>
-      <label htmlFor="email">Email</label>
+      <label className="register__label" htmlFor="email">Email</label>
       <input
+      className="register__input"
         onChange={handleChange}
         type="email"
         name="email"
         placeholder="email@email.com"
       />
-      <label htmlFor="password">password</label>
+      <label className="register__label" htmlFor="password">password</label>
       <input
+      className="register__input"
         onChange={handleChange}
         type="password"
         name="password"
         id="password"
         placeholder="******"
       />
-      <button>Register</button>
+      <button className="register__button--submit">Register</button>
     </form>
     </motion.div>
   );

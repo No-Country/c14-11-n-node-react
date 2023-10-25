@@ -9,7 +9,7 @@ import Cards from "./pages/Cards";
 import Error404 from "./pages/Error404";
 import Nabvar from "./components/Nabvar";
 import Filters from "./components/Filters";
-import Playmovies from "./pages/Playmovies";
+// import Playmovies from "./pages/Playmovies";
 import Trailer from "./pages/TrailersMovies"
 
 export default function App() {

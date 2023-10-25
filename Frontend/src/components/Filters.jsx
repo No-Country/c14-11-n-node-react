@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Filters = () => {
 
   const [genrefilter, setGenrefilter] = useState();
-  // const [movieFilter, setMovieFilter] = useState()
+  //  const [movieFilter, setMovieFilter] = useState()
 
   const baseURL = "https://image.tmdb.org/t/p/w500";
   const url = "http://localhost:4000/filters/genres";
@@ -18,11 +18,12 @@ const Filters = () => {
   const [moviegenre, setMoviegenre] = useFetch(url1)
 
 
-console.log(genrefilter);
+
   useEffect(() => {
     setGenres();
     setMoviegenre()
-  }, []);
+    setGenrefilter(moviegenre)
+  }, [genrefilter]);
 
   const { register, handleSubmit, reset } = useForm();
 
@@ -49,7 +50,7 @@ console.log(genrefilter);
             </option>
           ))}
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit">Busacar Genero</button>
 
       </form>
       <section className="filter__movies">

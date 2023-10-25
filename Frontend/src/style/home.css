@@ -5,6 +5,8 @@ width: 100%;
 padding-top: 1rem;
 }
 
+
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -30,14 +32,13 @@ padding-top: 1rem;
 
 
 .nabvar__card{
-position: relative;
-display: flex;
+width: 100%;
 
 }
 
 .nabvar__card>h1{
   position: absolute;
-  top: 550px;
+  top: 450px;
   left: 0px;
   background-color: lightgrey;
   font-size: 2rem;

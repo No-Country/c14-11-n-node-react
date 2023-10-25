@@ -18,14 +18,14 @@
   align-items: center;
   gap: 2rem;
 }
-.login__label {
+.login__label, .register__label {
   font-weight: bold;
   font-size: 1.5rem;
   opacity: 70%;
   color: lightgrey;
 }
 
-.login__input {
+.login__input, .register__input {
   width: 400px;
   height: 50px;
   border-radius: 1rem;
@@ -46,7 +46,14 @@
   opacity: 50%;
 }
 
-.login__button--submit {
+.register__input::placeholder {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  opacity: 50%;
+}
+
+.login__button--submit, .register__button--submit{
   width: 400px;
   height: 50px;
   border-radius: 1rem;
@@ -96,10 +103,20 @@
     color: white;
     transition: .3s ease-in-out;
 }
+.register__button--submit:hover{
+  background-color: rgb(142, 141, 141);
+  color: white;
+  transition: .3s ease-in-out;
+}
 
 .login__button--google:active{
  transform: scale(.9);
 }
+
+.register__button--submit:active{
+  transform: scale(.9);
+ }
+
 .login__button--google > img {
   width: 30px;
 }
