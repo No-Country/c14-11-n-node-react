@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
-import "../style/register.css"
+import "../style/loginAndRegister.css";
 import { motion }from "framer-motion"
 
 
@@ -33,6 +33,7 @@ const Register = () => {
 
   return (
     <motion.div
+    className="register"
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{
@@ -41,7 +42,7 @@ const Register = () => {
       ease: [0, 0.71, 0.2, 1.01]
     }}>
       {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
+      <form className="register__form" onSubmit={handleSubmit}>
       <label htmlFor="email">Email</label>
       <input
         onChange={handleChange}
