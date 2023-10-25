@@ -7,7 +7,7 @@ import "../style/home.css"
 
 import { useEffect} from "react";
 import useFetch from "../hooks/useFecth";
-import Cards from "../pages/Cards";
+
 
 const Home = () => {
 
@@ -36,16 +36,16 @@ const Home = () => {
         speed={3000}
         className="mySwiper"
       >
-        {movies?.map(movie =>(
+        {movies?.slice(0,7).map(movie =>(
           <SwiperSlide key={movie.title}>
             <div className="nabvar__card">
-              <img src={baseURL + movie.poster_path}/>
+              <img src={baseURL + movie.backdrop_path}/>
               <h1>{movie.title}</h1>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <Cards/>
+    
     </section>
   );
 };

@@ -4,6 +4,9 @@ import { auth } from "../firebase/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { onAuthStateChanged } from "firebase/auth";
 import { signOut } from "firebase/auth";
+
+
+
 export const authContext = createContext();
 
 export const useAuth = () => {

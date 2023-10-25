@@ -1,0 +1,69 @@
+.container__filter__cards{
+    background-color: white;
+    margin-top: 2rem;
+    max-width: 1240px;
+    border-radius: 3rem;
+    width: 100%;
+   padding-bottom: 4rem;
+
+}
+
+
+.container__filter__cards>form{
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.container__filter__cards>form>select{
+    width: 375px;
+    height: 50px;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    text-align: center;
+    color: rgb(255, 251, 251);
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: lightslategray;
+}
+
+.container__filter__cards>form>button{
+    width: 100px;
+    height: 50px;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: rgb(255, 251, 251);
+    transition: .3s ease-in-out;
+    background-color:lightslategray ;
+}
+.filter__movies{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+     gap: 2rem;
+}
+
+.movies__card>img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.movies__card{
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lightslategray;
+}
+
+

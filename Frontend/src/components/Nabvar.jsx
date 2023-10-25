@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../style/nabvar.css";
 import { useAuth } from "../context/authContext";
 
 const Nabvar = () => {
   
   const { user, logout } = useAuth();
+  const navigate = useNavigate()
 
   const handleClick = async () => {
     await logout();
+     navigate("/login")
   };
 
   return (
@@ -17,7 +19,7 @@ const Nabvar = () => {
     <Link to={"/"}>
         <i className="bx bx-md bx-movie-play icon_navbar"></i>
       </Link>
-      <h2 className="nabvar__title">Hola!!  {user?.email}</h2>
+      {user && <h2 className="nabvar__title">Hola!!  {user?.email}</h2>}
       
     </div>
       {user ? (

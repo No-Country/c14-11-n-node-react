@@ -1,54 +1,60 @@
-import React, { useContext } from 'react'
-import useFetch from '../hooks/useFecth'
-import Cards from '../pages/Cards'
-import { Store } from '../Store'
+import { useEffect, useState } from "react";
+import useFetch from "../hooks/useFecth";
+import { useForm } from "react-hook-form";
+import "../style/filters.css"
 
 const Filters = () => {
-  const {
-    state: {
-      // allMovies,
-      movies,
-    },
-    dispatch,
-  } = useContext(Store)
 
-  const url = 'http://localhost:4000/list/upcomings'
-  const url2 = 'http://localhost:4000/filters/genres'
+  
+  const [genrefilter, setGenrefilter] = useState();
+  // const [movieFilter, setMovieFilter] = useState()
 
-  const [moviesF, setMoviesF] = useFetch(url)
-  const [filters, setFilters] = useFetch(url2)
+  const baseURL = "https://image.tmdb.org/t/p/w500";
+  const url = "http://localhost:4000/filters/genres";
+  const url1 = `http://localhost:4000/filters/genre/${genrefilter}`
 
-  const handleFilters = ({ id }) => {
-    // const newCall = await axios.get(`${url}/${id}`)
-    console.log(id)
-    dispatch({ type: 'GET_MOVIES_FILTERED', payload: moviesF })
-  }
+  const [genres, setGenres] = useFetch(url);
+  const [moviegenre, setMoviegenre] = useFetch(url1)
 
-  React.useEffect(() => {
-    setMoviesF()
-    setFilters()
-  }, [])
+
+console.log(moviegenre);
+  useEffect(() => {
+    setGenres();
+    setMoviegenre()
+  }, []);
+
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data) => {
+    setGenrefilter(data.genre);
+    reset();
+  };
 
   return (
-    <main>
-      <section>
-        <select>
-          {filters?.map((filtro) => (
-            <option onClick={() => handleFilters(filtro.id)} key={filtro.id}>
-              {filtro.name}
+    <section className="container__filter__cards">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <select {...register("genre")}>
+        <option value="">Género</option> 
+          {genres?.map((genre) => (
+            <option value={genre.id} key={genre.id}>
+              {genre.name}
             </option>
           ))}
         </select>
-        {/* <button onClick={() => handleFilters(idFiltro)}>Magia</button> */}
+        <button type="submit">Submit</button>
+      </form>
+      <section className="filter__movies">
+          {
+            moviegenre?.map((movie) => (
+              <div className="movies__card" key={movie.id}>
+                <img src={baseURL+movie.backdrop_path} alt=""/>
+                <h1>{movie.title}</h1>
+              </div>
+            ))
+          }
       </section>
-      <section>
-        <h3>Movies</h3>
-        {moviesF?.map((movie) => (
-          <Cards key={movie.id} name={movie.original_title} img={movie.image} />
-        ))}
-      </section>
-    </main>
-  )
-}
+    </section>
+  );
+};
 
-export default Filters
+export default Filters;

@@ -1,43 +1,61 @@
-import { useState } from "react";
+// Importaciones de módulos y dependencias
+import { useEffect, useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
-import "../style/login.css";
-import google from "../assets/google.svg";
-import { motion } from "framer-motion";
+import "../style/login.css";  // Estilos para el componente
+import google from "../assets/google.svg";  // Icono de Google
+import { motion } from "framer-motion";  // Biblioteca de animaciones
 
 const Login = () => {
-  const [user, setUser] = useState({
+
+  // Estado local para almacenar datos de usuario
+  const [userData, setUser] = useState({
     email: "",
     password: "",
   });
 
-  const { login, loginWithGoogle } = useAuth();
+  // Hooks del contexto de autenticación y navegación
+  const { user, login, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
+  
+  // Estado local para manejar errores
   const [error, setError] = useState(null);
 
+  // Actualizar el estado de userData con los cambios en los inputs
   const handleChange = ({ target: { name, value } }) => {
-    setUser({ ...user, [name]: value });
+    setUser({ ...userData, [name]: value });
   };
 
+  // Manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      await login(user.email, user.password);
+      await login(userData.email, userData.password);
       navigate("/");
     } catch (error) {
-      setError(error.message);
+      const errorCode = error.code;
+      setError(errorCode);
     }
   };
+
+  // Redireccionar si el usuario ya está autenticado
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
+
+  // Inicio de sesión con Google
   const handleGoogleSignin = async () => {
     await loginWithGoogle();
     navigate("/");
   };
 
+  // Redireccionar a la página de registro
   const handldeRegister = () => {
     navigate("/register");
   };
-
   return (
     <motion.div
       className="login"
@@ -78,7 +96,8 @@ const Login = () => {
         className="login__button login__button--google"
         onClick={handleGoogleSignin}
       >
-        Login with Google <img src={google} alt="" />
+        Iniciar sesion con google
+        <img src={google} alt="" />
       </button>
 
       <button className="login__button--register" onClick={handldeRegister}>
