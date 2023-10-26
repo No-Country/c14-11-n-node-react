@@ -4,8 +4,6 @@ const getMovieByName = require('../controllers/getMovieByName')
 const { getPopMovies } = require('../controllers/getPopularMovies')
 const getByGenre = require('../controllers/getMoviesByGenre')
 
-
-
 //TRAER PELICULAS DE LA API
 const getAllMoviesHandler = async (req, res) => {
   try {
@@ -37,7 +35,7 @@ const getMovieByNameHandler = async (req, res) => {
   try {
     const films = await getMovieByName(name)
 
-    return res.status(200).json(films)
+    return res.status(200).send(films)
   } catch (error) {
     return res.status(404).send(error)
   }
@@ -54,13 +52,9 @@ const getMovieByGenresHandler = async (req, res) => {
   }
 }
 
-
-
 module.exports = {
   getAllMoviesHandler,
   getMovieByIdHandler,
   getMovieByNameHandler,
-  getMovieByGenresHandler
+  getMovieByGenresHandler,
 }
-
-

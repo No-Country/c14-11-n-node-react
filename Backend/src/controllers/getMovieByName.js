@@ -1,15 +1,16 @@
 require('dotenv').config()
 const axios = require('axios')
-const { mapLinks } = require('../utils/cleanFilms')
+const { mapLinksOnArray } = require('../utils/cleanFilms')
 const { API_KEY } = process.env
 const API_URL = 'https://api.themoviedb.org'
 
 const getMovieByName = async (inputName) => {
   const { data } = await axios.get(
-    `${API_URL}/3/movie?language=es-ES&query=${inputName}&api_key=${API_KEY}`
+    `${API_URL}/3/search/movie?query=${inputName}&api_key=${API_KEY}`
   )
 
-  return mapLinks(data)
+  const cleanCode = mapLinksOnArray(data.results)
+  return cleanCode
 }
 
 module.exports = getMovieByName
