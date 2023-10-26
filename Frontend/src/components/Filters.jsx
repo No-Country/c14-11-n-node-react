@@ -8,7 +8,7 @@ import axios from 'axios'
 const Filters = () => {
   // Declaración de variables de estado y constantes
   const [genrefilter, setGenrefilter] = useState() // Almacena el filtro de género seleccionado
-  const [searched, setSearched] = useState([]) // Almacena los resultados de búsqueda
+  const [searched, setSearched] = useState(false) // Almacena los resultados de búsqueda
 
   const baseURL = 'https://image.tmdb.org/t/p/w500' // URL base para las imágenes
   const url = 'http://localhost:4000/filters/genres' // URL para obtener géneros
