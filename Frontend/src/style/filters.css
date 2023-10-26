@@ -1,77 +1,177 @@
-.container__filter__cards{
-    background: rgba(255, 255, 255, 0.1);
+.container__filter__cards {
+  background: rgba(255, 255, 255, 0.367);
   backdrop-filter: blur(20px);
-    margin-top: 2rem;
-    max-width: 1240px;
-    border-radius: 3rem;
-    width: 100%;
-   padding-bottom: 4rem;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+  margin-top: 2rem;
+  max-width: 1240px;
+  border-radius: 3rem;
+  width: 100%;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
+.container__filters {
+  padding: 2rem 4rem 2rem 4rem;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+}
 
-.container__filter__cards>form{
-    padding: 2rem 2rem 2rem 4rem ;
-    display: flex;
-    gap: 1rem;
+.container__filters > form {
+  display: flex;
+  gap: 1rem;
+}
+.container__filters {
+  display: flex;
+  justify-content: space-between;
+}
+.container__filters > div {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Estilos del input */
+
+.container__filters > div > input {
+  font-size: 1em;
+  padding: 0.6em 1em;
+  border: none;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.container__filters > div > input:hover {
+  background-color: #f2f2f2;
+}
+
+.container__filters > div > input:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container__filters > div > button {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 6px #c5c5c5, -6px -6px 12px #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  color: lightslategray;
+}
+.container__filters > div > button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  transition: 0.2s;
+}
+
+.container__filters > form > select {
+  font-size: 1em;
+  padding: 0.6em 1em;
+  border: none;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px;
+
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.container__filters > form > select:hover {
+  background-color: #f2f2f2;
+}
+
+.container__filters > form > select:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container__filters > form > button {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 6px #c5c5c5, -6px -6px 12px #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  color: lightslategray;
+}
+.container__filters > form > button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  transition: 0.2s;
+}
+.filter__movies {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.movies__card > img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.movies__card {
+  width: 300px;
   
-    width: 100%;
-    justify-content: flex-start;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(241, 237, 237, 0.671);
 }
 
-.container__filter__cards>form>select{
-    width: 275px;
-    height: 50px;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-    padding: 1rem;
-    text-align: center;
-    color: rgb(255, 251, 251);
-    font-weight: bold;
-    font-size: 1.2rem;
-    background-color: lightslategray;
-    cursor: pointer;
+.tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+  
 }
 
-.container__filter__cards>form>button{
-    width: 200px;
-    height: 50px;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-    padding: 0 1rem;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: rgb(255, 251, 251);
-    transition: .3s ease-in-out;
-    background-color:lightslategray ;
-}
-.filter__movies{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-     gap: 2rem;
-     
+.circle {
+  padding: 0 4px;
 }
 
-.movies__card>img{
-    width: 100%;
-    height: 250px;
-    border-radius: 10px;
+.box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
 }
 
-.movies__card{
-    width: 350px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: lightslategray;
+.red {
+  background-color: #ff605c;
 }
 
+.yellow {
+  background-color: #ffbd44;
+}
 
+.green {
+  background-color: #00ca4e;
+}

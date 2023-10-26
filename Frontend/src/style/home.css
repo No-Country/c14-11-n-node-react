@@ -1,11 +1,9 @@
-.container__home{
-height: 600px;
-max-width: 1240px;
-width: 100%;
-padding-top: 1rem;
+.container__home {
+
+  max-width: 1240px;
+  width: 100%;
+  padding-top: 1rem;
 }
-
-
 
 .swiper {
   width: 100%;
@@ -16,33 +14,34 @@ padding-top: 1rem;
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
-   border-radius: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 .swiper-slide img {
-  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 500px;
+  
 }
 
-
-.nabvar__card{
-width: 100%;
-
+.nabvar__card > img {
+  border-radius: 2rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1000px;
 }
 
-.nabvar__card>h1{
+.nabvar__card {
+  width: 100%;
+}
+
+.nabvar__card > h1 {
   position: absolute;
-  top: 450px;
-  left: 0px;
+  top: 350px;
+  left: 120px;
   background-color: lightgrey;
   font-size: 2rem;
-  border-radius:0px 10px 10px 0px;
+  border-radius: 0px 10px 10px 0px;
   padding: 1rem;
   opacity: 60%;
   color: rgb(26, 30, 33);

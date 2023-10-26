@@ -16,19 +16,18 @@
   padding: 2rem;
 }
 .movie__reproductor-btn {
-  width: 200px;
-  height: 50px;
-  border-radius: 1rem;
-  border: none;
-  outline: none;
-  padding: 0 1rem;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-weight: bold;
-  font-size: 1.2rem;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 6px #c5c5c5, -6px -6px 12px #ffffff;
   cursor: pointer;
-  color: rgb(142, 141, 141);
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
+  font-weight: bold;
+  color: lightslategray;
 }
 
 .movie__reproductor__btns {
@@ -37,13 +36,11 @@
   justify-content: space-between;
 }
 
-.movie__reproductor-btn:hover {
-  background-color: rgb(142, 141, 141);
-  color: white;
-  transition: 0.3s ease-in-out;
-}
+
 .movie__reproductor-btn:active {
-  transform: scale(0.9);
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  transition: 0.2s;
 }
 
 .movie__Info {

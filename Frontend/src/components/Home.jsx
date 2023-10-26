@@ -25,15 +25,15 @@ const Home = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 5500,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         pagination={{
-          clickable: true,
+          clickable: false,
         }}
-        navigation={true}
+        navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
-        speed={3000}
+        speed={2000}
         className="mySwiper"
       >
         {movies?.slice(0,7).map(movie =>(

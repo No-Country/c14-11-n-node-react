@@ -18,7 +18,6 @@ const TrailersMovies = () => {
   const [trailer, setTrailer] = useState(null);
   const [movie, setMovie] = useState(null);
   const [playing, setPlaying] = useState(true);
-
   const navigate = useNavigate()
 
 

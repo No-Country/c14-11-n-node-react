@@ -1,6 +1,7 @@
 .container__nabvar {
   margin-top: 1rem;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.367);
+  backdrop-filter: blur(20px);
   max-width: 1240px;
   width: 100%;
   border-radius: 10px;
@@ -15,38 +16,39 @@
 }
 
 .nabvar__title{
-    padding: 0px 1rem;
-    font-weight: bold;
-    font-size: 1rem;
-    border: none;
-    outline: none;
-    
-    background-color: lightgray;
-    border-radius: 5px;
-    opacity: 70%;
-    transition: 0.3s;
-    color: rgb(0, 0, 0);
-    display: flex;
-    align-items: center;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 6px #c5c5c5, -6px -6px 6px #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  color: lightslategray;
 }
 
 .nabvar__btn{
-    padding: 5px 1rem;
-    font-weight: bold;
-    font-size: 1rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: lightgray;
-    border-radius: 5px;
-    opacity: 70%;
-    transition: 0.3s;
-    color: rgb(0, 0, 0);
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 6px #c5c5c5, -6px -6px 12px #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  color: lightslategray;
 }
 
-.nabvar__btn:hover {
-  opacity: 100%;
-  transition: 0.3s;
+.nabvar__btn:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  transition: 0.2s;
 }
 
 .icon_navbar{
