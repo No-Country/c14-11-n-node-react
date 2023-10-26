@@ -3,6 +3,7 @@ const getMovieById = require('../controllers/getMovieById')
 const getMovieByName = require('../controllers/getMovieByName')
 const { getPopMovies } = require('../controllers/getPopularMovies')
 const getByGenre = require('../controllers/getMoviesByGenre')
+const getPopularByGenres = require('../controllers/getPopularByGenres')
 
 
 
@@ -54,13 +55,24 @@ const getMovieByGenresHandler = async (req, res) => {
   }
 }
 
+///Traer populares por genero
+const getPopulateByGenresHandler = async (req, res) => {
+  const { id } = req.params
+  try {
+    const films = await getPopularByGenres(id)
+    return res.status(200).json(films)
+  } catch (error) {
+    return res.status(404).send(error)
+  }
+}
 
 
 module.exports = {
   getAllMoviesHandler,
   getMovieByIdHandler,
   getMovieByNameHandler,
-  getMovieByGenresHandler
+  getMovieByGenresHandler,
+  getPopulateByGenresHandler,
 }
 
 

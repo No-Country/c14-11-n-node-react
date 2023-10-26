@@ -3,6 +3,7 @@ const {
   getMovieByIdHandler,
   getMovieByNameHandler,
   getMovieByGenresHandler,
+  getPopulateByGenresHandler,
 } = require('../handlers/filmsHandlers')
 
 const { Router } = require('express')
@@ -15,6 +16,9 @@ const filmRouter = Router()
 filmRouter.get(`/`, getAllMoviesHandler)
 //TRAER PELICULAS POR GENERO ID
 filmRouter.get('/genres/:id', getMovieByGenresHandler)
+
+//TRAE PELICULAS POPULARES POR GENERO ID...
+filmRouter.get('/popular/:id', getPopulateByGenresHandler)
 
 //TRAER DETAIL DE LA PELICULA (PETICION POR ID)
 filmRouter.get('/:filmId', getMovieByIdHandler)

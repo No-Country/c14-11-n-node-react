@@ -6,6 +6,7 @@ const filmRouter = require('./routes/filmsRoutes')
 const filterRouter = require('./routes/filterRoutes')
 const listRouter = require('./routes/listRoutes')
 const errorResponse = require('./utils/errorResponse')
+const tvRouter = require ('./routes/tvRoutes')
 
 const app = express();
 
@@ -25,6 +26,8 @@ app.use('/getmovies', filmRouter)
 app.use('/filters', filterRouter)
 
 app.use('/list', listRouter)
+
+app.use('/tv', tvRouter)
 
 const PORT = 4000
 app.listen(PORT, () => {
