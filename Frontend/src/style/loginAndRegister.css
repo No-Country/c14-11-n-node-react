@@ -22,7 +22,7 @@
   font-weight: bold;
   font-size: 1.5rem;
   opacity: 70%;
-  color: lightgrey;
+  color: rgb(149, 147, 147);
 }
 
 .login__input, .register__input {
@@ -94,7 +94,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: rgb(142, 141, 141);
+  color: rgb(96, 95, 95);
   transition: .3s ease-in-out;
 }
 
