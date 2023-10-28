@@ -11,7 +11,7 @@ import Nabvar from "./components/Nabvar";
 import Filters from "./components/Filters";
 // import Playmovies from "./pages/Playmovies";
 import Trailer from "./pages/TrailersMovies"
-
+//hey
 export default function App() {
   return (
     <div className="main__container">
