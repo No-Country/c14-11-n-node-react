@@ -6,6 +6,12 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Filters = () => {
+
+  const onSubmit = (data) => {
+    setGenrefilter(data.genre);
+    setSearched(null);
+    reset();
+  };
   // Declaración de variables de estado y constantes
   const [genrefilter, setGenrefilter] = useState(); // Almacena el filtro de género seleccionado
   const [searched, setSearched] = useState(false); // Almacena los resultados de búsqueda
@@ -37,19 +43,15 @@ const Filters = () => {
   // Efecto para actualizar el filtro de género y cargar películas por género cuando cambia genrefilter
   useEffect(() => {
     setGenres();
-    setMoviegenre();
     setGenrefilter(moviegenre);
+    setMoviegenre();
   }, [genrefilter]);
 
   // Configuración para el formulario y sus datos
   const { register, handleSubmit, reset } = useForm();
 
   // Función que se ejecuta cuando se envía el formulario
-  const onSubmit = (data) => {
-    setGenrefilter(data.genre);
-    setSearched(null);
-    reset();
-  };
+
 
   const navigate = useNavigate(); // Obtiene la función de navegación
 

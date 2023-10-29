@@ -1,59 +1,51 @@
 .container__nabvar {
   margin-top: 1rem;
-  background: rgba(255, 255, 255, 0.367);
-  backdrop-filter: blur(20px);
+  background: #fff0f0;
   max-width: 1240px;
   width: 100%;
-  border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   padding: 1rem;
 }
-.nabvar__title--icon{
-    display: flex;
-    gap: 2rem;
+.nabvar__title--icon {
+  display: flex;
+  gap: 2rem;
 }
 
-.nabvar__title{
-  color: #090909;
-  padding: 0.7em 1.7em;
-  font-size: 18px;
-  border-radius: 0.5em;
-  background: #e8e8e8;
-  border: 1px solid #e8e8e8;
-  transition: all 0.3s;
-  box-shadow: 6px 6px 6px #c5c5c5, -6px -6px 6px #ffffff;
-  cursor: pointer;
-  transition: 0.3s;
+.nabvar__title {
+  color: var(--guardsman-red-700);
+  
+  font-size: 20px;
   font-weight: bold;
-  color: lightslategray;
 }
 
-.nabvar__btn{
-  color: #090909;
-  padding: 0.7em 1.7em;
-  font-size: 18px;
-  border-radius: 0.5em;
-  background: #e8e8e8;
-  border: 1px solid #e8e8e8;
-  transition: all 0.3s;
-  box-shadow: 6px 6px 6px #c5c5c5, -6px -6px 12px #ffffff;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: bold;
-  color: lightslategray;
-}
-
-.nabvar__btn:active {
-  color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+.nabvar__btn {
+  font-size: larger;
+  font-weight: bolder;
+  color: white;
+  background-color: #ff2c2c;
+  padding: 1rem;
   transition: 0.2s;
 }
 
-.icon_navbar{
-    color: #bbbaba;
+.nabvar__btn:hover {
+  transition: 0.2s;
+  background-color: #f60c0c;
 }
 
+.icon_navbar {
+  color: #ff2c2c;
+}
 
+.nabvar__info_profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
+}
+
+.nabvar__info_profile > img {
+  border-radius: 50%;
+  width: 50px;
+}

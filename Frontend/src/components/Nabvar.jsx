@@ -1,54 +1,55 @@
-import { Link, useNavigate } from 'react-router-dom'
-import '../style/nabvar.css'
-import { useAuth } from '../context/authContext'
-// import { useState } from 'react'
-// import axios from 'axios'
+import { Link, useNavigate } from "react-router-dom";
+import "../style/nabvar.css";
+import { useAuth } from "../context/authContext";
+import { useState } from "react";
 
 const Nabvar = () => {
-  const { user, logout } = useAuth()
-  const navigate = useNavigate()
+  const [login, setLogin] = useState(true);
 
-  // const [inputText, setInputText] = useState('')
-  // const url = `http://localhost:4000/search?name=${inputText}`
+  const { user, logout } = useAuth();
 
-  // const handleChange = (event) => {
-  //   setInputText(event.target.value)
-  // }
-
-  // const handleSearch = async () => {
-  //   const { data } = await axios.get(url)
-  //   console.log(data)
-  // }
+  console.log(user);
+  const navigate = useNavigate();
 
   const handleClick = async () => {
-    await logout()
-    navigate('/login')
-  }
+    await logout();
+    navigate("/login");
+  };
+
+  const handlelogin = () => {
+    setLogin(!login);
+    if (login === false) {
+      navigate("/login");
+    } else if (login === true) {
+      navigate("/register");
+    }
+  };
 
   return (
     <header className="container__nabvar">
       <div className="nabvar__title--icon">
-        <Link to={'/'}>
-          <i className="bx bx-md bx-movie-play icon_navbar"></i>
+        <Link to={"/"}>
+          <i className="bx bx-lg bx-movie-play icon_navbar"></i>
         </Link>
 
-        {user && <h2 className="nabvar__title">Hola!! {user?.email}</h2>}
-        {/* <div>
-          <input type="text" value={inputText} onChange={handleChange} />
-          <button onClick={handleSearch}>Search</button>
-        </div> */}
+        {user && (
+          <div className="nabvar__info_profile">
+            <img src={user?.photoURL} alt="" />
+            <h2 className="nabvar__title">{user?.email}</h2>
+          </div>
+        )}
       </div>
       {user ? (
         <button className="nabvar__btn" onClick={handleClick}>
           Cerrar sesion
         </button>
       ) : (
-        <Link to={'/register'}>
-          <button className="nabvar__btn">Registrase</button>
-        </Link>
+        <button onClick={handlelogin} className="nabvar__btn">
+          {login ? "Registrase" : "Iniciar sesion"}
+        </button>
       )}
     </header>
-  )
-}
+  );
+};
 
-export default Nabvar
+export default Nabvar;

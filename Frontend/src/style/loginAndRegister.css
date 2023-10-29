@@ -1,40 +1,57 @@
-.login, .register{
+.login,
+.register {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+  background-color: #fff0f0;
   gap: 1.3rem;
   padding: 1.5rem;
-  border-radius: 1.5rem;
-   margin-top: 2rem;
-   
+ 
+  margin: 2rem;
+  width: 100%;
+  max-width: 400px;
 }
 
-.login__form, .register__form {
+.login__error, .ragister_error{
+  background-color:var(--guardsman-red-400);
+  padding: 1rem;
+  text-align: center;
+  color: var(--guardsman-red-900);
+  font-weight: bold;
+  width: 100%;
+  max-width:400px;
+}
+
+.login__form,
+.register__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  width: 100%;
+  max-width: 400px;
 }
-.login__label, .register__label {
+.login__label,
+.register__label {
   font-weight: bold;
   font-size: 1.5rem;
   opacity: 70%;
-  color: rgb(149, 147, 147);
+  color:#8d0f0f;
 }
 
-.login__input, .register__input {
-  width: 400px;
+.login__input,
+.register__input {
+  width: 100%;
+  max-width: 400px;
   height: 50px;
-  border-radius: 1rem;
+
   border: none;
   outline: none;
   padding: 0 1rem;
   text-align: center;
-  color: rgb(142, 141, 141);
-  
+  color:#8d0f0f;
+  background-color: #ff9999;
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -43,7 +60,7 @@
   font-family: "Inter", sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
-  opacity: 50%;
+  color:#ffc3c3;
 }
 
 .register__input::placeholder {
@@ -53,10 +70,12 @@
   opacity: 50%;
 }
 
-.login__button--submit, .register__button--submit{
-  width: 400px;
+.login__button--submit,
+.register__button--submit {
+  width: 100%;
+  max-width: 400px;
   height: 50px;
-  border-radius: 1rem;
+  
   border: none;
   outline: none;
   padding: 0 1rem;
@@ -65,23 +84,25 @@
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
-  color: rgb(142, 141, 141);
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-color:#ff2c2c ;
+  color: white;
 }
 
-.login__button--submit:hover{
-    background-color: rgb(142, 141, 141);
-    color: white;
-    transition: .3s ease-in-out;
+.login__button--submit:hover {
+  background-color: #f60c0c;
+  color: white;
+  transition: 0.3s ease-in-out;
 }
-.login__button--submit:active{
-    transform: scale(.9);
+.login__button--submit:active {
+  transform: scale(0.9);
 }
 
 .login__button--google {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 50px;
-  border-radius: 1rem;
+ 
   border: none;
   outline: none;
   padding: 0 1rem;
@@ -94,52 +115,55 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: rgb(96, 95, 95);
-  transition: .3s ease-in-out;
-}
-
-.login__button--google:hover{
-    background-color: rgb(142, 141, 141);
-    color: white;
-    transition: .3s ease-in-out;
-}
-.register__button--submit:hover{
-  background-color: rgb(142, 141, 141);
+  background-color:#ff2c2c ;
   color: white;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.login__button--google:active{
- transform: scale(.9);
+.login__button--google:hover {
+  background-color: #f60c0c;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.register__button--submit:hover {
+  background-color: #f60c0c;
+  color: white;
+  transition: 0.3s ease-in-out;
 }
 
-.register__button--submit:active{
-  transform: scale(.9);
- }
+.login__button--google:active {
+  transform: scale(0.9);
+}
+
+.register__button--submit:active {
+  transform: scale(0.9);
+}
 
 .login__button--google > img {
   width: 30px;
 }
 .login__button--register {
-    width: 400px;
-    height: 50px;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-    padding: 0 1rem;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: rgb(142, 141, 141);
-    transition: .3s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color:#ff2c2c ;
+  color: white;
+  transition: 0.3s ease-in-out;
 }
-.login__button--register:hover{
-    background-color: rgb(142, 141, 141);
-    color: white;
-    transition: .3s ease-in-out;
+.login__button--register:hover {
+  background-color: #f60c0c;
+  color: white;
+  transition: 0.3s ease-in-out;
 }
-.login__button--register:active{
-    transform: scale(.9);
+.login__button--register:active {
+  transform: scale(0.9);
 }

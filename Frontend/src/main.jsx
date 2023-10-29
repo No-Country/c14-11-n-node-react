@@ -1,20 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
 
-import { StoreProvider } from './Store.jsx'
+import { StoreProvider } from "./Store.jsx";
+import { NextUIProvider } from "@nextui-org/system";
 
-
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <React.StrictMode>
       <StoreProvider>
-      
+        <NextUIProvider>
         <App />
+        </NextUIProvider>
       </StoreProvider>
     </React.StrictMode>
   </BrowserRouter>
-)
+);
