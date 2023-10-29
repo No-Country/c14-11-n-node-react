@@ -5,7 +5,6 @@ import { useState } from "react";
 
 const Nabvar = () => {
   const [login, setLogin] = useState(true);
-
   const { user, logout } = useAuth();
 
   console.log(user);

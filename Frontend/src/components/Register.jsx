@@ -1,20 +1,20 @@
-import { useState, } from "react";
+import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 import "../style/loginAndRegister.css";
 import { motion } from "framer-motion";
 
 const Register = () => {
-  const [user, setUser] = useState({
+  const [user1, setUser] = useState({
     email: "",
     password: "",
   });
-  const { signup } = useAuth();
+  const { user, signup } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState();
 
   const handleChange = ({ target: { name, value } }) => {
-    setUser({ ...user, [name]: value });
+    setUser({ ...user1, [name]: value });
   };
 
   const handleSubmit = async (e) => {
@@ -22,7 +22,7 @@ const Register = () => {
     setError("");
 
     try {
-      await signup(user.email, user.password);
+      await signup(user1.email, user1.password);
       navigate("/login");
     } catch (error) {
       console.log(error);
@@ -50,8 +50,9 @@ const Register = () => {
   };
 
   if (user) {
-    navigate('/'); 
+    navigate('/');
 }
+
 
   return (
     <motion.div

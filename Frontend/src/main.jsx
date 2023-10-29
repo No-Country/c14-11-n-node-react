@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
 import { StoreProvider } from "./Store.jsx";
-import { NextUIProvider } from "@nextui-org/system";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
