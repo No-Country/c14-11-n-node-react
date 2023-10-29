@@ -3,10 +3,11 @@ const axios = require('axios')
 const { API_KEY } = process.env
 const API_URL = 'https://api.themoviedb.org'
 
-const getAllGenres = async () => {
-  
+const getAllGenres = async (tv) => {
   const { data } = await axios.get(
-  `${API_URL}/3/genre/${tv?'tv':'movie'}/list?language=es&api_key=${API_KEY}`
+    `${API_URL}/3/genre/${
+      tv ? 'tv' : 'movie'
+    }/list?language=es&api_key=${API_KEY}`
   )
 
   const filmGenres = data.genres
