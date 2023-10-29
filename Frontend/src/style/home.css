@@ -1,48 +1,49 @@
 .container__home {
-
   max-width: 1240px;
   width: 100%;
   padding-top: 1rem;
+  
 }
 
 .swiper {
   width: 100%;
   height: 100%;
   border-radius: 2rem;
+ 
+  
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-
+  display: flex;
+  justify-content: center;
 }
 
 .swiper-slide img {
   width: 100%;
   height: 500px;
-  
 }
 
 .nabvar__card > img {
-  border-radius: 2rem;
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 1000px;
+  
 }
 
-.nabvar__card {
-  width: 100%;
-}
+
 
 .nabvar__card > h1 {
   position: absolute;
   top: 350px;
   left: 120px;
-  background-color: lightgrey;
+  background-color: var(--guardsman-red-400);
   font-size: 2rem;
   border-radius: 0px 10px 10px 0px;
   padding: 1rem;
-  opacity: 60%;
-  color: rgb(26, 30, 33);
+   font-weight: 600;
+  color:var(--guardsman-red-800);
 }

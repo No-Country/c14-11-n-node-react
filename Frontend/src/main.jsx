@@ -11,9 +11,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <React.StrictMode>
       <StoreProvider>
-        <NextUIProvider>
+     
         <App />
-        </NextUIProvider>
+        
       </StoreProvider>
     </React.StrictMode>
   </BrowserRouter>

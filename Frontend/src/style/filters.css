@@ -1,6 +1,6 @@
 .container__filter__cards {
-  background: rgba(255, 255, 255, 0.367);
-  backdrop-filter: blur(20px);
+  background:var(--guardsman-red-100);
+  
   margin-top: 2rem;
   max-width: 1240px;
   border-radius: 3rem;
@@ -138,7 +138,7 @@
 
 .movies__card {
   width: 300px;
-  
+
   padding: 10px;
   border-radius: 10px;
   background-color: rgba(241, 237, 237, 0.671);
@@ -148,7 +148,6 @@
   display: flex;
   align-items: center;
   padding: 9px;
-  
 }
 
 .circle {
