@@ -2,8 +2,9 @@ import React from 'react'
 
 const initialState = {
   allMovies: [],
-  movies: [],
-  filters: [],
+  allSeries: [],
+  movieFilters: [],
+  tvFilters: [],
 }
 
 function reducer(state, action) {
@@ -12,12 +13,36 @@ function reducer(state, action) {
       return {
         ...state,
         allMovies: action.payload,
-        movies: action.payload,
+      }
+    case 'GET_MORE_MOVIES':
+      return {
+        ...state,
+        allMovies: [...state.allMovies, ...action.payload],
       }
     case 'GET_MOVIES_FILTERED':
       return {
         ...state,
-        movies: action.payload,
+        allMovies: action.payload,
+      }
+    case 'GET_MOVIE_FILTERS':
+      return {
+        ...state,
+        movieFilters: action.payload,
+      }
+    case 'GET_TV':
+      return {
+        ...state,
+        allSeries: action.payload,
+      }
+    case 'GET_TV_FILTERED':
+      return {
+        ...state,
+        allSeries: action.payload,
+      }
+    case 'GET_TV_FILTERS':
+      return {
+        ...state,
+        tvFilters: action.payload,
       }
 
     default:

@@ -7,15 +7,15 @@ const getPopularByGenres = require('../controllers/getPopularByGenres')
 
 //TRAER PELICULAS DE LA API
 const getAllMoviesHandler = async (req, res) => {
-  const {page}=req.query
+  const { page } = req.query
 
   try {
-    if(page =='0') throw new Error ('Page no valid')
+    if (page == '0') throw new Error('Page no valid')
     const result = await getAllMovies(page)
 
     return res.status(200).json(result)
   } catch (error) {
-    return res.status(404).send(error.message??error)
+    return res.status(404).send(error.message ?? error)
   }
 }
 
@@ -35,9 +35,10 @@ const getMovieByIdHandler = async (req, res) => {
 //TRAER PELICULA POR NOMBRE
 const getMovieByNameHandler = async (req, res) => {
   const { name } = req.query
+  const { page } = req.query
 
   try {
-    const films = await getMovieByName(name)
+    const films = await getMovieByName(name, page)
 
     return res.status(200).send(films)
   } catch (error) {
@@ -48,8 +49,9 @@ const getMovieByNameHandler = async (req, res) => {
 //TRAER PELICULA POR GENERO ID
 const getMovieByGenresHandler = async (req, res) => {
   const { id } = req.params
+  const { page } = req.query
   try {
-    const films = await getByGenre(id)
+    const films = await getByGenre(id, page)
     return res.status(200).json(films)
   } catch (error) {
     return res.status(404).send(error)
@@ -66,7 +68,6 @@ const getPopulateByGenresHandler = async (req, res) => {
     return res.status(404).send(error)
   }
 }
-
 
 module.exports = {
   getAllMoviesHandler,
