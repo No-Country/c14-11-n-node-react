@@ -102,6 +102,7 @@ const Peliculas = () => {
 
   return (
     <section className="container__filter__cards">
+
       <div className="container__filters">
         <form>
           <select
@@ -126,6 +127,7 @@ const Peliculas = () => {
           <button onClick={handleSearch}>Buscar</button>
         </div>
       </div>
+
       <section className="filter__movies">
         {(searched ? searched : allMovies)?.map((movie) => (
           <Atropos
@@ -154,7 +156,8 @@ const Peliculas = () => {
           </Atropos>
         ))}
       </section>
-      <button onClick={handleMore}>TRAER MAS</button>
+      
+      <button className='more__movies-btn' onClick={handleMore}>TRAER MAS</button>
     </section>
   )
 }

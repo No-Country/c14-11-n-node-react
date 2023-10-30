@@ -5,8 +5,9 @@
   width: 100%;
   padding-bottom: 4rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
+  
 }
 
 .container__filters {
@@ -173,4 +174,27 @@
   100% {
       background-position: 200% 0;
   }
+}
+
+
+.more__movies-btn{
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background-color: #ff2c2c;
+  color: white;
+  margin-top: 3rem;
+}
+
+.more__movies-btn:hover{
+  background-color: var(--guardsman-red-600);
 }
