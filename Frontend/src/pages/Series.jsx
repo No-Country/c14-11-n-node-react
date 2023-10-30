@@ -7,7 +7,7 @@ import axios from "axios";
 import Atropos from "atropos/react";
 import "atropos/css";
 
-const Peliculas = () => {
+const Series = () => {
   const onSubmit = (data) => {
     setGenrefilter(data.genre);
     setSearched(null);
@@ -84,6 +84,8 @@ const Peliculas = () => {
       <section className="filter__movies">
         {(searched ? searched : moviegenre)?.map((movie) => (
           <Atropos
+            shadow={true}
+            highlight={true}
             onClick={() => handleName(movie.title)}
             className="movies__card"
             key={movie.id}
@@ -113,4 +115,4 @@ const Peliculas = () => {
   );
 };
 
-export default Peliculas;
+export default Series;

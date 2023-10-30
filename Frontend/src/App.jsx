@@ -12,6 +12,7 @@ import Nabvar from "./components/Nabvar";
 // import Playmovies from "./pages/Playmovies";
 import Trailer from "./pages/TrailersMovies";
 import Peliculas from "./pages/Peliculas";
+import Series from "./pages/Series";
 
 //hey
 export default function App() {
@@ -53,6 +54,10 @@ export default function App() {
               </ProtectedRouted>
             }
           />
+
+          <Route path="/series" element={<ProtectedRouted>
+            <Series/>
+          </ProtectedRouted>}/>
 
           <Route path="*" element={<Error404 />} />
           <Route path="/login" element={<Login />} />

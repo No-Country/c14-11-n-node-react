@@ -47,3 +47,12 @@
    font-weight: 600;
   color:var(--guardsman-red-800);
 }
+
+
+.skeleton-container {
+  width: 300px; /* Puedes ajustar a tu necesidad */
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+

@@ -38,10 +38,16 @@ const Nabvar = () => {
           </div>
         )}
       </div>
+
       {user ? (
-        <button className="nabvar__btn" onClick={handleClick}>
-          Cerrar sesion
-        </button>
+        <div className="nabvar__container-btns">
+           <Link className="nabvar__series" to={"/"}>Inicio</Link>
+          <Link className="nabvar__series" to={"/series"}>Series</Link>
+          <Link className="nabvar__peliculas" to={"/peliculas"}>Peliculas</Link>
+          <button className="nabvar__btn" onClick={handleClick}>
+            Cerrar sesion
+          </button>
+        </div>
       ) : (
         <button onClick={handlelogin} className="nabvar__btn">
           {login ? "Registrase" : "Iniciar sesion"}
