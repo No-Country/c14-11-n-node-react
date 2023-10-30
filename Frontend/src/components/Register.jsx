@@ -91,7 +91,7 @@ const Register = () => {
           placeholder="email@email.com"
         />
         <label className="register__label" htmlFor="password">
-          password
+          Contraseña
         </label>
         <input
           className="register__input"
@@ -101,7 +101,7 @@ const Register = () => {
           id="password"
           placeholder="******"
         />
-        <button className="register__button--submit">Register</button>
+        <button className="register__button--submit">Registrarse</button>
       </form>
     </motion.div>
   );
