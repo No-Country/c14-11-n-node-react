@@ -34,6 +34,11 @@ function reducer(state, action) {
         ...state,
         allSeries: action.payload,
       }
+    case 'GET_MORE_SERIES':
+      return {
+        ...state,
+        allSeries: [...state.allSeries, ...action.payload],
+      }
     case 'GET_TV_FILTERED':
       return {
         ...state,

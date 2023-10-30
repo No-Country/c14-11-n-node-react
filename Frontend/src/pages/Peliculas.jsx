@@ -18,7 +18,6 @@ const Peliculas = () => {
   const [genrefilter, setGenrefilter] = useState(false) // Almacena el filtro de género seleccionado
   const [searched, setSearched] = useState(false) // Almacena los resultados de búsqueda
 
-  const baseURL = 'https://image.tmdb.org/t/p/w500' // URL base para las imágenes
   const url = 'http://localhost:4000/filters/genres' // URL para obtener géneros
   const url1 = `http://localhost:4000/filters/genre/${genrefilter}` // URL para obtener películas por género
 
@@ -70,7 +69,7 @@ const Peliculas = () => {
   const handleFilter = (event) => {
     event.preventDefault()
     setInputText('')
-    setMoviegenre(`${url1}${genrefilter}`)
+    setMoviegenre(`${url1}`)
   }
 
   //Paginado infinito
@@ -140,7 +139,7 @@ const Peliculas = () => {
                 <img
                   className="movies__card-img"
                   data-atropos-offset="1"
-                  src={baseURL + movie.backdrop_path}
+                  src={movie.image}
                   alt={movie.title}
                 />
                 <h1 className="movies__card-title" data-atropos-offset="5">

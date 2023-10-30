@@ -10,7 +10,7 @@ const getAllMoviesHandler = async (req, res) => {
   const { page } = req.query
 
   try {
-    if (page == '0') throw new Error('Page no valid')
+    if (page == '0') throw new Error('Page not valid')
     const result = await getAllMovies(page)
 
     return res.status(200).json(result)
