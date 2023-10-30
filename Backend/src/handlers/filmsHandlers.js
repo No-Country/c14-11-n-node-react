@@ -7,12 +7,15 @@ const getPopularByGenres = require('../controllers/getPopularByGenres')
 
 //TRAER PELICULAS DE LA API
 const getAllMoviesHandler = async (req, res) => {
+  const {page}=req.query
+
   try {
-    const result = await getAllMovies()
+    if(page =='0') throw new Error ('Page no valid')
+    const result = await getAllMovies(page)
 
     return res.status(200).json(result)
   } catch (error) {
-    return res.status(404).send(error)
+    return res.status(404).send(error.message??error)
   }
 }
 
