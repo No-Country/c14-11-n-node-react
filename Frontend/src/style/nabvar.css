@@ -1,21 +1,46 @@
+:root {
+  --border: 1rem;
+  --borderBtn: 0.5rem;
+  --primary-100: #ff6600;
+  --primary-200: #ff983f;
+  --primary-300: #ffffa1;
+  --accent-100: #f5f5f5;
+  --accent-200: #929292;
+  --text-100: #ffffff;
+  --text-200: #e0e0e0;
+  --bg-100: #1d1f21;
+  --bg-200: #2c2e30;
+  --bg-300: #444648;
+  --bg-gradiente1: rgb(255, 102, 0);
+  --bg-gradeinte2: linear-gradient(
+    280deg,
+    rgba(255, 102, 0, 1) 28%,
+    rgba(44, 46, 48, 1) 88%
+  );
+}
+
 .container__nabvar {
   margin-top: 1rem;
-  background: #fff0f0;
+  background: var(--bg-200);
+  background: var(--bg-gradeinte2);
   max-width: 1240px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  border-radius: var(--border);
 }
+
+
+
 .nabvar__title--icon {
   display: flex;
   gap: 2rem;
 }
 
 .nabvar__title {
-  color: var(--guardsman-red-700);
-  
+  color: var(--text-200);
   font-size: 20px;
   font-weight: bold;
 }
@@ -24,25 +49,25 @@
   font-size: larger;
   font-weight: bolder;
   color: white;
-  background-color:var(--guardsman-red-500);
+  background-color: var(--bg-300);
   padding: 1rem;
   transition: 0.2s;
+  border-radius: var(--borderBtn);
 }
 
 .nabvar__btn:hover {
   transition: 0.2s;
-  background-color: #f60c0c;
+  background-color: var(--primary-200);
 }
 
 .icon_navbar {
-  color: var(--guardsman-red-500);
+  color: var(--text-200);
 }
 
 .nabvar__info_profile {
   display: flex;
   align-items: center;
   gap: 10px;
-
 }
 
 .nabvar__info_profile > img {
@@ -50,24 +75,23 @@
   width: 50px;
 }
 
-
-.nabvar__container-btns{
+.nabvar__container-btns {
   display: flex;
   align-items: center;
   gap: 10px;
-  
 }
 
 .nabvar__container-btns > a {
   font-size: larger;
   font-weight: bolder;
   color: white;
-  background-color: var(--guardsman-red-500);
+  background-color: var(--bg-300);
   padding: 1rem;
-  transition: .2s;
+  transition: 0.2s;
+  border-radius: var(--borderBtn);
 }
 
 .nabvar__container-btns > a:hover {
   transition: 0.2s;
-  background-color: var(--guardsman-red-600);
+  background-color: var(--primary-200);
 }

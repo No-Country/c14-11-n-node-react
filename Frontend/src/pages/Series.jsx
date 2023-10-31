@@ -23,8 +23,10 @@ const Series = () => {
     ? `http://localhost:4000/tv/genres/${genrefilter}`
     : `http://localhost:4000/tv` // URL para obtener películas por género
 
+    
+
   const [inputText, setInputText] = useState('') // Almacena el texto de búsqueda
-  const urlSearch = `http://localhost:4000/search?name=${inputText}` // URL para buscar películas por nombre
+  // const urlSearch = `http://localhost:4000/search?name=${inputText}` // URL para buscar películas por nombre
 
   // Función para manejar cambios en el campo de búsqueda
   const handleChange = (event) => {
@@ -61,9 +63,8 @@ const Series = () => {
   useEffect(() => {
     dispatch({ type: 'GET_TV', payload: tvGenre })
 
-    console.log(tvGenre)
   }, [tvGenre])
-
+ 
   const navigate = useNavigate() // Obtiene la función de navegación
 
   // Función para navegar a la página de detalles de una película
@@ -139,12 +140,12 @@ const Series = () => {
             className="movies__card"
             key={show.id}
           >
-            {show.backdrop_path && show.title ? (
+            {show.poster_path && show.title ? (
               <>
                 <img
                   className="movies__card-img"
                   data-atropos-offset="1"
-                  src={show.image}
+                  src={show.poster_path}
                   alt={show.title}
                 />
                 <h1 className="movies__card-title" data-atropos-offset="5">

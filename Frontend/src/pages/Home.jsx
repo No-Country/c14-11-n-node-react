@@ -20,19 +20,16 @@ const Home = () => {
   return (
     <section className="container__home">
       <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 4500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: false,
-        }}
-        navigation={false}
-        modules={[Autoplay, Pagination, Navigation]}
-        speed={2000}
-        className="mySwiper"
+    spaceBetween={30}
+    centeredSlides={true}
+    autoplay={{
+      delay: 4500,
+      disableOnInteraction: false,
+    }}
+
+    modules={[Autoplay, Pagination, Navigation]}
+    className="mySwiper"
+    speed={2000}
       >
         {movies?.slice(0, 7).map((movie) => (
           <SwiperSlide key={movie.title}>

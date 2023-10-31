@@ -1,5 +1,32 @@
+:root {
+  --border: 1rem;
+  --borderBtn: 0.5rem;
+  --primary-100: #ff6600;
+  --primary-200: #ff983d;
+  --primary-300: #ffffa1;
+  --accent-100: #f5f5f5;
+  --accent-200: #929292;
+  --text-100: #ffffff;
+  --text-200: #e0e0e0;
+  --bg-100: #1d1f21;
+  --bg-200: #2c2e30;
+  --bg-300: #444648;
+  --bg-gradiente1: #ff6600;
+  --bg-gradeinte2: linear-gradient(
+    280deg,
+    rgba(255, 102, 0, 1) 28%,
+    rgba(44, 46, 48, 1) 88%
+  );
+
+  --bg-gradienMovie:linear-gradient(
+    0deg,
+    #ff6600  28%,
+    #2c2e30 88%
+  );
+}
+
 .container__filter__cards {
-  background: var(--guardsman-red-100);
+  border-radius: var(--border);
   margin-top: 2rem;
   max-width: 1240px;
   width: 100%;
@@ -7,7 +34,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  
+  gap: 2rem;
 }
 
 .container__filters {
@@ -16,6 +43,9 @@
   gap: 1rem;
   width: 100%;
   align-items: center;
+  background: var(--bg-gradeinte1);
+  background: var(--bg-gradeinte2);
+  border-radius: var(--border);
 }
 
 .container__filters > form {
@@ -37,66 +67,64 @@
   width: 100%;
   max-width: 400px;
   height: 50px;
-
   border: none;
   outline: none;
   padding: 0 1rem;
   text-align: center;
-  color: var(--guardsman-red-800);
-  background-color: var(--guardsman-red-300);
+  color: var(--text-100);
+  background-color: var(--bg-300);
   font-weight: bold;
   font-size: 1.2rem;
   transition: 0.2s;
+  border-radius: var(--borderBtn);
 }
 
 .container__filters > div > input:hover {
   transition: 0.2s;
-  background-color: var(--guardsman-red-400);
+  background-color: var(--primary-200);
 }
 
 .container__filters > div > input:focus {
   outline: none;
-  background-color: var(--guardsman-red-300);
-  box-shadow: 0 4px 6px var(--guardsman-red-200);
+  background-color: var(--primary-200);
 }
 
 .container__filters > div > button {
   font-size: larger;
   font-weight: bolder;
   color: white;
-  background-color: var(--guardsman-red-500);
+  background-color: var(--bg-300);
   padding: 0rem 1rem;
   transition: 0.2s;
+  border-radius: var(--borderBtn);
 }
 
 .container__filters > div > button:hover {
   transition: 0.2s;
-  background-color: var(--guardsman-red-600);
+  background-color: var(--primary-200);
 }
 
 .container__filters > form > select {
   font-size: 1em;
   padding: 0.6em 1em;
   border: none;
+  background-color: var(--primary-100);
 
-  background-color: var(--guardsman-red-300);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.2s;
   max-width: 250px;
-
-  color: #333;
+  color: var(--text-100);
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
+  border-radius: var(--borderBtn);
 }
 .container__filters > form > select:hover {
-  background-color: var(--guardsman-red-400);
+  background-color: var(--primary-200);
 }
 
 .container__filters > form > select:focus {
   outline: none;
-  background-color: var(--guardsman-red-200);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-200);
 }
 
 .container__filters > form > button {
@@ -112,8 +140,13 @@
   font-size: 1.2rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  background-color: #ff2c2c;
-  color: white;
+  background-color: var(--primary-100);
+  color: var(--accent-100);
+  border-radius: var(--borderBtn);
+}
+
+.container__filters > form > button:hover {
+  background-color: var(--primary-200);
 }
 
 .filter__movies {
@@ -122,28 +155,31 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  background-color: var(--bg-100);
+  padding: 2rem 1rem 1rem 1rem;
+  border-radius: var(--border);
 }
 
 .movies__card {
   cursor: pointer;
   width: 375px;
   height: 300px;
-  background: rgb(255, 153, 153);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 153, 153, 1) 0%,
-    rgba(184, 10, 10, 1) 100%
-  );
   padding: 1rem;
   overflow: visible;
+ background: var(--bg-gradienMovie);
+  border-radius: var(--borderBtn);
+  position: relative;
+ 
 }
 
+
+
 .movies__card-img {
-  
+  border-radius: var(--borderBtn);
+
 }
 
 .movies__card-title {
-  color: white;
   text-align: center;
   font-size: 1.7rem;
   font-weight: bold;
@@ -151,17 +187,22 @@
 
 /* Estilos skeleton */
 
+
+
 .skeleton-image {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   width: 100%;
-  height: 200px; /* Puedes ajustar a tu necesidad */
+  height: 200px;
   border-radius: 5px;
+ 
 }
 
 .skeleton-title {
-  background: #f0f0f0;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
   height: 20px;
   margin-top: 10px;
   border-radius: 3px;
@@ -169,15 +210,15 @@
 
 @keyframes shimmer {
   0% {
-      background-position: -200% 0;
+    background-position: -200% 0;
   }
   100% {
-      background-position: 200% 0;
+    background-position: 200% 0;
   }
 }
 
 
-.more__movies-btn{
+.more__movies-btn {
   width: 100%;
   max-width: 300px;
   height: 50px;
@@ -195,6 +236,6 @@
   margin-top: 3rem;
 }
 
-.more__movies-btn:hover{
+.more__movies-btn:hover {
   background-color: var(--guardsman-red-600);
 }

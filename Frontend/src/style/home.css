@@ -2,15 +2,11 @@
   max-width: 1240px;
   width: 100%;
   padding-top: 1rem;
-  ;
 }
 
 .swiper {
   width: 100%;
   height: 100%;
-
-
-  
 }
 
 .swiper-slide {
@@ -26,15 +22,11 @@
 }
 
 .nabvar__card > img {
-
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 1000px;
-  
 }
-
-
 
 .nabvar__card > h1 {
   position: absolute;
@@ -44,10 +36,9 @@
   font-size: 2rem;
   border-radius: 0px 10px 10px 0px;
   padding: 1rem;
-   font-weight: 600;
-  color:var(--guardsman-red-800);
+  font-weight: 600;
+  color: var(--guardsman-red-800);
 }
-
 
 .skeleton-container {
   width: 300px; /* Puedes ajustar a tu necesidad */
@@ -55,4 +46,3 @@
   border: 1px solid #eee;
   border-radius: 5px;
 }
-

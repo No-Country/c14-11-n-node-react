@@ -90,10 +90,10 @@ const Login = () => {
     navigate("/");
   };
 
-  // Redireccionar a la página de registro
-  const handldeRegister = () => {
-    navigate("/register");
-  };
+  // // Redireccionar a la página de registro
+  // const handldeRegister = () => {
+  //   navigate("/register");
+  // };
   return (
     <motion.div
       className="login"
@@ -151,9 +151,7 @@ const Login = () => {
         <img src={google} alt="" />
       </button>
 
-      <button className="login__button--register" onClick={handldeRegister}>
-        Registrarse
-      </button>
+   
     </motion.div>
   );
 };

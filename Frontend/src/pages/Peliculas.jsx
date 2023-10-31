@@ -1,81 +1,81 @@
-import { useContext, useEffect, useState } from 'react'
-import useFetch from '../hooks/useFecth'
-import '../style/filters.css'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import Atropos from 'atropos/react'
-import 'atropos/css'
-import { Store } from '../Store'
+import { useContext, useEffect, useState } from "react";
+import useFetch from "../hooks/useFecth";
+import "../style/filters.css";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import Atropos from "atropos/react";
+import "atropos/css";
+import { Store } from "../Store";
 
 const Peliculas = () => {
   //Se trae el estado global y su dispatch
   const {
     state: { allMovies, movieFilters },
     dispatch,
-  } = useContext(Store)
+  } = useContext(Store);
 
   // Declaración de variables de estado y constantes
-  const [genrefilter, setGenrefilter] = useState(false) // Almacena el filtro de género seleccionado
-  const [searched, setSearched] = useState(false) // Almacena los resultados de búsqueda
+  const [genrefilter, setGenrefilter] = useState(false); // Almacena el filtro de género seleccionado
+  const [searched, setSearched] = useState(false); // Almacena los resultados de búsqueda
 
-  const url = 'http://localhost:4000/filters/genres' // URL para obtener géneros
-  const url1 = `http://localhost:4000/filters/genre/${genrefilter}` // URL para obtener películas por género
+  const url = "http://localhost:4000/filters/genres"; // URL para obtener géneros
+  const url1 = `http://localhost:4000/filters/genre/${genrefilter}`; // URL para obtener películas por género
 
-  const [inputText, setInputText] = useState('') // Almacena el texto de búsqueda
-  const urlSearch = `http://localhost:4000/search?name=${inputText}` // URL para buscar películas por nombre
+  const [inputText, setInputText] = useState(""); // Almacena el texto de búsqueda
+  const urlSearch = `http://localhost:4000/search?name=${inputText}`; // URL para buscar películas por nombre
 
   // Función para manejar cambios en el campo de búsqueda
   const handleChange = (event) => {
-    setInputText(event.target.value)
-  }
+    setInputText(event.target.value);
+  };
 
   // Función para realizar una búsqueda
   const handleSearch = async () => {
-    setGenrefilter(false)
-    const { data } = await axios.get(urlSearch)
-    setSearched(data)
-  }
+    setGenrefilter(false);
+    const { data } = await axios.get(urlSearch);
+    setSearched(data);
+  };
 
   // Utiliza un custom hook llamado useFetch para obtener la lista de géneros
-  const [genres, setGenres] = useFetch(url)
+  const [genres, setGenres] = useFetch(url);
 
   // Utiliza un custom hook llamado useFetch para obtener películas por género
-  const [moviegenre, setMoviegenre] = useFetch(url1)
+  const [moviegenre, setMoviegenre] = useFetch(url1);
 
   // Efecto para actualizar el filtro de género y cargar películas por género cuando cambia genrefilter
   useEffect(() => {
-    setGenres()
-    setMoviegenre()
-  }, [])
+    setGenres();
+    setMoviegenre();
+  }, []);
 
   //Trae los generos de peliculas en caso de que no esten cargados
   useEffect(() => {
-    dispatch({ type: 'GET_MOVIE_FILTERS', payload: genres })
-  }, [genres])
+    dispatch({ type: "GET_MOVIE_FILTERS", payload: genres });
+  }, [genres]);
 
   //Guarda la lista de peliculas en el estado global
   useEffect(() => {
-    dispatch({ type: 'GET_MOVIES', payload: moviegenre })
-  }, [moviegenre])
+    dispatch({ type: "GET_MOVIES", payload: moviegenre });
+  }, [moviegenre]);
 
-  const navigate = useNavigate() // Obtiene la función de navegación
+  const navigate = useNavigate(); // Obtiene la función de navegación
 
   // Función para navegar a la página de detalles de una película
   const handleName = (title) => {
-    navigate(`/playmovies/${title}`)
-  }
+    navigate(`/playmovies/${title}`);
+  };
 
   // Trae peliculas del genero solicitado
   const handleFilter = (event) => {
-    event.preventDefault()
-    setInputText('')
-    setMoviegenre(`${url1}`)
-  }
+    event.preventDefault();
+    setInputText("");
+    setMoviegenre(`${url1}`);
+  };
 
   //Paginado infinito
   const handleMore = async () => {
     //Se calcula la pagina actual segun la cantidad de peliculas que hay en el estado global
-    const currentPage = allMovies.length / 20
+    const currentPage = allMovies.length / 20;
 
     //Se hace la peticion a la pagina que le sigue
 
@@ -93,15 +93,14 @@ const Peliculas = () => {
         )
       : await axios.get(
           `http://localhost:4000/getmovies?page=${currentPage + 1}`
-        )
+        );
 
     //Se despacha y se guardan en el estado global
-    dispatch({ type: 'GET_MORE_MOVIES', payload: moreMovies.data })
-  }
+    dispatch({ type: "GET_MORE_MOVIES", payload: moreMovies.data });
+  };
 
   return (
     <section className="container__filter__cards">
-
       <div className="container__filters">
         <form>
           <select
@@ -128,6 +127,7 @@ const Peliculas = () => {
       </div>
 
       <section className="filter__movies">
+      
         {(searched ? searched : allMovies)?.map((movie) => (
           <Atropos
             onClick={() => handleName(movie.title)}
@@ -136,6 +136,8 @@ const Peliculas = () => {
           >
             {movie.backdrop_path && movie.title ? (
               <>
+          
+                
                 <img
                   className="movies__card-img"
                   data-atropos-offset="1"
@@ -145,20 +147,23 @@ const Peliculas = () => {
                 <h1 className="movies__card-title" data-atropos-offset="5">
                   {movie.title}
                 </h1>
+                
               </>
             ) : (
-              <>
+              <div className="movies__card-skeleton">
                 <div data-atropos-offset="1" className="skeleton-image"></div>
                 <div data-atropos-offset="5" className="skeleton-title"></div>
-              </>
+              </div>
             )}
           </Atropos>
         ))}
       </section>
-      
-      <button className='more__movies-btn' onClick={handleMore}>TRAER MAS</button>
-    </section>
-  )
-}
 
-export default Peliculas
+      <button className="more__movies-btn" onClick={handleMore}>
+        TRAER MAS
+      </button>
+    </section>
+  );
+};
+
+export default Peliculas;
