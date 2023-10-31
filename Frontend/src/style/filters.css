@@ -1,5 +1,5 @@
 .container__filter__cards {
-  background: var(--guardsman-red-100);
+  
   margin-top: 2rem;
   max-width: 1240px;
   width: 100%;
@@ -15,11 +15,13 @@
   gap: 1rem;
   width: 100%;
   align-items: center;
+
 }
 
 .container__filters > form {
   display: flex;
   gap: 1rem;
+  background-color: #fff;
 }
 .container__filters {
   display: flex;
@@ -27,7 +29,8 @@
 }
 .container__filters > div {
   display: flex;
-  gap: 1rem;
+  gap: 5rem;
+
 }
 
 /* Estilos del input */
@@ -36,65 +39,69 @@
   width: 100%;
   max-width: 400px;
   height: 50px;
-
   border: none;
   outline: none;
-  padding: 0 1rem;
+  padding:0 1px;
   text-align: center;
-  color: var(--guardsman-red-800);
-  background-color: var(--guardsman-red-300);
   font-weight: bold;
   font-size: 1.2rem;
   transition: 0.2s;
+  color: #fff;
+  border-radius: .5rem;
+  
+  
 }
 
 .container__filters > div > input:hover {
   transition: 0.2s;
-  background-color: var(--guardsman-red-400);
+ 
 }
 
 .container__filters > div > input:focus {
   outline: none;
-  background-color: var(--guardsman-red-300);
-  box-shadow: 0 4px 6px var(--guardsman-red-200);
+  color: #333;
+  border: 2px solid #1a73e8;
 }
 
 .container__filters > div > button {
   font-size: larger;
   font-weight: bolder;
-  color: white;
-  background-color: var(--guardsman-red-500);
+  color:black;
+  background-color: #fff;
   padding: 0rem 1rem;
   transition: 0.2s;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+ 
 }
 
 .container__filters > div > button:hover {
   transition: 0.2s;
-  background-color: var(--guardsman-red-600);
+  background-color:#1a73e8;
+  color: #fff;
 }
 
 .container__filters > form > select {
   font-size: 1em;
   padding: 0.6em 1em;
   border: none;
-
-  background-color: var(--guardsman-red-300);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   max-width: 250px;
-
   color: #333;
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
+  
 }
 .container__filters > form > select:hover {
-  background-color: var(--guardsman-red-400);
+  background-color: red;
 }
 
 .container__filters > form > select:focus {
   outline: none;
-  background-color: var(--guardsman-red-200);
+  background-color: rgb(184, 109, 109);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 

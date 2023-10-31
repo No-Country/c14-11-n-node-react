@@ -76,7 +76,7 @@ const Series = () => {
         </form>
 
         <div>
-          <input type="text" value={inputText} onChange={handleChange} />
+          <input type="text" placeholder="Busca tu Serie Favorita" value={inputText} onChange={handleChange} />
           <div className="highlight"></div>
           <button onClick={handleSearch}>Buscar</button>
         </div>

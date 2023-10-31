@@ -1,12 +1,15 @@
 .container__nabvar {
   margin-top: 1rem;
-  background: #fff0f0;
+  background: rgb(245, 230, 230);
   max-width: 1240px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  border-radius: .4rem;
+  box-shadow: 0 0 6px #fff;
+
 }
 .nabvar__title--icon {
   display: flex;
@@ -14,8 +17,8 @@
 }
 
 .nabvar__title {
-  color: var(--guardsman-red-700);
-  
+ 
+  color: #f089a0;
   font-size: 20px;
   font-weight: bold;
 }
@@ -24,9 +27,12 @@
   font-size: larger;
   font-weight: bolder;
   color: white;
-  background-color:var(--guardsman-red-500);
+  background-color: #1a73e8;
+  border: none;
+  border-radius: .5rem;
   padding: 1rem;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .nabvar__btn:hover {
@@ -61,10 +67,10 @@
 .nabvar__container-btns > a {
   font-size: larger;
   font-weight: bolder;
-  color: white;
-  background-color: var(--guardsman-red-500);
+  color: black;
   padding: 1rem;
   transition: .2s;
+  text-decoration-line: none;
 }
 
 .nabvar__container-btns > a:hover {

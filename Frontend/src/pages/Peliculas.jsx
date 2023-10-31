@@ -76,9 +76,9 @@ const Peliculas = () => {
         </form>
 
         <div>
-          <input type="text" value={inputText} onChange={handleChange} />
+          <input type="text" placeholder="Busca tu Pelicula Favorita"  value={inputText} onChange={handleChange} />
           <div className="highlight"></div>
-          <button onClick={handleSearch}>Buscar</button>
+          <button onClick={handleSearch} >Buscar</button>
         </div>
       </div>
       <section className="filter__movies">
