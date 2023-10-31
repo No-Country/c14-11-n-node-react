@@ -3,11 +3,9 @@ const axios = require('axios')
 const { API_KEY } = process.env
 const API_URL = 'https://api.themoviedb.org'
 
-const getAllGenres = async (tv) => {
+const getGenresMovies = async () => {
   const { data } = await axios.get(
-    `${API_URL}/3/genre/${
-      tv ? 'tv' : 'movie'
-    }/list?language=es&api_key=${API_KEY}`
+    `${API_URL}/3/genre/movie/list?language=es&api_key=${API_KEY}`
   )
 
   const filmGenres = data.genres
@@ -15,4 +13,14 @@ const getAllGenres = async (tv) => {
   return filmGenres
 }
 
-module.exports = getAllGenres
+const getGenresTv = async () => {
+  const { data } = await axios.get(
+    `${API_URL}/3/genre/tv/list?language=es&api_key=${API_KEY}`
+  )
+
+  const tvGenres = data.genres
+
+  return tvGenres
+}
+
+module.exports = { getGenresMovies, getGenresTv }

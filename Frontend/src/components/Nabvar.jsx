@@ -50,7 +50,7 @@ const Nabvar = () => {
         </div>
       ) : (
         <button onClick={handlelogin} className="nabvar__btn">
-          {login ? "Registrase" : "Iniciar sesion"}
+          {login ? "Registrarse" : "Iniciar sesion"}
         </button>
       )}
     </header>

@@ -1,9 +1,17 @@
-const { getTvHandler } = require('../handlers/tvHandlers');
+const {
+  getAllSeriesHandler,
+  getTvByGenresHandler,
+} = require('../handlers/tvHandlers')
 
-const { Router } = require('express');
+const { Router } = require('express')
 const tvRouter = Router()
 
-//TRAER TV/SERIES POR GENERO ID
-tvRouter.get('/genres/:id', getTvHandler)
+//PREV = http://localhost:4000/tv
 
-module.exports = tvRouter;
+//TRAER SERIES DE LA API
+tvRouter.get(`/`, getAllSeriesHandler)
+
+//TRAER TV/SERIES POR GENERO ID
+tvRouter.get('/genres/:id', getTvByGenresHandler)
+
+module.exports = tvRouter

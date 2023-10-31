@@ -4,7 +4,10 @@ const cors = require('cors')
 const filmRouter = require('./routes/filmsRoutes')
 const filterRouter = require('./routes/filterRoutes')
 const listRouter = require('./routes/listRoutes')
+const tvRouter = require('./routes/tvRoutes')
+
 const errorResponse = require('./utils/errorResponse')
+
 const getMovieByName = require('./controllers/getMovieByName')
 
 const app = express()
@@ -22,6 +25,8 @@ app.use('/getmovies', filmRouter)
 app.use('/filters', filterRouter)
 
 app.use('/list', listRouter)
+
+app.use('/tv', tvRouter)
 
 /////////HAY QUE MODULARIZAR ESTE CODIGO
 

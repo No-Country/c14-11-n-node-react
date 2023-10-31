@@ -141,7 +141,7 @@ const Login = () => {
           id="password"
           placeholder="******"
         />
-        <button className="login__button login__button--submit">Login</button>
+        <button className="login__button login__button--submit">Iniciar sesion</button>
       </form>
       <button
         className="login__button login__button--google"

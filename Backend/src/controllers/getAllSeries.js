@@ -4,15 +4,14 @@ const { mapLinksOnArray } = require('../utils/cleanFilms')
 const { API_KEY } = process.env
 const API_URL = 'https://api.themoviedb.org'
 
-const getMovieByName = async (inputName, page) => {
+const getAllSeries = async (page) => {
   const { data } = await axios.get(
-    `${API_URL}/3/search/movie?language=es-ES&page=${
+    `${API_URL}/3/discover/tv?language=es-ES&page=${
       page ?? 1
-    }&query=${inputName}&api_key=${API_KEY}`
+    }&sort_by=popularity.desc&api_key=${API_KEY}`
   )
+  const infoApi = mapLinksOnArray(data.results)
 
-  const cleanCode = mapLinksOnArray(data.results)
-  return cleanCode
+  return infoApi
 }
-
-module.exports = getMovieByName
+module.exports = getAllSeries
