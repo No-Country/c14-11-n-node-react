@@ -15,18 +15,15 @@ const response = require('../utils/response') // esto se importa de utils
 //   }
 // }
 
-
 //ejemplos usando errorResponse y response( de carpeta utils)
 const getPopularMoviesHandler = async (req, res) => {
   try {
     const popFilms = await getPopMovies()
-    return response(res, 200, {data: popFilms})
-  } 
-  catch (error) {
+    return res.status(200).json(popFilms)
+  } catch (error) {
     return errorResponse(res, 404, error)
   }
 }
-
 
 //TRAER TOP RATED MOVIES
 const getTopRatedHandler = async (req, res) => {
