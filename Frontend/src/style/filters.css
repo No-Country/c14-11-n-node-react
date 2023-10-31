@@ -1,0 +1,207 @@
+.container__filter__cards {
+  
+  margin-top: 2rem;
+  max-width: 1240px;
+  width: 100%;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.container__filters {
+  padding: 2rem 4rem 2rem 4rem;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+
+}
+
+.container__filters > form {
+  display: flex;
+  gap: 1rem;
+  background-color: #fff;
+}
+.container__filters {
+  display: flex;
+  justify-content: space-between;
+}
+.container__filters > div {
+  display: flex;
+  gap: 5rem;
+
+}
+
+/* Estilos del input */
+
+.container__filters > div > input {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding:0 1px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 0.2s;
+  color: #fff;
+  border-radius: .5rem;
+  
+  
+}
+
+.container__filters > div > input:hover {
+  transition: 0.2s;
+ 
+}
+
+.container__filters > div > input:focus {
+  outline: none;
+  color: #333;
+  border: 2px solid #1a73e8;
+}
+
+.container__filters > div > button {
+  font-size: larger;
+  font-weight: bolder;
+  color:black;
+  background-color: #fff;
+  padding: 0rem 1rem;
+  transition: 0.2s;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+ 
+}
+
+.container__filters > div > button:hover {
+  transition: 0.2s;
+  background-color:#1a73e8;
+  color: #fff;
+}
+
+.container__filters > form > select {
+  font-size: 1em;
+  padding: 0.6em 1em;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  
+}
+.container__filters > form > select:hover {
+  background-color: red;
+}
+
+.container__filters > form > select:focus {
+  outline: none;
+  background-color: rgb(184, 109, 109);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container__filters > form > button {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background-color: #ff2c2c;
+  color: white;
+}
+
+.filter__movies {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.movies__card {
+  cursor: pointer;
+  width: 375px;
+  height: 300px;
+  background: rgb(255, 153, 153);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 153, 153, 1) 0%,
+    rgba(184, 10, 10, 1) 100%
+  );
+  padding: 1rem;
+  overflow: visible;
+}
+
+.movies__card-img {
+  
+}
+
+.movies__card-title {
+  color: white;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* Estilos skeleton */
+
+.skeleton-image {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  width: 100%;
+  height: 200px; /* Puedes ajustar a tu necesidad */
+  border-radius: 5px;
+}
+
+.skeleton-title {
+  background: #f0f0f0;
+  height: 20px;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+@keyframes shimmer {
+  0% {
+      background-position: -200% 0;
+  }
+  100% {
+      background-position: 200% 0;
+  }
+}
+
+
+.more__movies-btn{
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background-color: #ff2c2c;
+  color: white;
+  margin-top: 3rem;
+}
+
+.more__movies-btn:hover{
+  background-color: var(--guardsman-red-600);
+}

@@ -18,14 +18,22 @@
 }
 
 
-.cards{
+.container__card{
+    box-shadow: 0 5px 10px 0 rgba(31, 38, 135, 0.37);
     font-family: 'Inter Tight', sans-serif;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px); /* Desenfoque */
     max-width: 300px;
     width: 100%;
-    color: white;
-    border-radius: 1.5rem;
+    color: rgb(115, 0, 255);
+    border-radius: 5px;
     padding: 20px;
     text-align: justify;
+    height: 400px;
+    overflow: hidden;
+}
+
+.container__card>img{
+    width: 100%;
+    border-radius: 5px;
 }

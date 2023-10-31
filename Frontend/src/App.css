@@ -1,7 +1,19 @@
-.main__container{
+
+
+
+body {
+  margin: 0; /* Restablecer el margen a 0 */
+  padding: 0; /* Quitar el padding */
+
+  background: #151e33;
+  min-height: 100vh; /* Establecer la altura mínima al alto de la ventana del navegador */
+}
+.main__container {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  background-color: rgb(255, 64, 0);
+  max-width: 1440px;
+   padding: 1rem;
+  font-family: "Inter", sans-serif;
+  margin: 0 auto;
 }
