@@ -1,0 +1,12 @@
+.container__nabvar{
+    margin-top: 1rem;
+    background-color: gray;
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+  
+}
+
