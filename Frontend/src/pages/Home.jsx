@@ -62,7 +62,6 @@ const Home = () => {
         ))}
       </Swiper>
 
-      <button onClick={() => console.log(allTopRated)}>MAGIA</button>
       <SlideTopRated allTopRated={allTopRated} />
       <SlidePop allPopular={allPopular} />
     </section>
