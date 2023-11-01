@@ -16,10 +16,8 @@ const Series = () => {
 
   // Declaración de variables de estado y constantes
   const [genrefilter, setGenrefilter] = useState(false) // Almacena el filtro de género seleccionado
-  const [searched, setSearched] = useState(false) // Almacena los resultados de búsqueda
 
   //Estado para deshabilitar el boton de traer mas
-  const [noMore, setNoMore] = useState(false)
 
   const url = 'http://localhost:4000/filters/genres?tv=true' // URL para obtener géneros
   const url1 = genrefilter
@@ -38,7 +36,7 @@ const Series = () => {
   const handleSearch = async () => {
     setGenrefilter(false)
     const { data } = await axios.get(urlSearch)
-    setSearched(data)
+    dispatch({ type: 'GET_TV', payload: data })
   }
 
   // Utiliza un custom hook llamado useFetch para obtener la lista de géneros
@@ -120,7 +118,6 @@ const Series = () => {
           </select>
           <button onClick={handleFilter}>Buscar Genero</button>
         </form>
-
         <div>
           <input type="text" value={inputText} onChange={handleChange} />
           <div className="highlight"></div>
@@ -128,7 +125,7 @@ const Series = () => {
         </div>
       </div>
       <section className="filter__movies">
-        {(searched ? searched : allSeries)?.map((show) => (
+        {allSeries?.map((show) => (
           <Atropos
             onClick={() => handleName(show.name)}
             className="movies__card"
@@ -155,9 +152,7 @@ const Series = () => {
           </Atropos>
         ))}
       </section>
-      <button disabled={noMore} onClick={handleMore}>
-        TRAER MAS
-      </button>
+      <button onClick={handleMore}>TRAER MAS</button>
     </section>
   )
 }
