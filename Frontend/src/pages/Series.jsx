@@ -16,29 +16,30 @@ const Series = () => {
 
   // Declaración de variables de estado y constantes
   const [genrefilter, setGenrefilter] = useState(false) // Almacena el filtro de género seleccionado
-  // const [searched, setSearched] = useState(false) // Almacena los resultados de búsqueda
+  const [searched, setSearched] = useState(false) // Almacena los resultados de búsqueda
+
+  //Estado para deshabilitar el boton de traer mas
+  const [noMore, setNoMore] = useState(false)
 
   const url = 'http://localhost:4000/filters/genres?tv=true' // URL para obtener géneros
   const url1 = genrefilter
     ? `http://localhost:4000/tv/genres/${genrefilter}`
     : `http://localhost:4000/tv` // URL para obtener películas por género
 
-    
-
   const [inputText, setInputText] = useState('') // Almacena el texto de búsqueda
-  // const urlSearch = `http://localhost:4000/search?name=${inputText}` // URL para buscar películas por nombre
+  const urlSearch = `http://localhost:4000/tv/search?name=${inputText}` // URL para buscar películas por nombre
 
   // Función para manejar cambios en el campo de búsqueda
   const handleChange = (event) => {
     setInputText(event.target.value)
   }
 
-  // Función para realizar una búsqueda
-  // const handleSearch = async () => {
-  //   setGenrefilter(false)
-  //   const { data } = await axios.get(urlSearch)
-  //   setSearched(data)
-  // }
+  //Función para realizar una búsqueda
+  const handleSearch = async () => {
+    setGenrefilter(false)
+    const { data } = await axios.get(urlSearch)
+    setSearched(data)
+  }
 
   // Utiliza un custom hook llamado useFetch para obtener la lista de géneros
   const [genres, setGenres] = useFetch(url)
@@ -48,9 +49,7 @@ const Series = () => {
 
   // Efecto para actualizar el filtro de género y cargar películas por género cuando cambia genrefilter
   useEffect(() => {
-    if (allSeries.length === 0) {
-      setTvGenre()
-    }
+    setTvGenre()
     setGenres()
   }, [])
 
@@ -62,9 +61,8 @@ const Series = () => {
   //Guarda la lista de peliculas en el estado global
   useEffect(() => {
     dispatch({ type: 'GET_TV', payload: tvGenre })
-
   }, [tvGenre])
- 
+
   const navigate = useNavigate() // Obtiene la función de navegación
 
   // Función para navegar a la página de detalles de una película
@@ -85,22 +83,22 @@ const Series = () => {
 
     //Se hace la peticion a la pagina que le sigue
 
-    const moreMovies = genrefilter
+    const moreShows = genrefilter
       ? await axios.get(
-          `http://localhost:4000/filters/genre/${genrefilter}&page=${
+          `http://localhost:4000/tv/genres/${genrefilter}&page=${
             currentPage + 1
           }`
         )
       : inputText
       ? await axios.get(
-          `http://localhost:4000/search?name=${inputText}&page=${
+          `http://localhost:4000/tv/search?name=${inputText}&page=${
             currentPage + 1
           }`
         )
       : await axios.get(`http://localhost:4000/tv?page=${currentPage + 1}`)
 
     //Se despacha y se guardan en el estado global
-    dispatch({ type: 'GET_MORE_SERIES', payload: moreMovies.data })
+    dispatch({ type: 'GET_MORE_SERIES', payload: moreShows.data })
   }
 
   return (
@@ -126,30 +124,26 @@ const Series = () => {
         <div>
           <input type="text" value={inputText} onChange={handleChange} />
           <div className="highlight"></div>
-          <button
-          //  onClick={handleSearch}
-          >
-            Buscar
-          </button>
+          <button onClick={handleSearch}>Buscar</button>
         </div>
       </div>
       <section className="filter__movies">
-        {tvGenre?.map((show) => (
+        {(searched ? searched : allSeries)?.map((show) => (
           <Atropos
-            onClick={() => handleName(show.title)}
+            onClick={() => handleName(show.name)}
             className="movies__card"
             key={show.id}
           >
-            {show.poster_path && show.title ? (
+            {show.image && show.name ? (
               <>
                 <img
                   className="movies__card-img"
                   data-atropos-offset="1"
-                  src={show.poster_path}
-                  alt={show.title}
+                  src={show.image}
+                  alt={show.name}
                 />
                 <h1 className="movies__card-title" data-atropos-offset="5">
-                  {show.title}
+                  {show.name}
                 </h1>
               </>
             ) : (
@@ -161,7 +155,9 @@ const Series = () => {
           </Atropos>
         ))}
       </section>
-      <button onClick={handleMore}>TRAER MAS</button>
+      <button disabled={noMore} onClick={handleMore}>
+        TRAER MAS
+      </button>
     </section>
   )
 }

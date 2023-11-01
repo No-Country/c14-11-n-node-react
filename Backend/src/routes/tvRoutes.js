@@ -1,6 +1,7 @@
 const {
   getAllSeriesHandler,
   getTvByGenresHandler,
+  getTvByNameHandler,
 } = require('../handlers/tvHandlers')
 
 const { Router } = require('express')
@@ -13,5 +14,8 @@ tvRouter.get(`/`, getAllSeriesHandler)
 
 //TRAER TV/SERIES POR GENERO ID
 tvRouter.get('/genres/:id', getTvByGenresHandler)
+
+//BUSCAR SHOWS DE TV POR INPUT
+tvRouter.get('/search', getTvByNameHandler)
 
 module.exports = tvRouter
