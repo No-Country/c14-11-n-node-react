@@ -6,9 +6,12 @@ const {
 
 const filterRouter = Router()
 
-//GET ALL GENRES FROM API
+//PREV = http://localhost:4000/filters
+
+//TRAER GENEROS DE LA API
 filterRouter.get('/genres', getGenresHandler)
 
+//HACER PETICIONES A LA API CON EL GENERO APLICADO
 filterRouter.get('/genre/:idGenre', getByGenreHandler)
 
 module.exports = filterRouter

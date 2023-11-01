@@ -1,17 +1,29 @@
 const {
   getAllMoviesHandler,
   getMovieByIdHandler,
+  getMovieByNameHandler,
+  getMovieByGenresHandler,
+  getPopulateByGenresHandler,
 } = require('../handlers/filmsHandlers')
 
 const { Router } = require('express')
 
 const filmRouter = Router()
 
-//GET ALL MOVIES FROM API
-filmRouter.get(`/`, getAllMoviesHandler)
+//PREV = http://localhost:4000/getmovies
 
-//GET MOVIE BY ID
+//TRAER PELICULAS DE LA API
+filmRouter.get(`/`, getAllMoviesHandler)
+//TRAER PELICULAS POR GENERO ID
+filmRouter.get('/genres/:id', getMovieByGenresHandler)
+
+//TRAE PELICULAS POPULARES POR GENERO ID...
+filmRouter.get('/popular/:id', getPopulateByGenresHandler)
+
+//TRAER DETAIL DE LA PELICULA (PETICION POR ID)
 filmRouter.get('/:filmId', getMovieByIdHandler)
-//GET MOVIE BY NAME
+
+//TRAER PELICULAS POR NOMBRES (QUERY)
+filmRouter.get('/search', getMovieByNameHandler)
 
 module.exports = filmRouter
