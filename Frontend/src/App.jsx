@@ -8,11 +8,10 @@ import ProtectedRouted from "./components/ProtectedRouted";
 import Cards from "./pages/Cards";
 import Error404 from "./pages/Error404";
 import Nabvar from "./components/Nabvar";
-
-// import Playmovies from "./pages/Playmovies";
-import Trailer from "./pages/TrailersMovies";
+import PlayMovies from "./pages/PlayMovies";
 import Peliculas from "./pages/Peliculas";
 import Series from "./pages/Series";
+import PlaySeries from "./pages/PlaySeries";
 
 //hey
 export default function App() {
@@ -38,13 +37,20 @@ export default function App() {
             }
           />
           <Route
-            path="/playmovies/:title"
+            path="/playmovies/:title/:id"
             element={
               <ProtectedRouted>
-                <Trailer />
+                <PlayMovies />
               </ProtectedRouted>
             }
           />
+
+          <Route
+          path="/playseries/:title" element={
+            <ProtectedRouted>
+              <PlaySeries/>
+            </ProtectedRouted>
+          }/>
 
           <Route
             path="/peliculas"
