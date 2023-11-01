@@ -3,7 +3,7 @@ import '../style/home.css'
 const SlidePop = ({ allPopular }) => {
   return (
     <div>
-      <h1>Mas vistas</h1>
+      <h1>Populares</h1>
       <div className="caja">
         {allPopular?.map((show) => {
           return (
