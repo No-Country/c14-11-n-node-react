@@ -10,7 +10,7 @@ const PlaySeries = () => {
   const [videoId, setVideoId] = useState(null);
 console.log(videoId);
   useEffect(() => {
-    const API_KEY = "AIzaSyBm-AIzaSyCDafd08XRbnwcFdEbAyM0zl5SKddaanlc"; // Reemplaza con tu propia clave de API de YouTube
+    const API_KEY = "AIzaSyATfhV3S-sXWzH-L4kPHnGSk6iqsTKv9c4"; // Reemplaza con tu propia clave de API de YouTube
 
     const fetchVideoBySearch = async () => {
       try {
@@ -48,12 +48,12 @@ console.log(videoId);
         <div>
           <div className="container__movie-reproductor">
             <div className="movie__reproductor__btns">
-              <button
+              {/* <button
                 className="movie__reproductor-btn"
                 onClick={() => setVideoId(null)}
               >
                 Mas información
-              </button>
+              </button> */}
               <button className="movie__reproductor-btn" onClick={handleBack}>
                 Atrás
               </button>
