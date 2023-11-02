@@ -11,7 +11,7 @@ const SlideTopRated = () => {
 
   const baseUrl = "https://image.tmdb.org/t/p/w500";
 
-  const urlTR = "http://localhost:4000/list/top";
+  const urlTR = "https://nocountry-00o9.onrender.com/list/top";
 
   const [topRated, setTopRated] = useFetch(urlTR);
 

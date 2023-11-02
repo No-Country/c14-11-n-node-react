@@ -21,13 +21,13 @@ const Series = () => {
   const [noMore, setNoMore] = useState(false)
   //Estado para deshabilitar el boton de traer mas
 
-  const url = 'http://localhost:4000/filters/genres?tv=true' // URL para obtener géneros
+  const url = 'https://nocountry-00o9.onrender.com/filters/genres?tv=true' // URL para obtener géneros
   const url1 = genrefilter
-    ? `http://localhost:4000/tv/genres/${genrefilter}`
-    : `http://localhost:4000/tv` // URL para obtener películas por género
+    ? `https://nocountry-00o9.onrender.com/tv/genres/${genrefilter}`
+    : `https://nocountry-00o9.onrender.com/tv` // URL para obtener películas por género
 
   const [inputText, setInputText] = useState('') // Almacena el texto de búsqueda
-  const urlSearch = `http://localhost:4000/tv/search?name=${inputText}` // URL para buscar películas por nombre
+  const urlSearch = `https://nocountry-00o9.onrender.com/tv/search?name=${inputText}` // URL para buscar películas por nombre
 
   // Función para manejar cambios en el campo de búsqueda
   const handleChange = (event) => {
@@ -96,17 +96,17 @@ const Series = () => {
 
     const moreShows = genrefilter
       ? await axios.get(
-          `http://localhost:4000/tv/genres/${genrefilter}&page=${
+          `https://nocountry-00o9.onrender.com/tv/genres/${genrefilter}&page=${
             currentPage + 1
           }`
         )
       : inputText
       ? await axios.get(
-          `http://localhost:4000/tv/search?name=${inputText}&page=${
+          `https://nocountry-00o9.onrender.com/tv/search?name=${inputText}&page=${
             currentPage + 1
           }`
         )
-      : await axios.get(`http://localhost:4000/tv?page=${currentPage + 1}`)
+      : await axios.get(`https://nocountry-00o9.onrender.com/tv?page=${currentPage + 1}`)
 
     if (moreShows.data.length === 0) {
       setNoMore(true)

@@ -13,7 +13,7 @@ export default function SlideTopRated() {
 
   const baseUrl = "https://image.tmdb.org/t/p/w500";
 
-  const urlPop = "http://localhost:4000/list/popmovies";
+  const urlPop = "https://nocountry-00o9.onrender.com/list/popmovies";
 
   const [topRated, setTopRated] = useFetch(urlPop);
 
