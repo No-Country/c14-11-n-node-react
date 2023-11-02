@@ -1,46 +1,49 @@
-import  { useState, useEffect } from "react";
-import YouTube from "react-youtube";
-import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
-import "../style/trailersMovies.css";
+import { useState, useEffect } from 'react'
+import YouTube from 'react-youtube'
+import axios from 'axios'
+import { useNavigate, useParams } from 'react-router-dom'
+import '../style/trailersMovies.css'
 const PlaySeries = () => {
-  const { title } = useParams();
-  const navigate = useNavigate();
-console.log(title);
-  const [videoId, setVideoId] = useState(null);
+  const { title } = useParams()
+  const navigate = useNavigate()
+  console.log(title)
+  const [videoId, setVideoId] = useState(null)
 
   useEffect(() => {
-    //const API_KEY = "AIzaSyDQZYJQUAfVxyca1GdIi2ydPfJSfUW6ris"; // Reemplaza con tu propia clave de API de YouTube
+    const API_KEY = 'AIzaSyDQZYJQUAfVxyca1GdIi2ydPfJSfUW6ris' // Reemplaza con tu propia clave de API de YouTube
 
     const fetchVideoBySearch = async () => {
       try {
-        const response = await axios.get("https://www.googleapis.com/youtube/v3/search", {
-          params: {
-            key: API_KEY,
-            q: title + " official trailer",
-            maxResults: 1,
-            part: "id",
-            type: "video",
-          },
-        });
+        const response = await axios.get(
+          'https://www.googleapis.com/youtube/v3/search',
+          {
+            params: {
+              key: API_KEY,
+              q: title + ' official trailer',
+              maxResults: 1,
+              part: 'id',
+              type: 'video',
+            },
+          }
+        )
 
         if (response.data.items.length > 0) {
-          const videoId = response.data.items[0].id.videoId;
-          setVideoId(videoId);
+          const videoId = response.data.items[0].id.videoId
+          setVideoId(videoId)
         } else {
-          console.log("No se encontraron videos para el título proporcionado.");
+          console.log('No se encontraron videos para el título proporcionado.')
         }
       } catch (error) {
-        console.error("Hubo un error:", error);
+        console.error('Hubo un error:', error)
       }
-    };
+    }
 
-    fetchVideoBySearch();
-  }, [title]);
+    fetchVideoBySearch()
+  }, [title])
 
   const handleBack = () => {
-    navigate("/series");
-  };
+    navigate('/series')
+  }
 
   return (
     <div className="container__movie">
@@ -62,8 +65,8 @@ console.log(title);
               videoId={videoId}
               className="movie_reproductor"
               opts={{
-                width: "100%",
-                height: "100%",
+                width: '100%',
+                height: '100%',
                 playerVars: {
                   autoplay: 1,
                   controls: 1,
@@ -80,7 +83,7 @@ console.log(title);
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default PlaySeries;
+export default PlaySeries
