@@ -5,6 +5,8 @@ const initialState = {
   allSeries: [],
   movieFilters: [],
   tvFilters: [],
+  allTopRated: [],
+  allPopular: [],
 }
 
 function reducer(state, action) {
@@ -49,7 +51,16 @@ function reducer(state, action) {
         ...state,
         tvFilters: action.payload,
       }
-
+    case 'GET_TOP_RATED':
+      return {
+        ...state,
+        allTopRated: action.payload,
+      }
+    case 'GET_POPULAR':
+      return {
+        ...state,
+        allPopular: action.payload,
+      }
     default:
       return { ...state }
   }

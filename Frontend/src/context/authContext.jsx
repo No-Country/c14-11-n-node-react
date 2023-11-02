@@ -45,7 +45,6 @@
 //   );
 // }
 
-
 import { createContext, useContext, useEffect, useState } from "react";
 import { signInWithRedirect, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase";
@@ -90,11 +89,11 @@ export function AuthProvider({ children }) {
     const googleProvider = new GoogleAuthProvider();
     try {
       // Si el usuario ya está autenticado con otro método,
-      // cerrar la sesión antes de iniciar sesión con Google
+      // no permitir iniciar sesión con Google
       if (auth.currentUser) {
-        await logout();
+        console.log('Por favor, cierra la sesión actual antes de iniciar sesión con Google.');
+        return;
       }
-      // Utiliza signInWithRedirect en lugar de signInWithPopup
       await signInWithRedirect(auth, googleProvider);
     } catch (error) {
       console.error(error);

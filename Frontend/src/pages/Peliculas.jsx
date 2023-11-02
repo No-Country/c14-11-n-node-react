@@ -16,7 +16,6 @@ const Peliculas = () => {
 
   // Declaración de variables de estado y constantes
   const [genrefilter, setGenrefilter] = useState(false); // Almacena el filtro de género seleccionado
-  const [searched, setSearched] = useState(false); // Almacena los resultados de búsqueda
 
   const url = "http://localhost:4000/filters/genres"; // URL para obtener géneros
   const url1 = `http://localhost:4000/filters/genre/${genrefilter}`; // URL para obtener películas por género
@@ -33,7 +32,7 @@ const Peliculas = () => {
   const handleSearch = async () => {
     setGenrefilter(false);
     const { data } = await axios.get(urlSearch);
-    setSearched(data);
+    dispatch({ type: "GET_MOVIES", payload: data });
   };
 
   // Utiliza un custom hook llamado useFetch para obtener la lista de géneros
@@ -62,7 +61,10 @@ const Peliculas = () => {
 
   // Función para navegar a la página de detalles de una película
   const handleName = (title) => {
-    navigate(`/playmovies/${title}`);
+    const name = title.title
+    const id = title.id
+    navigate(`/playmovies/${name}/${id}`)
+    
   };
 
   // Trae peliculas del genero solicitado
@@ -127,17 +129,14 @@ const Peliculas = () => {
       </div>
 
       <section className="filter__movies">
-      
-        {(searched ? searched : allMovies)?.map((movie) => (
+        {allMovies?.map((movie) => (
           <Atropos
-            onClick={() => handleName(movie.title)}
+            onClick={() => handleName(movie)}
             className="movies__card"
             key={movie.id}
           >
             {movie.backdrop_path && movie.title ? (
               <>
-          
-                
                 <img
                   className="movies__card-img"
                   data-atropos-offset="1"
@@ -147,7 +146,6 @@ const Peliculas = () => {
                 <h1 className="movies__card-title" data-atropos-offset="5">
                   {movie.title}
                 </h1>
-                
               </>
             ) : (
               <div className="movies__card-skeleton">
@@ -159,7 +157,7 @@ const Peliculas = () => {
         ))}
       </section>
 
-      <button className="more__movies-btn" onClick={handleMore}>
+      <button className="more__movies-and-series-btn" onClick={handleMore}>
         TRAER MAS
       </button>
     </section>
@@ -167,3 +165,5 @@ const Peliculas = () => {
 };
 
 export default Peliculas;
+
+

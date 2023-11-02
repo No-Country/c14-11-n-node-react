@@ -1,0 +1,2005 @@
+{
+	"info": {
+		"_postman_id": "320dcf85-97e5-4b20-b400-f90368c738c2",
+		"name": "DB PELICULAS TESTING",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30176895",
+		"_collection_link": "https://crimson-astronaut-288857.postman.co/workspace/API-TESTING-FILM-FLOW~204d7280-bf28-470f-a082-e9febc8eea4e/collection/30176895-320dcf85-97e5-4b20-b400-f90368c738c2?action=share&source=collection_link&creator=30176895"
+	},
+	"item": [
+		{
+			"name": "US 14 | API TESTING | Obtener una lista de películas por género",
+			"item": [
+				{
+					"name": "ID: 28 - Acción",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verificar que todas las películas sean del género Acción (ID: 28)\", function () {\r",
+									"    // Obtener la respuesta JSON\r",
+									"    var jsonData = pm.response.json();\r",
+									"    \r",
+									"    // Iterar a través de las películas en la respuesta\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"        \r",
+									"        // Verificar que el género de Acción (ID: 28) esté presente en la lista de géneros\r",
+									"        pm.expect(genreIds).to.include(28, \"La película '\" + movie.title + \"' no pertenece al género Acción.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 12 - Aventura",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verificar que todas las películas sean del género Aventura (ID: 12)\", function () {\r",
+									"    // Obtener la respuesta JSON\r",
+									"    var jsonData = pm.response.json();\r",
+									"    \r",
+									"    // Iterar a través de las películas en la respuesta\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"        \r",
+									"        // Verificar que el género de Acción (ID: 12) esté presente en la lista de géneros\r",
+									"        pm.expect(genreIds).to.include(12, \"La película '\" + movie.title + \"' no pertenece al género Acción.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 16 - Animación",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"T03: Verificar que todas las películas en la respuesta pertenezcan al género de Animación (ID: 16)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    \r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"        \r",
+									"        pm.expect(genreIds).to.include(16, \"La película '\" + movie.title + \"' no pertenece al género Animación.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 35 - Comedia",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"T04: Verificar que todas las películas en la respuesta pertenezcan al género de Comedia (ID: 35)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    \r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"        \r",
+									"        pm.expect(genreIds).to.include(35, \"La película '\" + movie.title + \"' no pertenece al género Comedia.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 80 - Crimen",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC05: Verificar que todas las películas en la respuesta pertenezcan al género de Crimen (ID: 80)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    \r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"        \r",
+									"        pm.expect(genreIds).to.include(80, \"La película '\" + movie.title + \"' no pertenece al género Crimen.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/80",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"80"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 99 - Documental",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC06: Verificar que todas las películas en la respuesta pertenezcan al género de Documental (ID: 99)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    \r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"        \r",
+									"        pm.expect(genreIds).to.include(99, \"La película '\" + movie.title + \"' no pertenece al género Documental.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/99",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 18 - Drama",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC07: Verificar que todas las películas en la respuesta pertenezcan al género de Drama (ID: 18)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    \r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"        \r",
+									"        pm.expect(genreIds).to.include(18, \"La película '\" + movie.title + \"' no pertenece al género Drama.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 10751 - Familia",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC08: Verificar que todas las películas en la respuesta pertenezcan al género de Familia (ID: 10751)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    \r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"        \r",
+									"        pm.expect(genreIds).to.include(10751, \"La película '\" + movie.title + \"' no pertenece al género Familia.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/10751",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"10751"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 14 - Fantasía",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"T09: Verificar que todas las películas en la respuesta pertenezcan al género de Fantasía (ID: 14)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(14, \"La película '\" + movie.title + \"' no pertenece al género Fantasía.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 36 - Historia",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC10: Verificar que todas las películas en la respuesta pertenezcan al género de Historia (ID: 36)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(36, \"La película '\" + movie.title + \"' no pertenece al género Historia.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/36",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 27 - Terror",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC11: Verificar que todas las películas en la respuesta pertenezcan al género de Terror (ID: 27)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(27, \"La película '\" + movie.title + \"' no pertenece al género Terror.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "D: 10402 - Música",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC12: Verificar que todas las películas en la respuesta pertenezcan al género de Música (ID: 10402)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(10402, \"La película '\" + movie.title + \"' no pertenece al género Música.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/10402",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"10402"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 9648 - Misterio",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC13: Verificar que todas las películas en la respuesta pertenezcan al género de Misterio (ID: 9648)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(9648, \"La película '\" + movie.title + \"' no pertenece al género Misterio.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/9648",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"9648"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 10749 - Romance",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC14: Verificar que todas las películas en la respuesta pertenezcan al género de Romance (ID: 10749)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(10749, \"La película '\" + movie.title + \"' no pertenece al género Romance.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/10749",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"10749"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 878 - Ciencia ficción",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC15: Verificar que todas las películas en la respuesta pertenezcan al género de Ciencia ficción (ID: 878)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(878, \"La película '\" + movie.title + \"' no pertenece al género Ciencia ficción.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/878",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"878"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 10770 - Película de TV",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC16: Verificar que todas las películas en la respuesta pertenezcan al género de Película de TV (ID: 10770)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(10770, \"La película '\" + movie.title + \"' no pertenece al género Película de TV.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/10770",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"10770"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 53 - Suspense",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC17: Verificar que todas las películas en la respuesta pertenezcan al género de Suspense (ID: 53)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(53, \"La película '\" + movie.title + \"' no pertenece al género Suspense.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"53"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 10752 - Bélica",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC18: Verificar que todas las películas en la respuesta pertenezcan al género de Belica (ID: 10752)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(10752, \"La película '\" + movie.title + \"' no pertenece al género Belica.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/10752",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"10752"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID: 37 - Western",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TC19: Verificar que todas las películas en la respuesta pertenezcan al género de Western (ID: 37)\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    for (var i = 0; i < jsonData.length; i++) {\r",
+									"        var movie = jsonData[i];\r",
+									"        var genreIds = movie.genre_ids;\r",
+									"\r",
+									"        pm.expect(genreIds).to.include(37, \"La película '\" + movie.title + \"' no pertenece al género Western.\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/filters/genre/37",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"filters",
+								"genre",
+								"37"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "US 21 | Verificación de Disponibilidad de Imágenes de Portada de Series",
+			"item": [
+				{
+					"name": "PAGINA 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verificar disponibilidad de imágenes de portada\", function () {\r",
+									"    // Parsear la respuesta JSON\r",
+									"    var responseData = pm.response.json();\r",
+									"\r",
+									"    // Recorrer los datos de películas\r",
+									"    responseData.forEach(function (movie) {\r",
+									"        var imageUrl = movie.image;\r",
+									"        pm.sendRequest({\r",
+									"            url: imageUrl,\r",
+									"            method: 'GET'\r",
+									"        }, function (err, res) {\r",
+									"            pm.test(\"Imagen de portada disponible para \" + movie.name, function () {\r",
+									"                pm.expect(res.code).to.equal(200); // Verificar si la respuesta es exitosa (código de estado 200)\r",
+									"            });\r",
+									"        });\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/tv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAGINA 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"PAGINA 2: Verificar disponibilidad de imágenes de portada\", function () {\r",
+									"    // Parsear la respuesta JSON\r",
+									"    var responseData = pm.response.json();\r",
+									"\r",
+									"    // Recorrer los datos de películas\r",
+									"    responseData.forEach(function (movie) {\r",
+									"        var imageUrl = movie.image;\r",
+									"        pm.sendRequest({\r",
+									"            url: imageUrl,\r",
+									"            method: 'GET'\r",
+									"        }, function (err, res) {\r",
+									"            pm.test(\"Imagen de portada disponible para \" + movie.name, function () {\r",
+									"                pm.expect(res.code).to.equal(200); // Verificar si la respuesta es exitosa (código de estado 200)\r",
+									"            });\r",
+									"        });\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/tv?page=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tv"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAGINA 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"PAGINA 3: Verificar disponibilidad de imágenes de portada\", function () {\r",
+									"    // Parsear la respuesta JSON\r",
+									"    var responseData = pm.response.json();\r",
+									"\r",
+									"    // Recorrer los datos de películas\r",
+									"    responseData.forEach(function (movie) {\r",
+									"        var imageUrl = movie.image;\r",
+									"        pm.sendRequest({\r",
+									"            url: imageUrl,\r",
+									"            method: 'GET'\r",
+									"        }, function (err, res) {\r",
+									"            pm.test(\"Imagen de portada disponible para \" + movie.name, function () {\r",
+									"                pm.expect(res.code).to.equal(200); // Verificar si la respuesta es exitosa (código de estado 200)\r",
+									"            });\r",
+									"        });\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/tv?page=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tv"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAGINA 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"PAGINA 4: Verificar disponibilidad de imágenes de portada\", function () {\r",
+									"    // Parsear la respuesta JSON\r",
+									"    var responseData = pm.response.json();\r",
+									"\r",
+									"    // Recorrer los datos de películas\r",
+									"    responseData.forEach(function (movie) {\r",
+									"        var imageUrl = movie.image;\r",
+									"        pm.sendRequest({\r",
+									"            url: imageUrl,\r",
+									"            method: 'GET'\r",
+									"        }, function (err, res) {\r",
+									"            pm.test(\"Imagen de portada disponible para \" + movie.name, function () {\r",
+									"                pm.expect(res.code).to.equal(200); // Verificar si la respuesta es exitosa (código de estado 200)\r",
+									"            });\r",
+									"        });\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/tv?page=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tv"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAGINA 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"PAGINA 5: Verificar disponibilidad de imágenes de portada\", function () {\r",
+									"    // Parsear la respuesta JSON\r",
+									"    var responseData = pm.response.json();\r",
+									"\r",
+									"    // Recorrer los datos de películas\r",
+									"    responseData.forEach(function (movie) {\r",
+									"        var imageUrl = movie.image;\r",
+									"        pm.sendRequest({\r",
+									"            url: imageUrl,\r",
+									"            method: 'GET'\r",
+									"        }, function (err, res) {\r",
+									"            pm.test(\"Imagen de portada disponible para \" + movie.name, function () {\r",
+									"                pm.expect(res.code).to.equal(200); // Verificar si la respuesta es exitosa (código de estado 200)\r",
+									"            });\r",
+									"        });\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/tv?page=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tv"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAGINA 6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"PAGINA 6: Verificar disponibilidad de imágenes de portada\", function () {\r",
+									"    // Parsear la respuesta JSON\r",
+									"    var responseData = pm.response.json();\r",
+									"\r",
+									"    // Recorrer los datos de películas\r",
+									"    responseData.forEach(function (movie) {\r",
+									"        var imageUrl = movie.image;\r",
+									"        pm.sendRequest({\r",
+									"            url: imageUrl,\r",
+									"            method: 'GET'\r",
+									"        }, function (err, res) {\r",
+									"            pm.test(\"Imagen de portada disponible para \" + movie.name, function () {\r",
+									"                pm.expect(res.code).to.equal(200); // Verificar si la respuesta es exitosa (código de estado 200)\r",
+									"            });\r",
+									"        });\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/tv?page=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tv"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAGINA 7",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"PAGINA 7: Verificar disponibilidad de imágenes de portada\", function () {\r",
+									"    // Parsear la respuesta JSON\r",
+									"    var responseData = pm.response.json();\r",
+									"\r",
+									"    // Recorrer los datos de películas\r",
+									"    responseData.forEach(function (movie) {\r",
+									"        var imageUrl = movie.image;\r",
+									"        pm.sendRequest({\r",
+									"            url: imageUrl,\r",
+									"            method: 'GET'\r",
+									"        }, function (err, res) {\r",
+									"            pm.test(\"Imagen de portada disponible para \" + movie.name, function () {\r",
+									"                pm.expect(res.code).to.equal(200); // Verificar si la respuesta es exitosa (código de estado 200)\r",
+									"            });\r",
+									"        });\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/tv?page=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tv"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAGINA 8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"PAGINA 8: Verificar disponibilidad de imágenes de portada\", function () {\r",
+									"    // Parsear la respuesta JSON\r",
+									"    var responseData = pm.response.json();\r",
+									"\r",
+									"    // Recorrer los datos de películas\r",
+									"    responseData.forEach(function (movie) {\r",
+									"        var imageUrl = movie.image;\r",
+									"        pm.sendRequest({\r",
+									"            url: imageUrl,\r",
+									"            method: 'GET'\r",
+									"        }, function (err, res) {\r",
+									"            pm.test(\"Imagen de portada disponible para \" + movie.name, function () {\r",
+									"                pm.expect(res.code).to.equal(200); // Verificar si la respuesta es exitosa (código de estado 200)\r",
+									"            });\r",
+									"        });\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/tv?page=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tv"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAGINA 9",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"PAGINA 9: Verificar disponibilidad de imágenes de portada\", function () {\r",
+									"    // Parsear la respuesta JSON\r",
+									"    var responseData = pm.response.json();\r",
+									"\r",
+									"    // Recorrer los datos de películas\r",
+									"    responseData.forEach(function (movie) {\r",
+									"        var imageUrl = movie.image;\r",
+									"        pm.sendRequest({\r",
+									"            url: imageUrl,\r",
+									"            method: 'GET'\r",
+									"        }, function (err, res) {\r",
+									"            pm.test(\"Imagen de portada disponible para \" + movie.name, function () {\r",
+									"                pm.expect(res.code).to.equal(200); // Verificar si la respuesta es exitosa (código de estado 200)\r",
+									"            });\r",
+									"        });\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/tv?page=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tv"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAGINA 10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"PAGINA 10: Verificar disponibilidad de imágenes de portada\", function () {\r",
+									"    // Parsear la respuesta JSON\r",
+									"    var responseData = pm.response.json();\r",
+									"\r",
+									"    // Recorrer los datos de películas\r",
+									"    responseData.forEach(function (movie) {\r",
+									"        var imageUrl = movie.image;\r",
+									"        pm.sendRequest({\r",
+									"            url: imageUrl,\r",
+									"            method: 'GET'\r",
+									"        }, function (err, res) {\r",
+									"            pm.test(\"Imagen de portada disponible para \" + movie.name, function () {\r",
+									"                pm.expect(res.code).to.equal(200); // Verificar si la respuesta es exitosa (código de estado 200)\r",
+									"            });\r",
+									"        });\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/tv?page=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tv"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Esta colección de pruebas verifica la disponibilidad de imágenes de portada de series en la API local. Debido a la magnitud de las series, el proyecto solo se centrará en las primeras 10 páginas de series. Tenga en cuenta que los siguientes endpoints están disponibles para las primeras 10 páginas:\n\n1. [http://localhost:4000/tv?page=1](http://localhost:4000/tv?page=1)\n    \n2. [http://localhost:4000/tv?page=2](http://localhost:4000/tv?page=2)\n    \n3. [http://localhost:4000/tv?page=3](http://localhost:4000/tv?page=3)\n    \n4. [http://localhost:4000/tv?page=4](http://localhost:4000/tv?page=4)\n    \n5. [http://localhost:4000/tv?page=5](http://localhost:4000/tv?page=5)\n    \n6. [http://localhost:4000/tv?page=6](http://localhost:4000/tv?page=6)\n    \n7. [http://localhost:4000/tv?page=7](http://localhost:4000/tv?page=7)\n    \n8. [http://localhost:4000/tv?page=8](http://localhost:4000/tv?page=8)\n    \n9. [http://localhost:4000/tv?page=9](http://localhost:4000/tv?page=9)\n    \n10. [http://localhost:4000/tv?page=10](http://localhost:4000/tv?page=10)\n    \n\nLas demás páginas no se verificarán en este proyecto."
+		},
+		{
+			"name": "US 13 | API TESTING | Obtener una lista de géneros",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// TC1: Verificar que se reciba una lista de géneros válidos\r",
+							"pm.test(\"Verificar que se reciba una lista de géneros válidos\", function () {\r",
+							"    // Parsear la respuesta JSON\r",
+							"    var jsonResponse = pm.response.json();\r",
+							"    // Verificar que los géneros en la lista sean válidos\r",
+							"    var validGenres = [\r",
+							"        { \"id\": 28, \"name\": \"Acción\" },\r",
+							"        { \"id\": 12, \"name\": \"Aventura\" },\r",
+							"        { \"id\": 16, \"name\": \"Animación\" },\r",
+							"        { \"id\": 35, \"name\": \"Comedia\" },\r",
+							"        { \"id\": 80, \"name\": \"Crimen\" },\r",
+							"        { \"id\": 99, \"name\": \"Documental\" },\r",
+							"        { \"id\": 18, \"name\": \"Drama\" },\r",
+							"        { \"id\": 10751, \"name\": \"Familia\" },\r",
+							"        { \"id\": 14, \"name\": \"Fantasía\" },\r",
+							"        { \"id\": 36, \"name\": \"Historia\" },\r",
+							"        { \"id\": 27, \"name\": \"Terror\" },\r",
+							"        { \"id\": 10402, \"name\": \"Música\" },\r",
+							"        { \"id\": 9648, \"name\": \"Misterio\" },\r",
+							"        { \"id\": 10749, \"name\": \"Romance\" },\r",
+							"        { \"id\": 878, \"name\": \"Ciencia ficción\" },\r",
+							"        { \"id\": 10770, \"name\": \"Película de TV\" },\r",
+							"        { \"id\": 53, \"name\": \"Suspense\" },\r",
+							"        { \"id\": 10752, \"name\": \"Bélica\" },\r",
+							"        { \"id\": 37, \"name\": \"Western\" }\r",
+							"    ];\r",
+							"\r",
+							"    pm.expect(jsonResponse).to.eql(validGenres);\r",
+							"});\r",
+							"\r",
+							"// TC2: VERIFICAR STATUS 200\r",
+							"pm.test(\"Verificar código de estado HTTP 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// TC3: VERIFICAR que sea array de objetos JSON\r",
+							"pm.test(\"Verificar respuesta como array de objetos JSON\", function () {\r",
+							"    pm.expect(pm.response.json()).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							"//TC4:Verificar que cada género en la lista contenga al menos los campos \"id\" y \"name\"\r",
+							"pm.test(\"Verificar campos 'id' y 'name' en cada género\", function () {\r",
+							"    // Obtener la respuesta JSON\r",
+							"    var jsonResponse = pm.response.json();\r",
+							"\r",
+							"    // Verificar que la respuesta sea un arreglo\r",
+							"    pm.expect(jsonResponse).to.be.an('array');\r",
+							"\r",
+							"    // Iterar a través de cada género en el arreglo y verificar los campos 'id' y 'name'\r",
+							"    jsonResponse.forEach(function (genre) {\r",
+							"        pm.expect(genre).to.have.property('id');\r",
+							"        pm.expect(genre).to.have.property('name');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"//TC5: Verificar que la respuesta no sea un código de estado HTTP 404 (Not Found) cuando se envía una solicitud GET a una URL incorrecta\r",
+							"pm.test(\"Verificar que no sea un código de estado HTTP 404\", function () {\r",
+							"    pm.response.to.not.have.status(404);\r",
+							"});\r",
+							"\r",
+							"//TC6:TC8: Verificar que la lista de géneros no esté vacía\r",
+							"pm.test(\"Verificar que la lista de géneros no esté vacía\", function () {\r",
+							"    // Verificar que la respuesta sea un arreglo\r",
+							"    pm.expect(pm.response.json()).to.be.an('array');\r",
+							"\r",
+							"    // Verificar que el arreglo no esté vacío\r",
+							"    pm.expect(pm.response.json()).to.have.length.above(0);\r",
+							"});\r",
+							"\r",
+							"//TC7: C7: Verificar que la respuesta no contenga géneros duplicados\r",
+							"pm.test(\"Verificar que no haya géneros duplicados\", function () {\r",
+							"    // Obtener la respuesta JSON\r",
+							"    var jsonResponse = pm.response.json();\r",
+							"\r",
+							"    // Verificar que la respuesta sea un arreglo\r",
+							"    pm.expect(jsonResponse).to.be.an('array');\r",
+							"\r",
+							"    // Verificar que no haya géneros duplicados\r",
+							"    var genres = jsonResponse.map(JSON.stringify);\r",
+							"    var uniqueGenres = [...new Set(genres)];\r",
+							"    pm.expect(uniqueGenres.length).to.eql(genres.length);\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/filters/genres",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"filters",
+						"genres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 15 | API TESTING | Obtener una lista de películas populares",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//TC1: Verificar que la respuesta de la solicitud GET a \"http://localhost:4000/list/popmovies\" sea un código de estado HTTP 200 (OK).\r",
+							"pm.test(\"TC1: Verificar estado 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//TC2: Verificar que las películas en la respuesta tengan la propiedad \"popularity\" cuando se envía una solicitud GET a \"http://localhost:4000/list/popmovies\".\r",
+							"pm.test(\"TC2: Verificar que todas las películas tienen la propiedad 'popularity'\", function () {\r",
+							"    const movies = pm.response.json();\r",
+							"    pm.expect(movies).to.be.an('array').that.is.not.empty;\r",
+							"\r",
+							"    movies.forEach((movie) => {\r",
+							"        pm.expect(movie).to.have.property('popularity');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//TC3: Verificar que la respuesta de la solicitud GET a \"http://localhost:4000/list/popmovies\" sea un objeto JSON que contiene un arreglo de películas populares.\r",
+							"pm.test(\"TC3: Verificar que la respuesta sea un objeto JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"//TC4: Verificar que la propiedad POPULARITY sea un número.\r",
+							"pm.test(\"TC4: La propiedad POPULARITY es un número\", function () {\r",
+							"    const movies = pm.response.json();\r",
+							"    movies.forEach((movie) => {\r",
+							"        pm.expect(movie.popularity).to.be.a('number');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"//TC5: Verificar que la lista de peliculas populares no tengan un orden ascendente ni desdendente, es decir, que tenga un orden aleatorio cuando se envia la solicitud GET.\r",
+							"pm.test(\"TC5: Las peliculas no tienen orden ascendente o descendente\", function () {\r",
+							"    const movies = pm.response.json();\r",
+							"    const sortedMovies = [...movies].sort((a, b) => a.popularity - b.popularity);\r",
+							"\r",
+							"    pm.expect(movies).to.not.eql(sortedMovies);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/list/popmovies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"list",
+						"popmovies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 17 | API TESTING | Validar el formato de las URL de las imágenes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//TC#1: Verificar imagen válida cuando la URL de la imagen comienza con \"https://\".\r",
+							"pm.test(\"Las URLs de las imagenes comienzan con 'https://'\", function () {\r",
+							"    const movies = pm.response.json();\r",
+							"    _.each(movies, function (movie) {\r",
+							"        pm.expect(movie.image).to.match(/^https:\\/\\//);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"//TC#2: Verificar estado 200 cuando se hace la solicitud GET.\r",
+							"pm.test(\"El estado de respuesta es 200 (OK)\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//TC#3: Verificar que todas las películas tengan la propiedad image.\r",
+							"pm.test(\"Todas las películas tienen la propiedad 'image'\", function () {\r",
+							"    const movies = pm.response.json();\r",
+							"    _.each(movies, function (movie) {\r",
+							"        pm.expect(movie).to.have.property('image');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/getmovies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"getmovies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 19 | API TESTING | Obtener una lista de películas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//TC1: Verificar que se reciban 20 películas en la respuesta cuando se realiza la solicitud GET.\r",
+							"pm.test(\"La lista contiene 20 peliculas\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.expect(pm.response.json()).to.be.an('array').and.to.have.lengthOf(20);\r",
+							"});\r",
+							"\r",
+							"//TC2: Verificar que el código de estado de la respuesta sea 200 (Éxito) cuando se realiza la solicitud GET.\r",
+							"pm.test(\"Estado 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//TC3: Verificar que la respuesta contiene la información requerida para cada película, como título, descripción, fecha de lanzamiento e imagen.\r",
+							"pm.test(\"Todas las peliculas tienen propiedad titulo, descripción, fecha e imagen\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.json;\r",
+							"\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('array');\r",
+							"    \r",
+							"    jsonData.forEach(function (movie) {\r",
+							"        pm.expect(movie).to.have.property(\"title\");\r",
+							"        pm.expect(movie).to.have.property(\"overview\");\r",
+							"        pm.expect(movie).to.have.property(\"release_date\");\r",
+							"        pm.expect(movie).to.have.property(\"image\");\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"//TC4  Verificar que las fechas se devuelven en un formato específico, como \"AAAA-MM-DD\r",
+							"pm.test(\"Verificar que las fechas se devuelven en formato 'AAAA-MM-DD'\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"    // Get the response JSON\r",
+							"    const responseJson = pm.response.json();\r",
+							"\r",
+							"    // Define a regular expression to match the 'AAAA-MM-DD' format\r",
+							"    const dateFormatRegex = /^\\d{4}-\\d{2}-\\d{2}$/;\r",
+							"\r",
+							"    // Iterate through each movie in the response\r",
+							"    responseJson.forEach(function (movie) {\r",
+							"        // Check if the 'release_date' field matches the expected date format\r",
+							"        pm.expect(movie.release_date).to.match(dateFormatRegex);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Campo adult es un valor booleano\", function () {\r",
+							"  const responseData = pm.response.json();\r",
+							"\r",
+							"  pm.expect(responseData).to.be.an('array');\r",
+							"  responseData.forEach(function(movie) {\r",
+							"    pm.expect(movie.adult).to.be.a('boolean');\r",
+							"  });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Verificar que el campo género_ids sea un array y no esté vacío para cada película\", function () {\r",
+							"  const responseData = pm.response.json();\r",
+							"\r",
+							"  pm.expect(responseData).to.be.an('array');\r",
+							"\r",
+							"  responseData.forEach(function(movie) {\r",
+							"    pm.expect(movie.genre_ids).to.be.an('array').and.to.have.lengthOf.at.least(1, \"genre_ids should not be empty\");\r",
+							"  });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Verificar que el campo id sea un número entero no negativo para cada película\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData).to.be.an('array');\r",
+							"    responseData.forEach(function(movie) {\r",
+							"        pm.expect(movie.id).to.be.a('number').and.to.be.at.least(0, \"id field should be a non-negative integer\");\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has the required fields\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"\r",
+							"    pm.expect(responseData).to.be.an('array');\r",
+							"\r",
+							"    responseData.forEach(function (movie) {\r",
+							"        pm.expect(movie).to.have.property('adult');\r",
+							"        pm.expect(movie).to.have.property('title');\r",
+							"        pm.expect(movie).to.have.property('overview');\r",
+							"        pm.expect(movie).to.have.property('release_date');\r",
+							"        pm.expect(movie).to.have.property('image');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Adult is a boolean value\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData).to.be.an('array');\r",
+							"    \r",
+							"    responseData.forEach(function(movie) {\r",
+							"        pm.expect(movie.adult).to.be.a('boolean');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Verify that the genre_ids array is present and contains at least one element for each movie\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"\r",
+							"    pm.expect(responseData).to.be.an('array').and.to.have.lengthOf.at.least(1, \"Array should not be empty\");\r",
+							"\r",
+							"    responseData.forEach(function(movie) {\r",
+							"        pm.expect(movie.genre_ids).to.exist.and.to.be.an('array').and.to.have.lengthOf.at.least(1, \"Array should not be empty\");\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Verify that the id field is a non-negative integer for each movie\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"\r",
+							"    pm.expect(responseData).to.be.an('array').that.is.not.empty;\r",
+							"\r",
+							"    responseData.forEach(function(movie) {\r",
+							"        pm.expect(movie.id).to.be.a('number').that.is.at.least(0);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/getmovies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"getmovies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 16 | API TESTING | Obtener una lista de próximos estrenos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Fechas de lanzamiento en formato AAAA-MM-DD\", function () {\r",
+							"    var responseData = pm.response.json();\r",
+							"    var isFormatValid = true;\r",
+							"\r",
+							"    for (var i = 0; i < responseData.length; i++) {\r",
+							"        var releaseDate = responseData[i].release_date;\r",
+							"        if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(releaseDate)) {\r",
+							"            isFormatValid = false;\r",
+							"            break;\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    pm.expect(isFormatValid).to.be.true;\r",
+							"});\r",
+							"\r",
+							"//-------------------------------------------------------------\r",
+							"var currentDate = new Date().toISOString().split('T')[0];\r",
+							"\r",
+							"// Imprime la fecha actual en la consola\r",
+							"console.log(\"Fecha actual: \" + currentDate);\r",
+							"\r",
+							"// Analiza la respuesta JSON\r",
+							"var responseData = pm.response.json();\r",
+							"\r",
+							"// Itera a través de las películas en la respuesta y muestra el nombre junto con la fecha de lanzamiento\r",
+							"for (var i = 0; i < responseData.length; i++) {\r",
+							"    var movie = responseData[i];\r",
+							"    var releaseDate = movie.release_date;\r",
+							"    var movieTitle = movie.title;\r",
+							"    console.log(\"Fecha de lanzamiento de '\" + movieTitle + \"': \" + releaseDate);\r",
+							"}\r",
+							"// ========================================================\r",
+							"\r",
+							"//=========================================================\r",
+							"pm.test(\"Las fechas de lanzamiento son posteriores a la actual\", function () {\r",
+							"    var responseData = pm.response.json();\r",
+							"    var currentDate = new Date();\r",
+							"    var moviesWithPastDates = [];\r",
+							"\r",
+							"    for (var i = 0; i < responseData.length; i++) {\r",
+							"        var releaseDate = new Date(responseData[i].release_date);\r",
+							"        if (releaseDate < currentDate) {\r",
+							"            moviesWithPastDates.push(responseData[i].title);\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    if (moviesWithPastDates.length > 0) {\r",
+							"        pm.expect.fail(\"Las siguientes películas tienen fechas de lanzamiento pasadas: \" + moviesWithPastDates.join(\", \"));\r",
+							"    }\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Todas las películas tienen la propiedad release_date\", function () {\r",
+							"    var responseData = pm.response.json();\r",
+							"    var allMoviesHaveReleaseDate = true;\r",
+							"\r",
+							"    for (var i = 0; i < responseData.length; i++) {\r",
+							"        var movie = responseData[i];\r",
+							"        if (!movie.hasOwnProperty(\"release_date\")) {\r",
+							"            allMoviesHaveReleaseDate = false;\r",
+							"            break;\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    pm.expect(allMoviesHaveReleaseDate).to.be.true;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/list/upcomings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"list",
+						"upcomings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 18 | API TESTING | Validar valores de \"vote_average\" en un rango y \"vote_count\" mínimo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Endpoint es accesible\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"La respuesta obtinee un array de peliculas\", function () {\r",
+							"    pm.expect(pm.response.json()).to.be.an('array');\r",
+							"});\r",
+							"pm.test(\"Todas las peliculas tienen vote_average con un valor numérico dentro del rango válido de 0 a 10\", function () {\r",
+							"    var movies = pm.response.json();\r",
+							"\r",
+							"    _.each(movies, function (movie) {\r",
+							"        pm.expect(movie.vote_average).to.be.a('number');\r",
+							"        pm.expect(movie.vote_average).to.be.within(0, 10);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Todas las peliculas tienen vote_count con valor numérico igual o mayor que 0.\", function () {\r",
+							"    var movies = pm.response.json();\r",
+							"\r",
+							"    _.each(movies, function (movie) {\r",
+							"        pm.expect(movie.vote_count).to.be.a('number');\r",
+							"        pm.expect(movie.vote_count).to.be.at.least(0);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"pm.test(\"El array de peliculas no esta vacio\", function () {\r",
+							"    pm.response.to.not.be.empty;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/getmovies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"getmovies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US 20 | API TESTING | Obtener una lista de generos (SERIES)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// TC1: Verificar que se reciba una lista de géneros válidos\r",
+							"pm.test(\"Verificar que se reciba una lista de géneros válidos\", function () {\r",
+							"    // Parsear la respuesta JSON\r",
+							"    var jsonResponse = pm.response.json();\r",
+							"    // Verificar que los géneros en la lista sean válidos\r",
+							"    var validGenres = [\r",
+							"        { \"id\": 10759, \"name\": \"Action & Adventure\" },\r",
+							"        { \"id\": 16, \"name\": \"Animación\" },\r",
+							"        { \"id\": 35, \"name\": \"Comedia\" },\r",
+							"        { \"id\": 80, \"name\": \"Crimen\" },\r",
+							"        { \"id\": 99, \"name\": \"Documental\" },\r",
+							"        { \"id\": 18, \"name\": \"Drama\" },\r",
+							"        { \"id\": 10751, \"name\": \"Familia\" },\r",
+							"        { \"id\": 10762, \"name\": \"Kids\" },\r",
+							"        { \"id\": 9648, \"name\": \"Misterio\" },\r",
+							"        { \"id\": 10763, \"name\": \"News\" },\r",
+							"        { \"id\": 10764, \"name\": \"Reality\" },\r",
+							"        { \"id\": 10765, \"name\": \"Sci-Fi & Fantasy\" },\r",
+							"        { \"id\": 10766, \"name\": \"Soap\" },\r",
+							"        { \"id\": 10767, \"name\": \"Talk\" },\r",
+							"        { \"id\": 10768, \"name\": \"War & Politics\" },\r",
+							"        { \"id\": 37, \"name\": \"Western\" }\r",
+							"    ];\r",
+							"\r",
+							"    pm.expect(jsonResponse).to.eql(validGenres);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// TC2: VERIFICAR STATUS 200\r",
+							"pm.test(\"Verificar código de estado HTTP 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// TC3: VERIFICAR que sea array de objetos JSON\r",
+							"pm.test(\"Verificar respuesta como array de objetos JSON\", function () {\r",
+							"    pm.expect(pm.response.json()).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							"//TC4:Verificar que cada género en la lista contenga al menos los campos \"id\" y \"name\"\r",
+							"pm.test(\"Verificar campos 'id' y 'name' en cada género\", function () {\r",
+							"    // Obtener la respuesta JSON\r",
+							"    var jsonResponse = pm.response.json();\r",
+							"\r",
+							"    // Verificar que la respuesta sea un arreglo\r",
+							"    pm.expect(jsonResponse).to.be.an('array');\r",
+							"\r",
+							"    // Iterar a través de cada género en el arreglo y verificar los campos 'id' y 'name'\r",
+							"    jsonResponse.forEach(function (genre) {\r",
+							"        pm.expect(genre).to.have.property('id');\r",
+							"        pm.expect(genre).to.have.property('name');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//TC6:TC8: Verificar que la lista de géneros no esté vacía\r",
+							"pm.test(\"Verificar que la lista de géneros no esté vacía\", function () {\r",
+							"    // Verificar que la respuesta sea un arreglo\r",
+							"    pm.expect(pm.response.json()).to.be.an('array');\r",
+							"\r",
+							"    // Verificar que el arreglo no esté vacío\r",
+							"    pm.expect(pm.response.json()).to.have.length.above(0);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/filters/genres?tv=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"filters",
+						"genres"
+					],
+					"query": [
+						{
+							"key": "tv",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

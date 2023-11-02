@@ -7,7 +7,7 @@ const Nabvar = () => {
   const [login, setLogin] = useState(true);
   const { user, logout } = useAuth();
 
-  console.log(user);
+
   const navigate = useNavigate();
 
   const handleClick = async () => {
