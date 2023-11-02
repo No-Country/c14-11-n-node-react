@@ -32,7 +32,7 @@ export default function SlideTopRated() {
           modules={[Virtual, Navigation, Pagination]}
           onSwiper={setSwiperRef}
           slidesPerView={3}
-          centeredSlides={false}
+          centeredSlides={true}
           spaceBetween={10}
          
           navigation={true}
