@@ -1,0 +1,10 @@
+.cajita {
+  height: 400px;
+  padding-top: 180px;
+}
+
+.cajita h1 {
+  background-color: white;
+  border: 1em solid white;
+  border-radius: 1em;
+}
