@@ -19,11 +19,11 @@ const Peliculas = () => {
 
   const [noMore, setNoMore] = useState(false)
 
-  const url = 'http://localhost:4000/filters/genres' // URL para obtener géneros
-  const url1 = `http://localhost:4000/filters/genre/${genrefilter}` // URL para obtener películas por género
+  const url = 'https://nocountry-00o9.onrender.com/filters/genres' // URL para obtener géneros
+  const url1 = `https://nocountry-00o9.onrender.com/filters/genre/${genrefilter}` // URL para obtener películas por género
 
   const [inputText, setInputText] = useState('') // Almacena el texto de búsqueda
-  const urlSearch = `http://localhost:4000/search?name=${inputText}` // URL para buscar películas por nombre
+  const urlSearch = `https://nocountry-00o9.onrender.com/search?name=${inputText}` // URL para buscar películas por nombre
 
   // Función para manejar cambios en el campo de búsqueda
   const handleChange = (event) => {
@@ -93,18 +93,18 @@ const Peliculas = () => {
 
     const moreMovies = genrefilter
       ? await axios.get(
-          `http://localhost:4000/filters/genre/${genrefilter}&page=${
+          `https://nocountry-00o9.onrender.com/filters/genre/${genrefilter}&page=${
             currentPage + 1
           }`
         )
       : inputText
       ? await axios.get(
-          `http://localhost:4000/search?name=${inputText}&page=${
+          `https://nocountry-00o9.onrender.com/search?name=${inputText}&page=${
             currentPage + 1
           }`
         )
       : await axios.get(
-          `http://localhost:4000/getmovies?page=${currentPage + 1}`
+          `https://nocountry-00o9.onrender.com/getmovies?page=${currentPage + 1}`
         )
 
     if (moreMovies.data.length === 0) {
