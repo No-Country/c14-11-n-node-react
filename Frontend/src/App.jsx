@@ -37,7 +37,7 @@ export default function App() {
             }
           />
           <Route
-            path="/playmovies/:title/:id"
+            path="/playmovies/:title"
             element={
               <ProtectedRouted>
                 <PlayMovies />

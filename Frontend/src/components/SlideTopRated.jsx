@@ -1,21 +1,54 @@
-import '../style/home.css'
+import "../style/slides.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { useEffect, useState } from "react";
+import useFetch from "../hooks/useFecth";
 
-const SlideTopRated = ({ allTopRated }) => {
+import { Virtual, Navigation, Pagination } from "swiper/modules";
+
+const SlideTopRated = () => {
+  const [swiperRef, setSwiperRef] = useState(null);
+
+  const baseUrl = "https://image.tmdb.org/t/p/w500";
+
+  const urlTR = "http://localhost:4000/list/top";
+
+  const [topRated, setTopRated] = useFetch(urlTR);
+
+  useEffect(() => {
+    setTopRated([]);
+  }, []);
+
   return (
-    <div>
-      <h1>Mas vistas</h1>
-      <div className="caja">
-        {allTopRated?.map((show) => {
-          return (
-            <div className="carta" key={show.id}>
+    <>
+      <h1 className="slides__title">Series más vistas</h1>
+      <div className="slides">
+        <Swiper
+          className="slides__box"
+          modules={[Virtual, Navigation, Pagination]}
+          onSwiper={setSwiperRef}
+          slidesPerView={3}
+          centeredSlides={false}
+          spaceBetween={10}
+      
+          navigation={true}
+     
+        >
+          {topRated?.map((show) => (
+            <SwiperSlide className="slides__carta" key={show.id}>
               <h1>{show.original_title}</h1>
-              <img src={show.image} alt="" />
-            </div>
-          )
-        })}
+              <img
+                src={`${baseUrl}${
+                  show.poster_path ? show.poster_path : show.image
+                }`}
+                alt="Imagenes "
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default SlideTopRated
+export default SlideTopRated;

@@ -61,9 +61,7 @@ const Peliculas = () => {
 
   // Función para navegar a la página de detalles de una película
   const handleName = (title) => {
-    const name = title.title
-    const id = title.id
-    navigate(`/playmovies/${name}/${id}`)
+    navigate(`/playmovies/${title}`)
     
   };
 
