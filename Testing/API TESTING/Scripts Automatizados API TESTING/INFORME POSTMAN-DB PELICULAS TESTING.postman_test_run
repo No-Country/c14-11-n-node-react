@@ -1,0 +1,2536 @@
+{
+	"id": "9f865616-20b1-4c43-b0c4-fd0df7488308",
+	"name": "DB PELICULAS TESTING",
+	"timestamp": "2023-11-01T23:37:45.457Z",
+	"collection_id": "30176895-320dcf85-97e5-4b20-b400-f90368c738c2",
+	"folder_id": 0,
+	"environment_id": "30176895-9791ff1c-78b9-49b7-97b6-8fdf82050a74",
+	"totalPass": 261,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-11-01T23:37:15.623Z",
+	"totalFail": 8,
+	"results": [
+		{
+			"id": "6d518bf2-1813-4953-94d7-9c53792a0385",
+			"name": "ID: 28 - Acción",
+			"url": "http://localhost:4000/filters/genre/28",
+			"time": 776,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificar que todas las películas sean del género Acción (ID: 28)": true
+			},
+			"testPassFailCounts": {
+				"Verificar que todas las películas sean del género Acción (ID: 28)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				776
+			],
+			"allTests": [
+				{
+					"Verificar que todas las películas sean del género Acción (ID: 28)": true
+				}
+			]
+		},
+		{
+			"id": "c4391822-e9fb-4e48-b90a-74b3091b11e8",
+			"name": "ID: 12 - Aventura",
+			"url": "http://localhost:4000/filters/genre/12",
+			"time": 248,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificar que todas las películas sean del género Aventura (ID: 12)": true
+			},
+			"testPassFailCounts": {
+				"Verificar que todas las películas sean del género Aventura (ID: 12)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				248
+			],
+			"allTests": [
+				{
+					"Verificar que todas las películas sean del género Aventura (ID: 12)": true
+				}
+			]
+		},
+		{
+			"id": "7e5e9783-2772-4c38-aefc-0128e2de4868",
+			"name": "ID: 16 - Animación",
+			"url": "http://localhost:4000/filters/genre/16",
+			"time": 332,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"T03: Verificar que todas las películas en la respuesta pertenezcan al género de Animación (ID: 16)": true
+			},
+			"testPassFailCounts": {
+				"T03: Verificar que todas las películas en la respuesta pertenezcan al género de Animación (ID: 16)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				332
+			],
+			"allTests": [
+				{
+					"T03: Verificar que todas las películas en la respuesta pertenezcan al género de Animación (ID: 16)": true
+				}
+			]
+		},
+		{
+			"id": "07d518f0-4f35-4d71-aa77-8da5beb53500",
+			"name": "ID: 35 - Comedia",
+			"url": "http://localhost:4000/filters/genre/35",
+			"time": 307,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"T04: Verificar que todas las películas en la respuesta pertenezcan al género de Comedia (ID: 35)": true
+			},
+			"testPassFailCounts": {
+				"T04: Verificar que todas las películas en la respuesta pertenezcan al género de Comedia (ID: 35)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				307
+			],
+			"allTests": [
+				{
+					"T04: Verificar que todas las películas en la respuesta pertenezcan al género de Comedia (ID: 35)": true
+				}
+			]
+		},
+		{
+			"id": "606b630a-b31f-4ca4-b7d8-0586f317f233",
+			"name": "ID: 80 - Crimen",
+			"url": "http://localhost:4000/filters/genre/80",
+			"time": 318,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC05: Verificar que todas las películas en la respuesta pertenezcan al género de Crimen (ID: 80)": true
+			},
+			"testPassFailCounts": {
+				"TC05: Verificar que todas las películas en la respuesta pertenezcan al género de Crimen (ID: 80)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				318
+			],
+			"allTests": [
+				{
+					"TC05: Verificar que todas las películas en la respuesta pertenezcan al género de Crimen (ID: 80)": true
+				}
+			]
+		},
+		{
+			"id": "477caffd-779b-479f-98a5-d7c066c2a003",
+			"name": "ID: 99 - Documental",
+			"url": "http://localhost:4000/filters/genre/99",
+			"time": 285,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC06: Verificar que todas las películas en la respuesta pertenezcan al género de Documental (ID: 99)": true
+			},
+			"testPassFailCounts": {
+				"TC06: Verificar que todas las películas en la respuesta pertenezcan al género de Documental (ID: 99)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				285
+			],
+			"allTests": [
+				{
+					"TC06: Verificar que todas las películas en la respuesta pertenezcan al género de Documental (ID: 99)": true
+				}
+			]
+		},
+		{
+			"id": "7f53f210-5382-4df7-b581-3ba14c39dc07",
+			"name": "ID: 18 - Drama",
+			"url": "http://localhost:4000/filters/genre/18",
+			"time": 285,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC07: Verificar que todas las películas en la respuesta pertenezcan al género de Drama (ID: 18)": true
+			},
+			"testPassFailCounts": {
+				"TC07: Verificar que todas las películas en la respuesta pertenezcan al género de Drama (ID: 18)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				285
+			],
+			"allTests": [
+				{
+					"TC07: Verificar que todas las películas en la respuesta pertenezcan al género de Drama (ID: 18)": true
+				}
+			]
+		},
+		{
+			"id": "2fdc64e6-0a6c-4594-98c9-47701dcde302",
+			"name": "ID: 10751 - Familia",
+			"url": "http://localhost:4000/filters/genre/10751",
+			"time": 272,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC08: Verificar que todas las películas en la respuesta pertenezcan al género de Familia (ID: 10751)": true
+			},
+			"testPassFailCounts": {
+				"TC08: Verificar que todas las películas en la respuesta pertenezcan al género de Familia (ID: 10751)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				272
+			],
+			"allTests": [
+				{
+					"TC08: Verificar que todas las películas en la respuesta pertenezcan al género de Familia (ID: 10751)": true
+				}
+			]
+		},
+		{
+			"id": "60c892fe-62bf-4f4b-88af-abd9c604544d",
+			"name": "ID: 14 - Fantasía",
+			"url": "http://localhost:4000/filters/genre/14",
+			"time": 278,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"T09: Verificar que todas las películas en la respuesta pertenezcan al género de Fantasía (ID: 14)": true
+			},
+			"testPassFailCounts": {
+				"T09: Verificar que todas las películas en la respuesta pertenezcan al género de Fantasía (ID: 14)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				278
+			],
+			"allTests": [
+				{
+					"T09: Verificar que todas las películas en la respuesta pertenezcan al género de Fantasía (ID: 14)": true
+				}
+			]
+		},
+		{
+			"id": "fbe390c7-9ac8-4d43-b29b-b1d0d81cb9df",
+			"name": "ID: 36 - Historia",
+			"url": "http://localhost:4000/filters/genre/36",
+			"time": 245,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC10: Verificar que todas las películas en la respuesta pertenezcan al género de Historia (ID: 36)": true
+			},
+			"testPassFailCounts": {
+				"TC10: Verificar que todas las películas en la respuesta pertenezcan al género de Historia (ID: 36)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				245
+			],
+			"allTests": [
+				{
+					"TC10: Verificar que todas las películas en la respuesta pertenezcan al género de Historia (ID: 36)": true
+				}
+			]
+		},
+		{
+			"id": "7c53d4b6-bcab-4ea6-b730-d6e764732775",
+			"name": "ID: 27 - Terror",
+			"url": "http://localhost:4000/filters/genre/27",
+			"time": 268,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC11: Verificar que todas las películas en la respuesta pertenezcan al género de Terror (ID: 27)": true
+			},
+			"testPassFailCounts": {
+				"TC11: Verificar que todas las películas en la respuesta pertenezcan al género de Terror (ID: 27)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				268
+			],
+			"allTests": [
+				{
+					"TC11: Verificar que todas las películas en la respuesta pertenezcan al género de Terror (ID: 27)": true
+				}
+			]
+		},
+		{
+			"id": "c147342f-d003-4704-b841-94930b7ed328",
+			"name": "D: 10402 - Música",
+			"url": "http://localhost:4000/filters/genre/10402",
+			"time": 304,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC12: Verificar que todas las películas en la respuesta pertenezcan al género de Música (ID: 10402)": true
+			},
+			"testPassFailCounts": {
+				"TC12: Verificar que todas las películas en la respuesta pertenezcan al género de Música (ID: 10402)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				304
+			],
+			"allTests": [
+				{
+					"TC12: Verificar que todas las películas en la respuesta pertenezcan al género de Música (ID: 10402)": true
+				}
+			]
+		},
+		{
+			"id": "ff9d4a5f-c04c-4113-87af-3f404dd52e4a",
+			"name": "ID: 9648 - Misterio",
+			"url": "http://localhost:4000/filters/genre/9648",
+			"time": 260,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC13: Verificar que todas las películas en la respuesta pertenezcan al género de Misterio (ID: 9648)": true
+			},
+			"testPassFailCounts": {
+				"TC13: Verificar que todas las películas en la respuesta pertenezcan al género de Misterio (ID: 9648)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				260
+			],
+			"allTests": [
+				{
+					"TC13: Verificar que todas las películas en la respuesta pertenezcan al género de Misterio (ID: 9648)": true
+				}
+			]
+		},
+		{
+			"id": "e7a7b6a0-ffcc-48d3-beb7-78ce50fb05fa",
+			"name": "ID: 10749 - Romance",
+			"url": "http://localhost:4000/filters/genre/10749",
+			"time": 327,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC14: Verificar que todas las películas en la respuesta pertenezcan al género de Romance (ID: 10749)": true
+			},
+			"testPassFailCounts": {
+				"TC14: Verificar que todas las películas en la respuesta pertenezcan al género de Romance (ID: 10749)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				327
+			],
+			"allTests": [
+				{
+					"TC14: Verificar que todas las películas en la respuesta pertenezcan al género de Romance (ID: 10749)": true
+				}
+			]
+		},
+		{
+			"id": "ce8ad9e0-c676-4e8a-9c09-df95ba15ed92",
+			"name": "ID: 878 - Ciencia ficción",
+			"url": "http://localhost:4000/filters/genre/878",
+			"time": 243,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC15: Verificar que todas las películas en la respuesta pertenezcan al género de Ciencia ficción (ID: 878)": true
+			},
+			"testPassFailCounts": {
+				"TC15: Verificar que todas las películas en la respuesta pertenezcan al género de Ciencia ficción (ID: 878)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				243
+			],
+			"allTests": [
+				{
+					"TC15: Verificar que todas las películas en la respuesta pertenezcan al género de Ciencia ficción (ID: 878)": true
+				}
+			]
+		},
+		{
+			"id": "914b9772-0a2a-42a3-a9fb-18a1ec8aa0e2",
+			"name": "ID: 10770 - Película de TV",
+			"url": "http://localhost:4000/filters/genre/10770",
+			"time": 308,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC16: Verificar que todas las películas en la respuesta pertenezcan al género de Película de TV (ID: 10770)": true
+			},
+			"testPassFailCounts": {
+				"TC16: Verificar que todas las películas en la respuesta pertenezcan al género de Película de TV (ID: 10770)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				308
+			],
+			"allTests": [
+				{
+					"TC16: Verificar que todas las películas en la respuesta pertenezcan al género de Película de TV (ID: 10770)": true
+				}
+			]
+		},
+		{
+			"id": "cb183375-bd62-4a4e-8c34-d2a8dbc540b7",
+			"name": "ID: 53 - Suspense",
+			"url": "http://localhost:4000/filters/genre/53",
+			"time": 278,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC17: Verificar que todas las películas en la respuesta pertenezcan al género de Suspense (ID: 53)": true
+			},
+			"testPassFailCounts": {
+				"TC17: Verificar que todas las películas en la respuesta pertenezcan al género de Suspense (ID: 53)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				278
+			],
+			"allTests": [
+				{
+					"TC17: Verificar que todas las películas en la respuesta pertenezcan al género de Suspense (ID: 53)": true
+				}
+			]
+		},
+		{
+			"id": "c462599f-b0ec-4264-a257-63dd4a046c3e",
+			"name": "ID: 10752 - Bélica",
+			"url": "http://localhost:4000/filters/genre/10752",
+			"time": 310,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC18: Verificar que todas las películas en la respuesta pertenezcan al género de Belica (ID: 10752)": true
+			},
+			"testPassFailCounts": {
+				"TC18: Verificar que todas las películas en la respuesta pertenezcan al género de Belica (ID: 10752)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				310
+			],
+			"allTests": [
+				{
+					"TC18: Verificar que todas las películas en la respuesta pertenezcan al género de Belica (ID: 10752)": true
+				}
+			]
+		},
+		{
+			"id": "cb57f142-e05a-4f8b-ac4b-3ccf33889ac5",
+			"name": "ID: 37 - Western",
+			"url": "http://localhost:4000/filters/genre/37",
+			"time": 293,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC19: Verificar que todas las películas en la respuesta pertenezcan al género de Western (ID: 37)": true
+			},
+			"testPassFailCounts": {
+				"TC19: Verificar que todas las películas en la respuesta pertenezcan al género de Western (ID: 37)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				293
+			],
+			"allTests": [
+				{
+					"TC19: Verificar que todas las películas en la respuesta pertenezcan al género de Western (ID: 37)": true
+				}
+			]
+		},
+		{
+			"id": "3b3bc08f-33e1-4b7c-a4ff-84f36bcb331c",
+			"name": "PAGINA 1",
+			"url": "http://localhost:4000/tv",
+			"time": 258,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificar disponibilidad de imágenes de portada": true,
+				"Imagen de portada disponible para Mama na prenájom": true,
+				"Imagen de portada disponible para Ley y orden: Unidad de Víctimas Especiales": true,
+				"Imagen de portada disponible para Elas por Elas": true,
+				"Imagen de portada disponible para Mía es la venganza": true,
+				"Imagen de portada disponible para Late Night with Seth Meyers": true,
+				"Imagen de portada disponible para The Late Show with Stephen Colbert": true,
+				"Imagen de portada disponible para Demain nous appartient": true,
+				"Imagen de portada disponible para Senior High": true,
+				"Imagen de portada disponible para Terra e Paixão": true,
+				"Imagen de portada disponible para Gran hermano VIP": true,
+				"Imagen de portada disponible para Crónicas del Sol": true,
+				"Imagen de portada disponible para Navy: Investigación criminal": true,
+				"Imagen de portada disponible para Aquí todo empieza": true,
+				"Imagen de portada disponible para CSI: Las Vegas": true,
+				"Imagen de portada disponible para Tagesschau": true,
+				"Imagen de portada disponible para Ley y orden": true,
+				"Imagen de portada disponible para Loki": true,
+				"Imagen de portada disponible para The Tonight Show Starring Jimmy Fallon": true,
+				"Imagen de portada disponible para Brugklas": true,
+				"Imagen de portada disponible para Binnelanders": true
+			},
+			"testPassFailCounts": {
+				"Verificar disponibilidad de imágenes de portada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Mama na prenájom": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Ley y orden: Unidad de Víctimas Especiales": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Elas por Elas": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Mía es la venganza": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Late Night with Seth Meyers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Late Show with Stephen Colbert": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Demain nous appartient": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Senior High": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Terra e Paixão": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Gran hermano VIP": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Crónicas del Sol": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Navy: Investigación criminal": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Aquí todo empieza": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para CSI: Las Vegas": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Tagesschau": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Ley y orden": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Loki": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Tonight Show Starring Jimmy Fallon": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Brugklas": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Binnelanders": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				258
+			],
+			"allTests": [
+				{
+					"Verificar disponibilidad de imágenes de portada": true,
+					"Imagen de portada disponible para Mama na prenájom": true,
+					"Imagen de portada disponible para Ley y orden: Unidad de Víctimas Especiales": true,
+					"Imagen de portada disponible para Elas por Elas": true,
+					"Imagen de portada disponible para Mía es la venganza": true,
+					"Imagen de portada disponible para Late Night with Seth Meyers": true,
+					"Imagen de portada disponible para The Late Show with Stephen Colbert": true,
+					"Imagen de portada disponible para Demain nous appartient": true,
+					"Imagen de portada disponible para Senior High": true,
+					"Imagen de portada disponible para Terra e Paixão": true,
+					"Imagen de portada disponible para Gran hermano VIP": true,
+					"Imagen de portada disponible para Crónicas del Sol": true,
+					"Imagen de portada disponible para Navy: Investigación criminal": true,
+					"Imagen de portada disponible para Aquí todo empieza": true,
+					"Imagen de portada disponible para CSI: Las Vegas": true,
+					"Imagen de portada disponible para Tagesschau": true,
+					"Imagen de portada disponible para Ley y orden": true,
+					"Imagen de portada disponible para Loki": true,
+					"Imagen de portada disponible para The Tonight Show Starring Jimmy Fallon": true,
+					"Imagen de portada disponible para Brugklas": true,
+					"Imagen de portada disponible para Binnelanders": true
+				}
+			]
+		},
+		{
+			"id": "c7a020fd-bb9e-4588-9bba-92e7b69ae65a",
+			"name": "PAGINA 2",
+			"url": "http://localhost:4000/tv?page=2",
+			"time": 239,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PAGINA 2: Verificar disponibilidad de imágenes de portada": true,
+				"Imagen de portada disponible para Ley y orden: Acción criminal": true,
+				"Imagen de portada disponible para Quiapo Kid": true,
+				"Imagen de portada disponible para Rick y Morty": true,
+				"Imagen de portada disponible para Anatomía de Grey": true,
+				"Imagen de portada disponible para Padre De Familia": true,
+				"Imagen de portada disponible para The Masked Singer": true,
+				"Imagen de portada disponible para The Daily Show": true,
+				"Imagen de portada disponible para Fuzuê": true,
+				"Imagen de portada disponible para Pira-Pirasong Paraiso": true,
+				"Imagen de portada disponible para Mentes criminales": true,
+				"Imagen de portada disponible para Padre made in USA": true,
+				"Imagen de portada disponible para El Mentalista": true,
+				"Imagen de portada disponible para Tony Awards": true,
+				"Imagen de portada disponible para House Hunters": true,
+				"Imagen de portada disponible para The Blacklist": true,
+				"Imagen de portada disponible para Familia de policías": true,
+				"Imagen de portada disponible para Vandaag Inside": true,
+				"Imagen de portada disponible para Sin rastro": true,
+				"Imagen de portada disponible para しーくれっとみっしょん～潜入捜査官は絶対に負けない！～": true,
+				"Imagen de portada disponible para Doctor Who": true
+			},
+			"testPassFailCounts": {
+				"PAGINA 2: Verificar disponibilidad de imágenes de portada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Ley y orden: Acción criminal": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Quiapo Kid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Rick y Morty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Anatomía de Grey": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Padre De Familia": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Masked Singer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Daily Show": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Fuzuê": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Pira-Pirasong Paraiso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Mentes criminales": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Padre made in USA": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para El Mentalista": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Tony Awards": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para House Hunters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Blacklist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Familia de policías": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Vandaag Inside": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Sin rastro": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para しーくれっとみっしょん～潜入捜査官は絶対に負けない！～": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Doctor Who": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				239
+			],
+			"allTests": [
+				{
+					"PAGINA 2: Verificar disponibilidad de imágenes de portada": true,
+					"Imagen de portada disponible para Ley y orden: Acción criminal": true,
+					"Imagen de portada disponible para Quiapo Kid": true,
+					"Imagen de portada disponible para Rick y Morty": true,
+					"Imagen de portada disponible para Anatomía de Grey": true,
+					"Imagen de portada disponible para Padre De Familia": true,
+					"Imagen de portada disponible para The Masked Singer": true,
+					"Imagen de portada disponible para The Daily Show": true,
+					"Imagen de portada disponible para Fuzuê": true,
+					"Imagen de portada disponible para Pira-Pirasong Paraiso": true,
+					"Imagen de portada disponible para Mentes criminales": true,
+					"Imagen de portada disponible para Padre made in USA": true,
+					"Imagen de portada disponible para El Mentalista": true,
+					"Imagen de portada disponible para Tony Awards": true,
+					"Imagen de portada disponible para House Hunters": true,
+					"Imagen de portada disponible para The Blacklist": true,
+					"Imagen de portada disponible para Familia de policías": true,
+					"Imagen de portada disponible para Vandaag Inside": true,
+					"Imagen de portada disponible para Sin rastro": true,
+					"Imagen de portada disponible para しーくれっとみっしょん～潜入捜査官は絶対に負けない！～": true,
+					"Imagen de portada disponible para Doctor Who": true
+				}
+			]
+		},
+		{
+			"id": "db5e2355-3c3b-4386-bd93-10767a75b6c1",
+			"name": "PAGINA 3",
+			"url": "http://localhost:4000/tv?page=3",
+			"time": 291,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PAGINA 3: Verificar disponibilidad de imágenes de portada": true,
+				"Imagen de portada disponible para Castle": true,
+				"Imagen de portada disponible para The Flash": true,
+				"Imagen de portada disponible para Flor Sem Tempo": true,
+				"Imagen de portada disponible para Sobrenatural": true,
+				"Imagen de portada disponible para The Good Doctor": true,
+				"Imagen de portada disponible para Around the Horn": true,
+				"Imagen de portada disponible para Rigo": true,
+				"Imagen de portada disponible para CSI: Miami": true,
+				"Imagen de portada disponible para Lang Leve de Liefde": true,
+				"Imagen de portada disponible para J.A.G.: Alerta roja": true,
+				"Imagen de portada disponible para Los Simpson": true,
+				"Imagen de portada disponible para The Rookie": true,
+				"Imagen de portada disponible para La joven Liga de la Justicia": true,
+				"Imagen de portada disponible para Lucifer": true,
+				"Imagen de portada disponible para Lux Video Theatre": false,
+				"Imagen de portada disponible para Der Alte": false,
+				"Imagen de portada disponible para Los asesinatos de Midsomer": true,
+				"Imagen de portada disponible para El hormiguero": true,
+				"Imagen de portada disponible para Expediente X": true,
+				"Imagen de portada disponible para 愛·回家之開心速遞": true
+			},
+			"testPassFailCounts": {
+				"PAGINA 3: Verificar disponibilidad de imágenes de portada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Castle": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Flash": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Flor Sem Tempo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Sobrenatural": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Good Doctor": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Around the Horn": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Rigo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para CSI: Miami": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Lang Leve de Liefde": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para J.A.G.: Alerta roja": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Los Simpson": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Rookie": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para La joven Liga de la Justicia": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Lucifer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Lux Video Theatre": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Imagen de portada disponible para Der Alte": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Imagen de portada disponible para Los asesinatos de Midsomer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para El hormiguero": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Expediente X": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para 愛·回家之開心速遞": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				291
+			],
+			"allTests": [
+				{
+					"PAGINA 3: Verificar disponibilidad de imágenes de portada": true,
+					"Imagen de portada disponible para Castle": true,
+					"Imagen de portada disponible para The Flash": true,
+					"Imagen de portada disponible para Flor Sem Tempo": true,
+					"Imagen de portada disponible para Sobrenatural": true,
+					"Imagen de portada disponible para The Good Doctor": true,
+					"Imagen de portada disponible para Around the Horn": true,
+					"Imagen de portada disponible para Rigo": true,
+					"Imagen de portada disponible para CSI: Miami": true,
+					"Imagen de portada disponible para Lang Leve de Liefde": true,
+					"Imagen de portada disponible para J.A.G.: Alerta roja": true,
+					"Imagen de portada disponible para Los Simpson": true,
+					"Imagen de portada disponible para The Rookie": true,
+					"Imagen de portada disponible para La joven Liga de la Justicia": true,
+					"Imagen de portada disponible para Lucifer": true,
+					"Imagen de portada disponible para Lux Video Theatre": false,
+					"Imagen de portada disponible para Der Alte": false,
+					"Imagen de portada disponible para Los asesinatos de Midsomer": true,
+					"Imagen de portada disponible para El hormiguero": true,
+					"Imagen de portada disponible para Expediente X": true,
+					"Imagen de portada disponible para 愛·回家之開心速遞": true
+				}
+			]
+		},
+		{
+			"id": "1cfac10d-0e52-4850-bd33-27e29a50bcfe",
+			"name": "PAGINA 4",
+			"url": "http://localhost:4000/tv?page=4",
+			"time": 276,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PAGINA 4: Verificar disponibilidad de imágenes de portada": true,
+				"Imagen de portada disponible para Tatort": true,
+				"Imagen de portada disponible para Hawaii Five-0": true,
+				"Imagen de portada disponible para Brooklyn Nine-Nine": true,
+				"Imagen de portada disponible para The Price Is Right": true,
+				"Imagen de portada disponible para El santo": true,
+				"Imagen de portada disponible para Bob's Burgers": true,
+				"Imagen de portada disponible para Conan": true,
+				"Imagen de portada disponible para Westworld": true,
+				"Imagen de portada disponible para Climax!": true,
+				"Imagen de portada disponible para Seinfeld": true,
+				"Imagen de portada disponible para Colombo": true,
+				"Imagen de portada disponible para Chucky": true,
+				"Imagen de portada disponible para La hora de Alfred Hitchcock": true,
+				"Imagen de portada disponible para Generación V": true,
+				"Imagen de portada disponible para DC's Legends of Tomorrow": true,
+				"Imagen de portada disponible para Larry David": true,
+				"Imagen de portada disponible para Al rojo vivo": true,
+				"Imagen de portada disponible para Supergirl": true,
+				"Imagen de portada disponible para Diagnóstico: Asesinato": true,
+				"Imagen de portada disponible para Bones": true
+			},
+			"testPassFailCounts": {
+				"PAGINA 4: Verificar disponibilidad de imágenes de portada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Tatort": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Hawaii Five-0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Brooklyn Nine-Nine": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Price Is Right": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para El santo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Bob's Burgers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Conan": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Westworld": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Climax!": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Seinfeld": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Colombo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Chucky": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para La hora de Alfred Hitchcock": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Generación V": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para DC's Legends of Tomorrow": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Larry David": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Al rojo vivo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Supergirl": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Diagnóstico: Asesinato": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Bones": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				276
+			],
+			"allTests": [
+				{
+					"PAGINA 4: Verificar disponibilidad de imágenes de portada": true,
+					"Imagen de portada disponible para Tatort": true,
+					"Imagen de portada disponible para Hawaii Five-0": true,
+					"Imagen de portada disponible para Brooklyn Nine-Nine": true,
+					"Imagen de portada disponible para The Price Is Right": true,
+					"Imagen de portada disponible para El santo": true,
+					"Imagen de portada disponible para Bob's Burgers": true,
+					"Imagen de portada disponible para Conan": true,
+					"Imagen de portada disponible para Westworld": true,
+					"Imagen de portada disponible para Climax!": true,
+					"Imagen de portada disponible para Seinfeld": true,
+					"Imagen de portada disponible para Colombo": true,
+					"Imagen de portada disponible para Chucky": true,
+					"Imagen de portada disponible para La hora de Alfred Hitchcock": true,
+					"Imagen de portada disponible para Generación V": true,
+					"Imagen de portada disponible para DC's Legends of Tomorrow": true,
+					"Imagen de portada disponible para Larry David": true,
+					"Imagen de portada disponible para Al rojo vivo": true,
+					"Imagen de portada disponible para Supergirl": true,
+					"Imagen de portada disponible para Diagnóstico: Asesinato": true,
+					"Imagen de portada disponible para Bones": true
+				}
+			]
+		},
+		{
+			"id": "005828cc-5e56-47b7-a91a-17de9f096840",
+			"name": "PAGINA 5",
+			"url": "http://localhost:4000/tv?page=5",
+			"time": 257,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PAGINA 5: Verificar disponibilidad de imágenes de portada": true,
+				"Imagen de portada disponible para Historias Corrientes": true,
+				"Imagen de portada disponible para Smallville": true,
+				"Imagen de portada disponible para Doctor Who": true,
+				"Imagen de portada disponible para Stargate SG-1": true,
+				"Imagen de portada disponible para El fugitivo": true,
+				"Imagen de portada disponible para Monk": true,
+				"Imagen de portada disponible para Queridos Papás": true,
+				"Imagen de portada disponible para Berserk of Gluttony": true,
+				"Imagen de portada disponible para The Graham Norton Show": true,
+				"Imagen de portada disponible para Dos hombres y medio": true,
+				"Imagen de portada disponible para Chicago Fire": true,
+				"Imagen de portada disponible para Scorpion": true,
+				"Imagen de portada disponible para House": true,
+				"Imagen de portada disponible para Markus Lanz": true,
+				"Imagen de portada disponible para Jujutsu Kaisen": true,
+				"Imagen de portada disponible para A través del tiempo": true,
+				"Imagen de portada disponible para Frasier": true,
+				"Imagen de portada disponible para Friends": true,
+				"Imagen de portada disponible para Gute Zeiten, schlechte Zeiten": true,
+				"Imagen de portada disponible para The Equalizer": true
+			},
+			"testPassFailCounts": {
+				"PAGINA 5: Verificar disponibilidad de imágenes de portada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Historias Corrientes": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Smallville": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Doctor Who": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Stargate SG-1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para El fugitivo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Monk": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Queridos Papás": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Berserk of Gluttony": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Graham Norton Show": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Dos hombres y medio": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Chicago Fire": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Scorpion": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para House": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Markus Lanz": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Jujutsu Kaisen": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para A través del tiempo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Frasier": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Friends": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Gute Zeiten, schlechte Zeiten": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Equalizer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				257
+			],
+			"allTests": [
+				{
+					"PAGINA 5: Verificar disponibilidad de imágenes de portada": true,
+					"Imagen de portada disponible para Historias Corrientes": true,
+					"Imagen de portada disponible para Smallville": true,
+					"Imagen de portada disponible para Doctor Who": true,
+					"Imagen de portada disponible para Stargate SG-1": true,
+					"Imagen de portada disponible para El fugitivo": true,
+					"Imagen de portada disponible para Monk": true,
+					"Imagen de portada disponible para Queridos Papás": true,
+					"Imagen de portada disponible para Berserk of Gluttony": true,
+					"Imagen de portada disponible para The Graham Norton Show": true,
+					"Imagen de portada disponible para Dos hombres y medio": true,
+					"Imagen de portada disponible para Chicago Fire": true,
+					"Imagen de portada disponible para Scorpion": true,
+					"Imagen de portada disponible para House": true,
+					"Imagen de portada disponible para Markus Lanz": true,
+					"Imagen de portada disponible para Jujutsu Kaisen": true,
+					"Imagen de portada disponible para A través del tiempo": true,
+					"Imagen de portada disponible para Frasier": true,
+					"Imagen de portada disponible para Friends": true,
+					"Imagen de portada disponible para Gute Zeiten, schlechte Zeiten": true,
+					"Imagen de portada disponible para The Equalizer": true
+				}
+			]
+		},
+		{
+			"id": "8e4f10f1-cad9-48b0-8391-1a3103b65e30",
+			"name": "PAGINA 6",
+			"url": "http://localhost:4000/tv?page=6",
+			"time": 289,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PAGINA 6: Verificar disponibilidad de imágenes de portada": true,
+				"Imagen de portada disponible para Grimm": true,
+				"Imagen de portada disponible para Hotel Paradise Extra": true,
+				"Imagen de portada disponible para Champs-Elysées": true,
+				"Imagen de portada disponible para Arrow": true,
+				"Imagen de portada disponible para Área 12": true,
+				"Imagen de portada disponible para Perry Mason": true,
+				"Imagen de portada disponible para Ein Fall für zwei": true,
+				"Imagen de portada disponible para Hunter": true,
+				"Imagen de portada disponible para The Tonight Show Starring Johnny Carson": true,
+				"Imagen de portada disponible para Bosch": true,
+				"Imagen de portada disponible para Magnum": true,
+				"Imagen de portada disponible para Prodigiosa: Las aventuras de Ladybug": true,
+				"Imagen de portada disponible para कौन बनेगा करोड़पति": true,
+				"Imagen de portada disponible para Suits: la clave del éxito": true,
+				"Imagen de portada disponible para The Mike Douglas Show": false,
+				"Imagen de portada disponible para Chicago P.D.": true,
+				"Imagen de portada disponible para Derrick": true,
+				"Imagen de portada disponible para This Is Us": true,
+				"Imagen de portada disponible para Minas de Pasión": true,
+				"Imagen de portada disponible para Elementary": true
+			},
+			"testPassFailCounts": {
+				"PAGINA 6: Verificar disponibilidad de imágenes de portada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Grimm": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Hotel Paradise Extra": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Champs-Elysées": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Arrow": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Área 12": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Perry Mason": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Ein Fall für zwei": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Hunter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Tonight Show Starring Johnny Carson": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Bosch": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Magnum": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Prodigiosa: Las aventuras de Ladybug": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para कौन बनेगा करोड़पति": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Suits: la clave del éxito": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Mike Douglas Show": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Imagen de portada disponible para Chicago P.D.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Derrick": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para This Is Us": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Minas de Pasión": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Elementary": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				289
+			],
+			"allTests": [
+				{
+					"PAGINA 6: Verificar disponibilidad de imágenes de portada": true,
+					"Imagen de portada disponible para Grimm": true,
+					"Imagen de portada disponible para Hotel Paradise Extra": true,
+					"Imagen de portada disponible para Champs-Elysées": true,
+					"Imagen de portada disponible para Arrow": true,
+					"Imagen de portada disponible para Área 12": true,
+					"Imagen de portada disponible para Perry Mason": true,
+					"Imagen de portada disponible para Ein Fall für zwei": true,
+					"Imagen de portada disponible para Hunter": true,
+					"Imagen de portada disponible para The Tonight Show Starring Johnny Carson": true,
+					"Imagen de portada disponible para Bosch": true,
+					"Imagen de portada disponible para Magnum": true,
+					"Imagen de portada disponible para Prodigiosa: Las aventuras de Ladybug": true,
+					"Imagen de portada disponible para कौन बनेगा करोड़पति": true,
+					"Imagen de portada disponible para Suits: la clave del éxito": true,
+					"Imagen de portada disponible para The Mike Douglas Show": false,
+					"Imagen de portada disponible para Chicago P.D.": true,
+					"Imagen de portada disponible para Derrick": true,
+					"Imagen de portada disponible para This Is Us": true,
+					"Imagen de portada disponible para Minas de Pasión": true,
+					"Imagen de portada disponible para Elementary": true
+				}
+			]
+		},
+		{
+			"id": "15b9697b-8969-4ea2-baf2-6b01ac6ddcce",
+			"name": "PAGINA 7",
+			"url": "http://localhost:4000/tv?page=7",
+			"time": 274,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PAGINA 7: Verificar disponibilidad de imágenes de portada": true,
+				"Imagen de portada disponible para RuPaul: Reinas del drag": true,
+				"Imagen de portada disponible para Más allá del límite": true,
+				"Imagen de portada disponible para The Office": true,
+				"Imagen de portada disponible para 9-1-1": true,
+				"Imagen de portada disponible para Modern Family": true,
+				"Imagen de portada disponible para Dr. Kildare": true,
+				"Imagen de portada disponible para Cómo defender a un asesino": true,
+				"Imagen de portada disponible para El equipo A": true,
+				"Imagen de portada disponible para Chicago Hope": true,
+				"Imagen de portada disponible para Cómo conocí a vuestra madre": true,
+				"Imagen de portada disponible para Juego de tronos": true,
+				"Imagen de portada disponible para Star Trek: La nueva generación": true,
+				"Imagen de portada disponible para Polizeiruf 110": false,
+				"Imagen de portada disponible para Jane the Virgin": true,
+				"Imagen de portada disponible para Érase una vez": true,
+				"Imagen de portada disponible para American Horror Story": true,
+				"Imagen de portada disponible para Entre fantasmas": true,
+				"Imagen de portada disponible para Ironside": true,
+				"Imagen de portada disponible para NDR Talk Show": false,
+				"Imagen de portada disponible para Crossing Jordan": true
+			},
+			"testPassFailCounts": {
+				"PAGINA 7: Verificar disponibilidad de imágenes de portada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para RuPaul: Reinas del drag": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Más allá del límite": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Office": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para 9-1-1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Modern Family": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Dr. Kildare": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Cómo defender a un asesino": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para El equipo A": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Chicago Hope": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Cómo conocí a vuestra madre": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Juego de tronos": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Star Trek: La nueva generación": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Polizeiruf 110": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Imagen de portada disponible para Jane the Virgin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Érase una vez": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para American Horror Story": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Entre fantasmas": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Ironside": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para NDR Talk Show": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Imagen de portada disponible para Crossing Jordan": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				274
+			],
+			"allTests": [
+				{
+					"PAGINA 7: Verificar disponibilidad de imágenes de portada": true,
+					"Imagen de portada disponible para RuPaul: Reinas del drag": true,
+					"Imagen de portada disponible para Más allá del límite": true,
+					"Imagen de portada disponible para The Office": true,
+					"Imagen de portada disponible para 9-1-1": true,
+					"Imagen de portada disponible para Modern Family": true,
+					"Imagen de portada disponible para Dr. Kildare": true,
+					"Imagen de portada disponible para Cómo defender a un asesino": true,
+					"Imagen de portada disponible para El equipo A": true,
+					"Imagen de portada disponible para Chicago Hope": true,
+					"Imagen de portada disponible para Cómo conocí a vuestra madre": true,
+					"Imagen de portada disponible para Juego de tronos": true,
+					"Imagen de portada disponible para Star Trek: La nueva generación": true,
+					"Imagen de portada disponible para Polizeiruf 110": false,
+					"Imagen de portada disponible para Jane the Virgin": true,
+					"Imagen de portada disponible para Érase una vez": true,
+					"Imagen de portada disponible para American Horror Story": true,
+					"Imagen de portada disponible para Entre fantasmas": true,
+					"Imagen de portada disponible para Ironside": true,
+					"Imagen de portada disponible para NDR Talk Show": false,
+					"Imagen de portada disponible para Crossing Jordan": true
+				}
+			]
+		},
+		{
+			"id": "86905398-8a7f-4b47-9a34-94bd4054b64a",
+			"name": "PAGINA 8",
+			"url": "http://localhost:4000/tv?page=8",
+			"time": 275,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PAGINA 8: Verificar disponibilidad de imágenes de portada": true,
+				"Imagen de portada disponible para Chicago Med": true,
+				"Imagen de portada disponible para Mannix": true,
+				"Imagen de portada disponible para Yellowstone": true,
+				"Imagen de portada disponible para Community": true,
+				"Imagen de portada disponible para Scrubs": true,
+				"Imagen de portada disponible para El rey de Queens": true,
+				"Imagen de portada disponible para SOKO 5113": true,
+				"Imagen de portada disponible para Great Performances": true,
+				"Imagen de portada disponible para Psych": true,
+				"Imagen de portada disponible para Die Rosenheim-Cops": true,
+				"Imagen de portada disponible para Minder": true,
+				"Imagen de portada disponible para El intrépido Batman": true,
+				"Imagen de portada disponible para Bambi-Verleihung": false,
+				"Imagen de portada disponible para Rockefeller Plaza": true,
+				"Imagen de portada disponible para Sabrina, cosas de brujas": true,
+				"Imagen de portada disponible para Los Soprano": true,
+				"Imagen de portada disponible para Wer weiß denn sowas?": true,
+				"Imagen de portada disponible para Parks and Recreation": true,
+				"Imagen de portada disponible para El joven Sheldon": true,
+				"Imagen de portada disponible para V.I.P.": true
+			},
+			"testPassFailCounts": {
+				"PAGINA 8: Verificar disponibilidad de imágenes de portada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Chicago Med": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Mannix": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Yellowstone": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Community": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Scrubs": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para El rey de Queens": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para SOKO 5113": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Great Performances": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Psych": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Die Rosenheim-Cops": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Minder": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para El intrépido Batman": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Bambi-Verleihung": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Imagen de portada disponible para Rockefeller Plaza": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Sabrina, cosas de brujas": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Los Soprano": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Wer weiß denn sowas?": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Parks and Recreation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para El joven Sheldon": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para V.I.P.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				275
+			],
+			"allTests": [
+				{
+					"PAGINA 8: Verificar disponibilidad de imágenes de portada": true,
+					"Imagen de portada disponible para Chicago Med": true,
+					"Imagen de portada disponible para Mannix": true,
+					"Imagen de portada disponible para Yellowstone": true,
+					"Imagen de portada disponible para Community": true,
+					"Imagen de portada disponible para Scrubs": true,
+					"Imagen de portada disponible para El rey de Queens": true,
+					"Imagen de portada disponible para SOKO 5113": true,
+					"Imagen de portada disponible para Great Performances": true,
+					"Imagen de portada disponible para Psych": true,
+					"Imagen de portada disponible para Die Rosenheim-Cops": true,
+					"Imagen de portada disponible para Minder": true,
+					"Imagen de portada disponible para El intrépido Batman": true,
+					"Imagen de portada disponible para Bambi-Verleihung": false,
+					"Imagen de portada disponible para Rockefeller Plaza": true,
+					"Imagen de portada disponible para Sabrina, cosas de brujas": true,
+					"Imagen de portada disponible para Los Soprano": true,
+					"Imagen de portada disponible para Wer weiß denn sowas?": true,
+					"Imagen de portada disponible para Parks and Recreation": true,
+					"Imagen de portada disponible para El joven Sheldon": true,
+					"Imagen de portada disponible para V.I.P.": true
+				}
+			]
+		},
+		{
+			"id": "0cb99d8e-5b22-4c7c-a122-ab09b756803c",
+			"name": "PAGINA 9",
+			"url": "http://localhost:4000/tv?page=9",
+			"time": 273,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PAGINA 9: Verificar disponibilidad de imágenes de portada": true,
+				"Imagen de portada disponible para Star Trek: Voyager": true,
+				"Imagen de portada disponible para Superman y Lois": true,
+				"Imagen de portada disponible para Better Call Saul": true,
+				"Imagen de portada disponible para Saturday Night Live": true,
+				"Imagen de portada disponible para The Big Valley": true,
+				"Imagen de portada disponible para Have Gun, Will Travel": true,
+				"Imagen de portada disponible para Riverdale": true,
+				"Imagen de portada disponible para Shameless": true,
+				"Imagen de portada disponible para Colgados en Filadelfia": true,
+				"Imagen de portada disponible para 우아한 제국": true,
+				"Imagen de portada disponible para SOKO Köln": true,
+				"Imagen de portada disponible para MacGyver": true,
+				"Imagen de portada disponible para Mujeres desesperadas": true,
+				"Imagen de portada disponible para BoJack Horseman": true,
+				"Imagen de portada disponible para El coche fantástico": true,
+				"Imagen de portada disponible para The Late Late Show with Craig Ferguson": true,
+				"Imagen de portada disponible para Dick Powell's Zane Grey Theatre": true,
+				"Imagen de portada disponible para iCarly": true,
+				"Imagen de portada disponible para La dimensión desconocida": true,
+				"Imagen de portada disponible para Las chicas Gilmore": true
+			},
+			"testPassFailCounts": {
+				"PAGINA 9: Verificar disponibilidad de imágenes de portada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Star Trek: Voyager": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Superman y Lois": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Better Call Saul": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Saturday Night Live": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Big Valley": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Have Gun, Will Travel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Riverdale": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Shameless": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Colgados en Filadelfia": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para 우아한 제국": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para SOKO Köln": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para MacGyver": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Mujeres desesperadas": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para BoJack Horseman": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para El coche fantástico": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Late Late Show with Craig Ferguson": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Dick Powell's Zane Grey Theatre": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para iCarly": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para La dimensión desconocida": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Las chicas Gilmore": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				273
+			],
+			"allTests": [
+				{
+					"PAGINA 9: Verificar disponibilidad de imágenes de portada": true,
+					"Imagen de portada disponible para Star Trek: Voyager": true,
+					"Imagen de portada disponible para Superman y Lois": true,
+					"Imagen de portada disponible para Better Call Saul": true,
+					"Imagen de portada disponible para Saturday Night Live": true,
+					"Imagen de portada disponible para The Big Valley": true,
+					"Imagen de portada disponible para Have Gun, Will Travel": true,
+					"Imagen de portada disponible para Riverdale": true,
+					"Imagen de portada disponible para Shameless": true,
+					"Imagen de portada disponible para Colgados en Filadelfia": true,
+					"Imagen de portada disponible para 우아한 제국": true,
+					"Imagen de portada disponible para SOKO Köln": true,
+					"Imagen de portada disponible para MacGyver": true,
+					"Imagen de portada disponible para Mujeres desesperadas": true,
+					"Imagen de portada disponible para BoJack Horseman": true,
+					"Imagen de portada disponible para El coche fantástico": true,
+					"Imagen de portada disponible para The Late Late Show with Craig Ferguson": true,
+					"Imagen de portada disponible para Dick Powell's Zane Grey Theatre": true,
+					"Imagen de portada disponible para iCarly": true,
+					"Imagen de portada disponible para La dimensión desconocida": true,
+					"Imagen de portada disponible para Las chicas Gilmore": true
+				}
+			]
+		},
+		{
+			"id": "33f79357-219d-4d25-ad91-9836478d554a",
+			"name": "PAGINA 10",
+			"url": "http://localhost:4000/tv?page=10",
+			"time": 263,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PAGINA 10: Verificar disponibilidad de imágenes de portada": true,
+				"Imagen de portada disponible para Real Time with Bill Maher": true,
+				"Imagen de portada disponible para CSI: Nueva York": true,
+				"Imagen de portada disponible para Los Goldberg": true,
+				"Imagen de portada disponible para Fear the Walking Dead": true,
+				"Imagen de portada disponible para Crimen en el paraíso": true,
+				"Imagen de portada disponible para SOKO Wismar": true,
+				"Imagen de portada disponible para Los inmortales": true,
+				"Imagen de portada disponible para Longmire": true,
+				"Imagen de portada disponible para Caso abierto": true,
+				"Imagen de portada disponible para WWE Raw": true,
+				"Imagen de portada disponible para Die Harald Schmidt Show": true,
+				"Imagen de portada disponible para The Good Fight": true,
+				"Imagen de portada disponible para Los vengadores": true,
+				"Imagen de portada disponible para Peak Practice": true,
+				"Imagen de portada disponible para Les Rendez-vous du dimanche": false,
+				"Imagen de portada disponible para Matrimonio Con Hijos": true,
+				"Imagen de portada disponible para Suidooster": true,
+				"Imagen de portada disponible para Cannon": true,
+				"Imagen de portada disponible para Robert Montgomery Presents": true,
+				"Imagen de portada disponible para The Philco Television Playhouse": true
+			},
+			"testPassFailCounts": {
+				"PAGINA 10: Verificar disponibilidad de imágenes de portada": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Real Time with Bill Maher": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para CSI: Nueva York": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Los Goldberg": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Fear the Walking Dead": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Crimen en el paraíso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para SOKO Wismar": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Los inmortales": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Longmire": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Caso abierto": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para WWE Raw": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Die Harald Schmidt Show": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Good Fight": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Los vengadores": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Peak Practice": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Les Rendez-vous du dimanche": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Imagen de portada disponible para Matrimonio Con Hijos": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Suidooster": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Cannon": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para Robert Montgomery Presents": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Imagen de portada disponible para The Philco Television Playhouse": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				263
+			],
+			"allTests": [
+				{
+					"PAGINA 10: Verificar disponibilidad de imágenes de portada": true,
+					"Imagen de portada disponible para Real Time with Bill Maher": true,
+					"Imagen de portada disponible para CSI: Nueva York": true,
+					"Imagen de portada disponible para Los Goldberg": true,
+					"Imagen de portada disponible para Fear the Walking Dead": true,
+					"Imagen de portada disponible para Crimen en el paraíso": true,
+					"Imagen de portada disponible para SOKO Wismar": true,
+					"Imagen de portada disponible para Los inmortales": true,
+					"Imagen de portada disponible para Longmire": true,
+					"Imagen de portada disponible para Caso abierto": true,
+					"Imagen de portada disponible para WWE Raw": true,
+					"Imagen de portada disponible para Die Harald Schmidt Show": true,
+					"Imagen de portada disponible para The Good Fight": true,
+					"Imagen de portada disponible para Los vengadores": true,
+					"Imagen de portada disponible para Peak Practice": true,
+					"Imagen de portada disponible para Les Rendez-vous du dimanche": false,
+					"Imagen de portada disponible para Matrimonio Con Hijos": true,
+					"Imagen de portada disponible para Suidooster": true,
+					"Imagen de portada disponible para Cannon": true,
+					"Imagen de portada disponible para Robert Montgomery Presents": true,
+					"Imagen de portada disponible para The Philco Television Playhouse": true
+				}
+			]
+		},
+		{
+			"id": "94ec3643-c138-454b-93ea-7d46de3bf7ec",
+			"name": "US 13 | API TESTING | Obtener una lista de géneros",
+			"url": "http://localhost:4000/filters/genres",
+			"time": 269,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificar que se reciba una lista de géneros válidos": true,
+				"Verificar código de estado HTTP 200": true,
+				"Verificar respuesta como array de objetos JSON": true,
+				"Verificar campos 'id' y 'name' en cada género": true,
+				"Verificar que no sea un código de estado HTTP 404": true,
+				"Verificar que la lista de géneros no esté vacía": true,
+				"Verificar que no haya géneros duplicados": true
+			},
+			"testPassFailCounts": {
+				"Verificar que se reciba una lista de géneros válidos": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar código de estado HTTP 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar respuesta como array de objetos JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar campos 'id' y 'name' en cada género": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar que no sea un código de estado HTTP 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar que la lista de géneros no esté vacía": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar que no haya géneros duplicados": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				269
+			],
+			"allTests": [
+				{
+					"Verificar que se reciba una lista de géneros válidos": true,
+					"Verificar código de estado HTTP 200": true,
+					"Verificar respuesta como array de objetos JSON": true,
+					"Verificar campos 'id' y 'name' en cada género": true,
+					"Verificar que no sea un código de estado HTTP 404": true,
+					"Verificar que la lista de géneros no esté vacía": true,
+					"Verificar que no haya géneros duplicados": true
+				}
+			]
+		},
+		{
+			"id": "fd19f057-7d01-4b28-ad2a-484c63b567ec",
+			"name": "US 15 | API TESTING | Obtener una lista de películas populares",
+			"url": "http://localhost:4000/list/popmovies",
+			"time": 225,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC1: Verificar estado 200 OK": true,
+				"TC2: Verificar que todas las películas tienen la propiedad 'popularity'": true,
+				"TC3: Verificar que la respuesta sea un objeto JSON": true,
+				"TC4: La propiedad POPULARITY es un número": true,
+				"TC5: Las peliculas no tienen orden ascendente o descendente": true
+			},
+			"testPassFailCounts": {
+				"TC1: Verificar estado 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC2: Verificar que todas las películas tienen la propiedad 'popularity'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC3: Verificar que la respuesta sea un objeto JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC4: La propiedad POPULARITY es un número": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC5: Las peliculas no tienen orden ascendente o descendente": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				225
+			],
+			"allTests": [
+				{
+					"TC1: Verificar estado 200 OK": true,
+					"TC2: Verificar que todas las películas tienen la propiedad 'popularity'": true,
+					"TC3: Verificar que la respuesta sea un objeto JSON": true,
+					"TC4: La propiedad POPULARITY es un número": true,
+					"TC5: Las peliculas no tienen orden ascendente o descendente": true
+				}
+			]
+		},
+		{
+			"id": "fa501cc8-de80-4941-9e08-9a88c7d0a4c6",
+			"name": "US 17 | API TESTING | Validar el formato de las URL de las imágenes",
+			"url": "http://localhost:4000/getmovies",
+			"time": 337,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Las URLs de las imagenes comienzan con 'https://'": true,
+				"El estado de respuesta es 200 (OK)": true,
+				"Todas las películas tienen la propiedad 'image'": true
+			},
+			"testPassFailCounts": {
+				"Las URLs de las imagenes comienzan con 'https://'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"El estado de respuesta es 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todas las películas tienen la propiedad 'image'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				337
+			],
+			"allTests": [
+				{
+					"Las URLs de las imagenes comienzan con 'https://'": true,
+					"El estado de respuesta es 200 (OK)": true,
+					"Todas las películas tienen la propiedad 'image'": true
+				}
+			]
+		},
+		{
+			"id": "9fbf818f-47e8-4af7-80ea-691c9a6388e2",
+			"name": "US 19 | API TESTING | Obtener una lista de películas",
+			"url": "http://localhost:4000/getmovies",
+			"time": 242,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"La lista contiene 20 peliculas": true,
+				"Estado 200 OK": true,
+				"Todas las peliculas tienen propiedad titulo, descripción, fecha e imagen": true,
+				"Verificar que las fechas se devuelven en formato 'AAAA-MM-DD'": true,
+				"Response status code is 200": true,
+				"Campo adult es un valor booleano": true,
+				"Verificar que el campo género_ids sea un array y no esté vacío para cada película": true,
+				"Verificar que el campo id sea un número entero no negativo para cada película": true,
+				"Response has the required fields": true,
+				"Adult is a boolean value": true,
+				"Verify that the genre_ids array is present and contains at least one element for each movie": true,
+				"Verify that the id field is a non-negative integer for each movie": true
+			},
+			"testPassFailCounts": {
+				"La lista contiene 20 peliculas": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Estado 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todas las peliculas tienen propiedad titulo, descripción, fecha e imagen": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar que las fechas se devuelven en formato 'AAAA-MM-DD'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Campo adult es un valor booleano": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar que el campo género_ids sea un array y no esté vacío para cada película": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar que el campo id sea un número entero no negativo para cada película": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Adult is a boolean value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the genre_ids array is present and contains at least one element for each movie": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the id field is a non-negative integer for each movie": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				242
+			],
+			"allTests": [
+				{
+					"La lista contiene 20 peliculas": true,
+					"Estado 200 OK": true,
+					"Todas las peliculas tienen propiedad titulo, descripción, fecha e imagen": true,
+					"Verificar que las fechas se devuelven en formato 'AAAA-MM-DD'": true,
+					"Response status code is 200": true,
+					"Campo adult es un valor booleano": true,
+					"Verificar que el campo género_ids sea un array y no esté vacío para cada película": true,
+					"Verificar que el campo id sea un número entero no negativo para cada película": true,
+					"Response has the required fields": true,
+					"Adult is a boolean value": true,
+					"Verify that the genre_ids array is present and contains at least one element for each movie": true,
+					"Verify that the id field is a non-negative integer for each movie": true
+				}
+			]
+		},
+		{
+			"id": "3d8483d2-ecec-4222-8673-ecaae752c488",
+			"name": "US 16 | API TESTING | Obtener una lista de próximos estrenos",
+			"url": "http://localhost:4000/list/upcomings",
+			"time": 254,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Fechas de lanzamiento en formato AAAA-MM-DD": true,
+				"Las fechas de lanzamiento son posteriores a la actual": false,
+				"Todas las películas tienen la propiedad release_date": true
+			},
+			"testPassFailCounts": {
+				"Fechas de lanzamiento en formato AAAA-MM-DD": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Las fechas de lanzamiento son posteriores a la actual": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Todas las películas tienen la propiedad release_date": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				254
+			],
+			"allTests": [
+				{
+					"Fechas de lanzamiento en formato AAAA-MM-DD": true,
+					"Las fechas de lanzamiento son posteriores a la actual": false,
+					"Todas las películas tienen la propiedad release_date": true
+				}
+			]
+		},
+		{
+			"id": "afabfa86-a52a-418a-be25-c78c377d41e4",
+			"name": "US 18 | API TESTING | Validar valores de \"vote_average\" en un rango y \"vote_count\" mínimo",
+			"url": "http://localhost:4000/getmovies",
+			"time": 222,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Endpoint es accesible": true,
+				"La respuesta obtinee un array de peliculas": true,
+				"Todas las peliculas tienen vote_average con un valor numérico dentro del rango válido de 0 a 10": true,
+				"Todas las peliculas tienen vote_count con valor numérico igual o mayor que 0.": true,
+				"El array de peliculas no esta vacio": true
+			},
+			"testPassFailCounts": {
+				"Endpoint es accesible": {
+					"pass": 1,
+					"fail": 0
+				},
+				"La respuesta obtinee un array de peliculas": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todas las peliculas tienen vote_average con un valor numérico dentro del rango válido de 0 a 10": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todas las peliculas tienen vote_count con valor numérico igual o mayor que 0.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"El array de peliculas no esta vacio": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				222
+			],
+			"allTests": [
+				{
+					"Endpoint es accesible": true,
+					"La respuesta obtinee un array de peliculas": true,
+					"Todas las peliculas tienen vote_average con un valor numérico dentro del rango válido de 0 a 10": true,
+					"Todas las peliculas tienen vote_count con valor numérico igual o mayor que 0.": true,
+					"El array de peliculas no esta vacio": true
+				}
+			]
+		},
+		{
+			"id": "abf6ec85-a580-4be6-9089-00f5ed2ba0ea",
+			"name": "US 20 | API TESTING | Obtener una lista de generos (SERIES)",
+			"url": "http://localhost:4000/filters/genres?tv=true",
+			"time": 269,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificar que se reciba una lista de géneros válidos": true,
+				"Verificar código de estado HTTP 200": true,
+				"Verificar respuesta como array de objetos JSON": true,
+				"Verificar campos 'id' y 'name' en cada género": true,
+				"Verificar que la lista de géneros no esté vacía": true
+			},
+			"testPassFailCounts": {
+				"Verificar que se reciba una lista de géneros válidos": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar código de estado HTTP 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar respuesta como array de objetos JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar campos 'id' y 'name' en cada género": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verificar que la lista de géneros no esté vacía": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				269
+			],
+			"allTests": [
+				{
+					"Verificar que se reciba una lista de géneros válidos": true,
+					"Verificar código de estado HTTP 200": true,
+					"Verificar respuesta como array de objetos JSON": true,
+					"Verificar campos 'id' y 'name' en cada género": true,
+					"Verificar que la lista de géneros no esté vacía": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 10450,
+	"collection": {
+		"requests": [
+			{
+				"id": "6d518bf2-1813-4953-94d7-9c53792a0385",
+				"method": "GET"
+			},
+			{
+				"id": "c4391822-e9fb-4e48-b90a-74b3091b11e8",
+				"method": "GET"
+			},
+			{
+				"id": "7e5e9783-2772-4c38-aefc-0128e2de4868",
+				"method": "GET"
+			},
+			{
+				"id": "07d518f0-4f35-4d71-aa77-8da5beb53500",
+				"method": "GET"
+			},
+			{
+				"id": "606b630a-b31f-4ca4-b7d8-0586f317f233",
+				"method": "GET"
+			},
+			{
+				"id": "477caffd-779b-479f-98a5-d7c066c2a003",
+				"method": "GET"
+			},
+			{
+				"id": "7f53f210-5382-4df7-b581-3ba14c39dc07",
+				"method": "GET"
+			},
+			{
+				"id": "2fdc64e6-0a6c-4594-98c9-47701dcde302",
+				"method": "GET"
+			},
+			{
+				"id": "60c892fe-62bf-4f4b-88af-abd9c604544d",
+				"method": "GET"
+			},
+			{
+				"id": "fbe390c7-9ac8-4d43-b29b-b1d0d81cb9df",
+				"method": "GET"
+			},
+			{
+				"id": "7c53d4b6-bcab-4ea6-b730-d6e764732775",
+				"method": "GET"
+			},
+			{
+				"id": "c147342f-d003-4704-b841-94930b7ed328",
+				"method": "GET"
+			},
+			{
+				"id": "ff9d4a5f-c04c-4113-87af-3f404dd52e4a",
+				"method": "GET"
+			},
+			{
+				"id": "e7a7b6a0-ffcc-48d3-beb7-78ce50fb05fa",
+				"method": "GET"
+			},
+			{
+				"id": "ce8ad9e0-c676-4e8a-9c09-df95ba15ed92",
+				"method": "GET"
+			},
+			{
+				"id": "914b9772-0a2a-42a3-a9fb-18a1ec8aa0e2",
+				"method": "GET"
+			},
+			{
+				"id": "cb183375-bd62-4a4e-8c34-d2a8dbc540b7",
+				"method": "GET"
+			},
+			{
+				"id": "c462599f-b0ec-4264-a257-63dd4a046c3e",
+				"method": "GET"
+			},
+			{
+				"id": "cb57f142-e05a-4f8b-ac4b-3ccf33889ac5",
+				"method": "GET"
+			},
+			{
+				"id": "3b3bc08f-33e1-4b7c-a4ff-84f36bcb331c",
+				"method": "GET"
+			},
+			{
+				"id": "c7a020fd-bb9e-4588-9bba-92e7b69ae65a",
+				"method": "GET"
+			},
+			{
+				"id": "db5e2355-3c3b-4386-bd93-10767a75b6c1",
+				"method": "GET"
+			},
+			{
+				"id": "1cfac10d-0e52-4850-bd33-27e29a50bcfe",
+				"method": "GET"
+			},
+			{
+				"id": "005828cc-5e56-47b7-a91a-17de9f096840",
+				"method": "GET"
+			},
+			{
+				"id": "8e4f10f1-cad9-48b0-8391-1a3103b65e30",
+				"method": "GET"
+			},
+			{
+				"id": "15b9697b-8969-4ea2-baf2-6b01ac6ddcce",
+				"method": "GET"
+			},
+			{
+				"id": "86905398-8a7f-4b47-9a34-94bd4054b64a",
+				"method": "GET"
+			},
+			{
+				"id": "0cb99d8e-5b22-4c7c-a122-ab09b756803c",
+				"method": "GET"
+			},
+			{
+				"id": "33f79357-219d-4d25-ad91-9836478d554a",
+				"method": "GET"
+			},
+			{
+				"id": "94ec3643-c138-454b-93ea-7d46de3bf7ec",
+				"method": "GET"
+			},
+			{
+				"id": "fd19f057-7d01-4b28-ad2a-484c63b567ec",
+				"method": "GET"
+			},
+			{
+				"id": "fa501cc8-de80-4941-9e08-9a88c7d0a4c6",
+				"method": "GET"
+			},
+			{
+				"id": "9fbf818f-47e8-4af7-80ea-691c9a6388e2",
+				"method": "GET"
+			},
+			{
+				"id": "3d8483d2-ecec-4222-8673-ecaae752c488",
+				"method": "GET"
+			},
+			{
+				"id": "afabfa86-a52a-418a-be25-c78c377d41e4",
+				"method": "GET"
+			},
+			{
+				"id": "abf6ec85-a580-4be6-9089-00f5ed2ba0ea",
+				"method": "GET"
+			}
+		]
+	}
+}
