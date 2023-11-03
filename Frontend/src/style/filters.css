@@ -103,6 +103,8 @@
   padding: 0rem 1rem;
   transition: 0.2s;
   border-radius: var(--borderBtn);
+  border: none;
+  cursor: pointer;
 }
 
 .container__filters > div > button:hover {
