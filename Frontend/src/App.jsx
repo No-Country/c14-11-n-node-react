@@ -15,15 +15,7 @@ import PlaySeries from "./pages/PlaySeries";
 
 //hey
 export default function App() {
-   const pages = ['/cards','/playmovies','/playseries','/login','/register','/peliculas','/series','/']
-  const navigate=useLocation();
-  const path=navigate.pathname
- 
-  if(!pages.includes(path)){
-    return(
-     <Error404 />
-    )
-  }
+
   return (
     <div className="main__container">
       <AuthProvider>
