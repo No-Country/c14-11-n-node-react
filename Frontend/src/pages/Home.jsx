@@ -17,9 +17,9 @@ const Home = () => {
     dispatch,
   } = useContext(Store)
 
-  const url = `http://localhost:4000/list/upcomings`
-  const urlTR = 'http://localhost:4000/list/top'
-  const urlPop = 'http://localhost:4000/list/popmovies'
+  const url = `https://nocountry-00o9.onrender.com/list/upcomings`
+  const urlTR = 'https://nocountry-00o9.onrender.com/list/top'
+  const urlPop = 'https://nocountry-00o9.onrender.com/list/popmovies'
 
   const [movies, setMovies] = useFetch(url)
   const [topRated, setTopRated] = useFetch(urlTR)
@@ -69,3 +69,4 @@ const Home = () => {
 }
 
 export default Home
+

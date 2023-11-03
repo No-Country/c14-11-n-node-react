@@ -32,19 +32,20 @@
 }
 
 
-body {
-
-  margin: 0; /* Restablecer el margen a 0 */
-  padding: 0; /* Quitar el padding */
-   background-color: var(--bg-300);
-  min-height: 100vh; /* Establecer la altura mínima al alto de la ventana del navegador */
-}
-.main__container {
+.nomathces__container {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  max-width: 1440px;
-   padding: 1rem;
-  font-family: "Inter", sans-serif;
-  margin: 0 auto;
+  justify-content: center;
+  height: 400px;
+
+}
+
+.nomatchces__text{
+  background:var(--bg-gradeinte2);
+  border-radius: var(--borderBtn);
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-100);
+
 }

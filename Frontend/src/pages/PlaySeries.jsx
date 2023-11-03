@@ -6,11 +6,11 @@ import "../style/trailersMovies.css";
 const PlaySeries = () => {
   const { title } = useParams();
   const navigate = useNavigate();
-
+console.log(title);
   const [videoId, setVideoId] = useState(null);
-console.log(videoId);
+
   useEffect(() => {
-    const API_KEY = "AIzaSyATfhV3S-sXWzH-L4kPHnGSk6iqsTKv9c4"; // Reemplaza con tu propia clave de API de YouTube
+    //const API_KEY = "AIzaSyDQZYJQUAfVxyca1GdIi2ydPfJSfUW6ris"; // Reemplaza con tu propia clave de API de YouTube
 
     const fetchVideoBySearch = async () => {
       try {
