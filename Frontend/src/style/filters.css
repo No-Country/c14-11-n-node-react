@@ -174,7 +174,7 @@
   overflow: visible;
   background: var(--bg-gradienMovie);
   border-radius: var(--borderBtn);
-  position: relative;
+  position: relative ;
  
 }
 
