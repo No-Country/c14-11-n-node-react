@@ -42,10 +42,13 @@
 }
 
 .login__error, .ragister_error{
-  background-color:var(--guardsman-red-400);
+  background:var(--primary-100);
+  border: 2px solid var(--primary-200);
   padding: 1rem;
+  color: var(--text-200);
+  border-radius: var(--borderBtn);
   text-align: center;
-  color: var(--guardsman-red-900);
+  opacity: 30%;
   font-weight: bold;
   width: 100%;
   max-width:400px;
