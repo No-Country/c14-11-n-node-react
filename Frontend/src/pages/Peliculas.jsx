@@ -104,7 +104,9 @@ const Peliculas = () => {
           }`
         )
       : await axios.get(
-          `https://nocountry-00o9.onrender.com/getmovies?page=${currentPage + 1}`
+          `https://nocountry-00o9.onrender.com/getmovies?page=${
+            currentPage + 1
+          }`
         )
 
     if (moreMovies.data.length === 0) {
@@ -152,7 +154,7 @@ const Peliculas = () => {
       <section className="filter__movies">
         {allMovies?.map((movie) => (
           <Atropos
-            onClick={() => handleName(movie)}
+            onClick={() => handleName(movie.title)}
             className="movies__card"
             key={movie.id}
           >
