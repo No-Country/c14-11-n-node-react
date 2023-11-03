@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Login from "./components/Login";
@@ -15,6 +15,15 @@ import PlaySeries from "./pages/PlaySeries";
 
 //hey
 export default function App() {
+   const pages = ['/cards','/playmovies','/playseries','/login','/register','/peliculas','/series','/']
+  const navigate=useLocation();
+  const path=navigate.pathname
+ 
+  if(!pages.includes(path)){
+    return(
+     <Error404 />
+    )
+  }
   return (
     <div className="main__container">
       <AuthProvider>
