@@ -29,8 +29,9 @@ export default function App() {
       <AuthProvider>
         <Nabvar />
         <Routes>
-        <Route path="/" element={<Home />} />
+       
           <Route element={<ProtectedRoutes />}>
+           <Route path="/" element={<Home />} />
             <Route path="/cards" element={<Cards />} />
             <Route path="/playmovies/:title" element={<PlayMovies />} />
             <Route path="/playseries/:title" element={<PlaySeries />} />
