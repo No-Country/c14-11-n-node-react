@@ -6,6 +6,7 @@ import axios from 'axios'
 import Atropos from 'atropos/react'
 import 'atropos/css'
 import { Store } from '../Store'
+import NoMatches from '../components/NoMatches'
 
 const Peliculas = () => {
   //Se trae el estado global y su dispatch
@@ -144,40 +145,44 @@ const Peliculas = () => {
           <button onClick={handleFilter}>Buscar Genero</button>
         </form>
 
-        <div>
+        <div className="filters__inputs">
           <input type="text" value={inputText} onChange={handleChange} />
-          <div className="highlight"></div>
+
           <button onClick={handleSearch}>Buscar</button>
         </div>
       </div>
 
       <section className="filter__movies">
-        {allMovies?.map((movie) => (
-          <Atropos
-            onClick={() => handleName(movie.title)}
-            className="movies__card"
-            key={movie.id}
-          >
-            {movie.backdrop_path && movie.title ? (
-              <>
-                <img
-                  className="movies__card-img"
-                  data-atropos-offset="1"
-                  src={movie.image}
-                  alt={movie.title}
-                />
-                <h1 className="movies__card-title" data-atropos-offset="5">
-                  {movie.title}
-                </h1>
-              </>
-            ) : (
-              <div className="movies__card-skeleton">
-                <div data-atropos-offset="1" className="skeleton-image"></div>
-                <div data-atropos-offset="5" className="skeleton-title"></div>
-              </div>
-            )}
-          </Atropos>
-        ))}
+        {allMovies?.length === 0 ? (
+          <NoMatches />
+        ) : (
+          allMovies?.map((movie) => (
+            <Atropos
+              onClick={() => handleName(movie.title)}
+              className="movies__card"
+              key={movie.id}
+            >
+              {movie.backdrop_path && movie.title ? (
+                <>
+                  <img
+                    className="movies__card-img"
+                    data-atropos-offset="1"
+                    src={movie.image}
+                    alt={movie.title}
+                  />
+                  <h1 className="movies__card-title" data-atropos-offset="5">
+                    {movie.title}
+                  </h1>
+                </>
+              ) : (
+                <div className="movies__card-skeleton">
+                  <div data-atropos-offset="1" className="skeleton-image"></div>
+                  <div data-atropos-offset="5" className="skeleton-title"></div>
+                </div>
+              )}
+            </Atropos>
+          ))
+        )}
       </section>
 
       <button

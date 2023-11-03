@@ -8,8 +8,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-export default function SlideTopRated() {
-  const [swiperRef, setSwiperRef] = useState(null);
+const SlidePop = () => {
+  // const [swiperRef, setSwiperRef] = useState(null);
 
   const baseUrl = "https://image.tmdb.org/t/p/w500";
 
@@ -18,10 +18,9 @@ export default function SlideTopRated() {
   const [topRated, setTopRated] = useFetch(urlPop);
 
   useEffect(() => {
-    setTopRated([]);
+    if (setTopRated()) return 
   }, []);
 
-  console.log(topRated);
 
   return (
     <>
@@ -30,11 +29,10 @@ export default function SlideTopRated() {
         <Swiper
           className="slides__box"
           modules={[Virtual, Navigation, Pagination]}
-          onSwiper={setSwiperRef}
+          // onSwiper={setSwiperRef}
           slidesPerView={3}
           centeredSlides={true}
           spaceBetween={10}
-         
           navigation={true}
         >
           {topRated?.map((show) => (
@@ -52,4 +50,6 @@ export default function SlideTopRated() {
       </div>
     </>
   );
-}
+};
+
+export default SlidePop;

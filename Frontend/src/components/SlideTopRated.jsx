@@ -1,13 +1,13 @@
 import "../style/slides.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { useEffect, useState } from "react";
+import { useEffect,  } from "react";
 import useFetch from "../hooks/useFecth";
 
 import { Virtual, Navigation, Pagination } from "swiper/modules";
 
 const SlideTopRated = () => {
-  const [swiperRef, setSwiperRef] = useState(null);
+  // const [swiperRef, setSwiperRef] = useState(null);
 
   const baseUrl = "https://image.tmdb.org/t/p/w500";
 
@@ -16,7 +16,7 @@ const SlideTopRated = () => {
   const [topRated, setTopRated] = useFetch(urlTR);
 
   useEffect(() => {
-    setTopRated([]);
+    if (setTopRated()) return 
   }, []);
 
   return (
@@ -26,7 +26,7 @@ const SlideTopRated = () => {
         <Swiper
           className="slides__box"
           modules={[Virtual, Navigation, Pagination]}
-          onSwiper={setSwiperRef}
+          // onSwiper={setSwiperRef}
           slidesPerView={3}
           centeredSlides={true}
           spaceBetween={10}

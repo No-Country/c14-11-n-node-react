@@ -53,6 +53,8 @@
   padding: 1rem;
   transition: 0.2s;
   border-radius: var(--borderBtn);
+  cursor: pointer;
+  border: none;
 }
 
 .nabvar__btn:hover {
@@ -79,6 +81,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+
 }
 
 .nabvar__container-btns > a {
@@ -89,7 +92,7 @@
   padding: 1rem;
   transition: 0.2s;
   border-radius: var(--borderBtn);
-  
+  text-decoration: none;
 }
 
 .nabvar__container-btns > a:hover {
