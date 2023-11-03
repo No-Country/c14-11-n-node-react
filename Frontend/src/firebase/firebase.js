@@ -6,14 +6,13 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyATfhV3S-sXWzH-L4kPHnGSk6iqsTKv9c4",
-  authDomain: "no-country-be2c3.firebaseapp.com",
-  projectId: "no-country-be2c3",
-  storageBucket: "no-country-be2c3.appspot.com",
-  messagingSenderId: "1026130828696",
-  appId: "1:1026130828696:web:389cc963d56373df3bdfed"
-};
-
+  apiKey: 'AIzaSyCZwdFhYp62JkNNz4_-dRudMAe2YpepeyI',
+  authDomain: 'filmflow-nocountry.firebaseapp.com',
+  projectId: 'filmflow-nocountry',
+  storageBucket: 'filmflow-nocountry.appspot.com',
+  messagingSenderId: '1007270316578',
+  appId: '1:1007270316578:web:3bf60047d948f5f16e587b',
+}
 // Initialize Firebase
 const app = initializeApp(firebaseConfig); 
 export const auth = getAuth(app);
