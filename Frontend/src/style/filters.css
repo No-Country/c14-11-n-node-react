@@ -169,10 +169,10 @@
 .movies__card {
   cursor: pointer;
   width: 375px;
-  height: 300px;
+  /* height: 300px; */
   padding: 1rem;
   overflow: visible;
- background: var(--bg-gradienMovie);
+  background: var(--bg-gradienMovie);
   border-radius: var(--borderBtn);
   position: relative;
  
@@ -182,7 +182,7 @@
 
 .movies__card-img {
   border-radius: var(--borderBtn);
-
+  width: 100%;
 }
 
 .movies__card-title {
