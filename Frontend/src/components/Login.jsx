@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 import "../style/loginAndRegister.css"; // Estilos para el componente
-// import google from "../assets/google.svg"; // Icono de Google
+import google from "../assets/google.svg"; // Icono de Google
 import { motion } from "framer-motion"; // Biblioteca de animaciones
 
 const Login = () => {
@@ -143,13 +143,13 @@ const Login = () => {
         />
         <button className="login__button login__button--submit">Iniciar sesion</button>
       </form>
-      {/* <button
+      <button
         className="login__button login__button--google"
         onClick={handleGoogleSignin}
       >
         Iniciar sesion con google
         <img src={google} alt="" />
-      </button> */}
+      </button>
 
    
     </motion.div>
