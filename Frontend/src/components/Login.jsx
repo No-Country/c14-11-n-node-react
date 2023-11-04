@@ -143,13 +143,13 @@ const Login = () => {
         />
         <button className="login__button login__button--submit">Iniciar sesion</button>
       </form>
-      {/* <button
+      <button
         className="login__button login__button--google"
         onClick={handleGoogleSignin}
       >
         Iniciar sesion con google
         <img src={google} alt="" />
-      </button> */}
+      </button>
 
    
     </motion.div>
