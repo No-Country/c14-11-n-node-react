@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Login from "./components/Login";
@@ -15,13 +15,15 @@ import PlaySeries from "./pages/PlaySeries";
 
 //hey
 export default function App() {
+
   return (
     <div className="main__container">
       <AuthProvider>
         <Nabvar />
         <Routes>
-        <Route path="/" element={<Home />} />
+       
           <Route element={<ProtectedRoutes />}>
+           <Route path="/" element={<Home />} />
             <Route path="/cards" element={<Cards />} />
             <Route path="/playmovies/:title" element={<PlayMovies />} />
             <Route path="/playseries/:title" element={<PlaySeries />} />
