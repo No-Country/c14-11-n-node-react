@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 import "../style/loginAndRegister.css"; // Estilos para el componente
-// import google from "../assets/google.svg"; // Icono de Google
+import google from "../assets/google.svg"; // Icono de Google
 import { motion } from "framer-motion"; // Biblioteca de animaciones
 
 const Login = () => {
