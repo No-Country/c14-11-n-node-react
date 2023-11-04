@@ -69,7 +69,7 @@ const Series = () => {
     if (allSeries?.length < 20) {
       setNoMore(true);
     } else {
-      console.log("por alguna razon hay que poner esto aca");
+      console.log("La vida se trata de pequeños triunfos, que se convierten en una victoria");
     }
   }, [allSeries]);
 

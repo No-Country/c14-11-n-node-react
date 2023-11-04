@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import { BrowserRouter } from "react-router-dom";
+import {HashRouter} from "react-router-dom"
 import "./index.css";
 
 import { StoreProvider } from "./Store.jsx";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <HashRouter>
     <React.StrictMode>
       <StoreProvider>
      
@@ -16,5 +16,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         
       </StoreProvider>
     </React.StrictMode>
-  </BrowserRouter>
+    </HashRouter>
 );
